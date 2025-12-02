@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>{{ if .Title }}{{ .Title }} – {{ end }}David Millman</title>
+  <link rel="stylesheet" href="{{ "css/styles.css" | relURL }}">
+</head>
+
+<body>
+  <div id="wrapper">
+    <div class="top">
+      <header id="header">
+        <h1><a href="{{ "/" | relURL }}">{{ .Site.Title }}</a></h1>
+        {{ with .Site.Params.tagline }}
+          <p>{{ . }}</p>
+        {{ else }}
+          <p>Montana State University</p>
+        {{ end }}
+      </header>
+
+      <div id="page">
+        {{ partial "sidebar.html" . }}
+
+        <main id="content" role="main">
+          {{ block "main" . }}{{ end }}
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <footer id="footer">
+    <p>© {{ now.Format "2006" }} {{ .Site.Title }}</p>
+  </footer>
+</body>
+</html>

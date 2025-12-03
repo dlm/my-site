@@ -7,7 +7,7 @@
   --debug-sidebar: #FFFF99; /* light yellow */
   --debug-content: #FFB6C1; /* light pink */
   --debug-footer: #D3D3D3;  /* light gray */
-  
+
   /* Final colors for later */
   --bg-main: #F5E5C5;
   --orange: #FFB03B;
@@ -18,9 +18,46 @@
 body {
   margin: 0;
   padding: 20px 0;
-  background: #F5E5C5;
+  background: var(--bg-main);
   font-family: "Trebuchet MS", Arial, sans-serif;
   font-size: 13px;
+  color: #666;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #000;
+  margin: 0 0 10px 0;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 2.5em;
+  letter-spacing: -2px;
+}
+
+h2 {
+  font-size: 1.8em;
+  letter-spacing: -1px;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+p {
+  line-height: 1.5;
+  margin: 0 0 15px 0;
+}
+
+a {
+  color: var(--brown);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 /* Basic container */
@@ -45,11 +82,61 @@ body {
   display: flex; /* Make sidebar and content sit side-by-side */
 }
 
+/* Sidebar */
 #sidebar {
-  background: var(--debug-sidebar);
+  background: var(--orange);
   border: 1px solid orange;
-  width: 200px; /* Fixed width for sidebar */
+  width: 150px; /* Fixed width for sidebar */
   flex-shrink: 0; /* Don't let it shrink */
+  color: var(--dark-brown);
+  padding: 40px 0 0 0px;
+  /* margin-bottom: 10px; */
+}
+
+#sidebar .active {
+  font-weight: bold;
+}
+
+#sidebar li {
+  margin: 0;
+  padding: 0;
+}
+
+#sidebar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#sidebar h2 {
+  width: 150px;
+  height: 54px;
+  margin: 0;
+  padding: 10px 0 0 10px;
+  font-size: 18px;
+  background: url(images/img04.jpg) no-repeat left top;
+  color: #FFFFFF;
+}
+
+#sidebar li ul {
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+#sidebar li li {
+  margin: 0 0 0 30px;
+  padding: 0 0 0 10px;
+  background: url(images/img05.jpg) no-repeat left 50%;
+  line-height: 25px;
+}
+
+#sidebar a {
+  color: #000; /* Black links in sidebar */
+  text-decoration: underline; /* Underlined by default */
+}
+
+#sidebar a:hover {
+  text-decoration: none; /* Remove underline on hover */
 }
 
 #content {

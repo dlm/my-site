@@ -351,6 +351,10 @@ img.right {
 	text-decoration: none;
 }
 
+#sidebar .active {
+	font-weight: bold;
+}
+
 /* Footer */
 
 #footer {

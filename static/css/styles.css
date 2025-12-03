@@ -1,5 +1,20 @@
 /* Step 1: Just get the background right */
 
+:root {
+  /* Debug colors while we build */
+  --debug-header: #ADD8E6; /* light blue */
+  --debug-page: #90EE90;   /* light green */
+  --debug-sidebar: #FFFF99; /* light yellow */
+  --debug-content: #FFB6C1; /* light pink */
+  --debug-footer: #D3D3D3;  /* light gray */
+  
+  /* Final colors for later */
+  --bg-main: #F5E5C5;
+  --orange: #FFB03B;
+  --brown: #B64926;
+  --dark-brown: #5C1600;
+}
+
 body {
   margin: 0;
   padding: 20px 0;
@@ -18,29 +33,33 @@ body {
 
 /* DEBUG: Color the major sections so we can see layout */
 #header {
-  background: lightblue;
+  background: var(--debug-header);
   height: 100px;
   border: 1px solid blue;
 }
 
 #page {
-  background: lightgreen;
+  background: var(--debug-page);
   height: 400px;
   border: 1px solid green;
+  display: flex; /* Make sidebar and content sit side-by-side */
 }
 
 #sidebar {
-  background: lightyellow;
+  background: var(--debug-sidebar);
   border: 1px solid orange;
+  width: 200px; /* Fixed width for sidebar */
+  flex-shrink: 0; /* Don't let it shrink */
 }
 
 #content {
-  background: lightpink;
+  background: var(--debug-content);
   border: 1px solid purple;
+  flex: 1; /* Take up remaining space */
 }
 
 #footer {
-  background: lightgray;
+  background: var(--debug-footer);
   height: 50px;
   border: 1px solid gray;
 }

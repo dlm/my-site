@@ -9,17 +9,13 @@
       </p>
     </div>
 
-    {{ if .Params.photo }}
-      <img src="{{ .Params.photo | relURL }}" alt="{{ .Params.name }}" class="profile-photo">
-    {{ end }}
+    <img src="{{ .Params.photo | relURL }}" alt="{{ .Params.name }}" class="profile-photo">
   </div>
 
-  {{ with .Params.quote }}
-    <div class="quote-box">
-      {{ .text }}<br>
-      <cite>- {{ .author }}</cite>
-    </div>
-  {{ end }}
+  <div class="quote-box">
+    {{ .Params.quote.text }}<br>
+    <cite>- {{ .Params.quote.author }}</cite>
+  </div>
 
   {{ range .Params.callouts }}
     <div class="callout">

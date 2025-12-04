@@ -13,6 +13,8 @@
   --orange: #FFB03B;
   --brown: #B64926;
   --dark-brown: #5C1600;
+  --black: #000;
+  --gray: #ABABAB;
 }
 
 body {
@@ -21,13 +23,13 @@ body {
   background: var(--bg-main);
   font-family: "Trebuchet MS", Arial, sans-serif;
   font-size: 13px;
-  color: #666;
+  color: var(--gray);
 }
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
   font-family: Georgia, "Times New Roman", Times, serif;
-  color: #000;
+  color: var(--black);
   margin: 0 0 10px 0;
   font-weight: normal;
 }
@@ -64,28 +66,46 @@ a:hover {
 #wrapper {
   width: 900px;
   margin: 0 auto;
-  border: 1px solid red; /* DEBUG: so we can see the container */
   min-height: 500px;
 }
 
-/* DEBUG: Color the major sections so we can see layout */
 #header {
-  background: var(--debug-header);
+  background: var(--orange) url(images/banner.jpg) no-repeat right top;
   height: 100px;
-  border: 1px solid blue;
+  border-top: 1px solid var(--black);
+  border-left: 1px solid var(--black);
+  border-right: 1px solid var(--black);
+  padding-left: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#header h1 {
+  color: var(--black);
+  font-size: 42px;
+  margin: 0;
+  text-transform: lowercase;
+}
+
+#header p {
+  color: var(--dark-brown);
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0;
 }
 
 #page {
   background: var(--debug-page);
   height: 400px;
-  border: 1px solid green;
   display: flex; /* Make sidebar and content sit side-by-side */
+  border-left: 1px solid var(--black);
+  border-right: 1px solid var(--black);
 }
 
 /* Sidebar */
 #sidebar {
   background: var(--orange);
-  border: 1px solid orange;
   width: 200px; /* Fixed width for sidebar */
   flex-shrink: 0; /* Don't let it shrink */
   color: var(--dark-brown);
@@ -120,7 +140,7 @@ a:hover {
 }
 
 #sidebar a {
-  color: #000; /* Black links in sidebar */
+  color: var(--black);
   text-decoration: underline; /* Underlined by default */
 }
 
@@ -129,8 +149,9 @@ a:hover {
 }
 
 #content {
-  background: var(--debug-content);
-  border: 1px solid purple;
+  background: var(--brown);
+  border-top: 1px solid var(--black);
+  border-left: 1px solid var(--black);
   flex: 1; /* Take up remaining space */
 }
 

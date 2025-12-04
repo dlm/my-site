@@ -11,12 +11,8 @@
   <div id="wrapper">
     <div class="top">
       <header id="header">
-        <h1><a href="{{ "/" | relURL }}">{{ .Site.Title }}</a></h1>
-        {{ with .Site.Params.tagline }}
-          <p>{{ . }}</p>
-        {{ else }}
-          <p>Montana State University</p>
-        {{ end }}
+        <h1>{{ .Site.Title }}</h1>
+        <p>{{ .Site.Params.tagline }}</p>
       </header>
 
       <div id="page">

@@ -96,7 +96,7 @@ a:hover {
 }
 
 #page {
-  background: var(--debug-page);
+  background: var(--orange);
   height: 400px;
   display: flex; /* Make sidebar and content sit side-by-side */
   border-left: 1px solid var(--black);

@@ -3,26 +3,27 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Dave!</title>
+  <title>{{ .Site.Title }}</title>
   <link rel="stylesheet" href="{{ "css/styles.css" | relURL }}">
 </head>
 
 <body>
   <div id="wrapper">
-    <div class="top">
-      <header id="header">
-        <h1>{{ .Site.Title }}</h1>
-        <p>{{ .Site.Params.tagline }}</p>
-      </header>
+    <header id="header">
+      <h1>{{ .Site.Title }}</h1>
+    </header>
 
-      <div id="page">
-        {{ partial "sidebar.html" . }}
+    <nav id="navigation">
+      {{ range .Site.Menus.main }}
+        <a href="{{ .URL | relURL }}" {{ if eq $.RelPermalink .URL }} class="active" {{ end }}>
+          {{ .Name }}
+        </a>
+      {{ end }}
+    </nav>
 
-        <main id="content" role="main">
-          {{ block "main" . }}{{ end }}
-        </main>
-      </div>
-    </div>
+    <main id="content">
+      {{ block "main" . }}{{ end }}
+    </main>
   </div>
 
   <footer id="footer">

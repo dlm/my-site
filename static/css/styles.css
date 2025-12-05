@@ -18,63 +18,26 @@
 }
 
 body {
-  margin: 0;
-  padding: 20px 0;
-  background: var(--bg-main);
+  margin: 20px 0 0 0;
+  padding: 0;
+  background: var(--bg-main) url(images/img01.jpg) repeat left top;
   font-family: "Trebuchet MS", Arial, sans-serif;
   font-size: 13px;
   color: var(--gray);
 }
 
-/* Typography */
-h1, h2, h3, h4, h5, h6 {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: var(--black);
-  margin: 0 0 10px 0;
-  font-weight: normal;
-}
-
-h1 {
-  font-size: 2.5em;
-  letter-spacing: -2px;
-}
-
-h2 {
-  font-size: 1.8em;
-  letter-spacing: -1px;
-}
-
-h3 {
-  font-size: 1.2em;
-}
-
-p {
-  line-height: 1.5;
-  margin: 0 0 15px 0;
-}
-
-a {
-  color: var(--brown);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Basic container */
 #wrapper {
-  width: 900px;
+  width: 800px;
   margin: 0 auto;
-  min-height: 500px;
+  background: url(images/img03.jpg) repeat-y left top;
+  border-left: 1px solid var(--black);
+  border-right: 1px solid var(--black);
 }
 
 #header {
   background: var(--orange) url(images/banner.jpg) no-repeat right top;
-  height: 100px;
+  height: 90px;
   border-top: 1px solid var(--black);
-  border-left: 1px solid var(--black);
-  border-right: 1px solid var(--black);
   padding-left: 35px;
   display: flex;
   flex-direction: column;
@@ -83,34 +46,88 @@ a:hover {
 
 #header h1 {
   color: var(--black);
-  font-size: 42px;
+  font-size: 36px;
   margin: 0;
   text-transform: lowercase;
 }
 
-#header p {
-  color: var(--dark-brown);
-  font-size: 12px;
-  font-weight: bold;
-  margin: 0;
+/* Navigation */
+#navigation {
+  background: var(--orange);
+  display: flex;
+  border-bottom: 1px solid var(--black);
 }
 
-#page {
-  background: var(--orange);
-  height: 400px;
-  display: flex; /* Make sidebar and content sit side-by-side */
-  border-left: 1px solid var(--black);
+#navigation a {
+  width: 110px;
+  height: 42px;
+  padding: 12px 0 0 15px;
+  color: var(--black);
+  text-decoration: none;
   border-right: 1px solid var(--black);
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 13px;
+  background: var(--orange);
 }
+
+#navigation a:last-child {
+  border-right: none;
+}
+
+#navigation a:hover {
+  /* background: var(--brown); */
+color: #FFFFFF;
+  text-decoration: underline;
+}
+
+#navigation a.active {
+  font-size: 16px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background: url(images/img04.jpg);
+  background-size: 100% 115%; /* Stretch to fill button */
+  color: #FFFFFF;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+/* Content */
+#content {
+  background: #fff;
+  padding: 25px 30px;
+  min-height: 400px;
+}
+
+
+.picture-frame {
+  background: var(--brown);        /* content */
+  padding: 15px;                   /* content space */
+  border: 10px solid var(--orange); /* yellow mat */
+  outline: 1px solid var(--black);  /* black frame */
+}
+
+
+
+
+
+
+
+#footer {
+  background: var(--debug-footer);
+  height: 50px;
+  border: 1px solid gray;
+}
+
 
 /* Sidebar */
 #sidebar {
   background: var(--orange);
-  width: 200px; /* Fixed width for sidebar */
-  flex-shrink: 0; /* Don't let it shrink */
+  /* width: 150px; /* Fixed width for sidebar */ */
+  /* flex-shrink: 0; /* Don't let it shrink */ */
   color: var(--dark-brown);
-  padding: 40px 0 0 0px;
-  margin-bottom: 10px;
+  /* padding-top: 40px; */
 }
 
 #sidebar .active {
@@ -148,15 +165,131 @@ a:hover {
   text-decoration: none; /* Remove underline on hover */
 }
 
-#content {
-  background: var(--brown);
-  border-top: 1px solid var(--black);
-  border-left: 1px solid var(--black);
-  flex: 1; /* Take up remaining space */
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: var(--black);
+  margin: 0 0 10px 0;
+  font-weight: normal;
 }
 
-#footer {
-  background: var(--debug-footer);
-  height: 50px;
-  border: 1px solid gray;
+h1 {
+  font-size: 2.5em;
+  letter-spacing: -2px;
+  /* position: relative; */
 }
+
+/*
+* To get the effect of the box floating next to the text, 
+* we made the h1 relative.
+*/
+/* h1::before { */
+/*   content: ""; */
+/*   display: block; */
+/*   position: absolute; */
+/*   width: 6px; */
+/*   height: 30px; */
+/*   background: var(--black); */
+/*   transform: translateX(-40px); */
+/* } */
+
+
+h2 {
+  font-size: 1.8em;
+  letter-spacing: -1px;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+p {
+  line-height: 1.5;
+  margin: 0 0 15px 0;
+}
+
+a {
+  color: var(--brown);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Basic container */
+#wrapper {
+  width: 800px;
+  margin: 0 auto;
+  min-height: 500px;
+}
+
+
+
+/* /* Home page specific styles */ */
+/* .profile-header { */
+/*   margin-bottom: 25px; */
+/*   position: relative; */
+/*   min-height: 180px; */
+/* } */
+/**/
+/* .profile-info { */
+/*   padding-right: 200px; /* Space for photo */ */
+/* } */
+/**/
+/* .profile-info h1 { */
+/*   font-size: 2.2em; */
+/*   margin-bottom: 5px; */
+/* } */
+/**/
+/* .profile-info .position { */
+/*   font-weight: bold; */
+/*   font-size: 1.1em; */
+/*   color: #000; */
+/*   margin-bottom: 5px; */
+/* } */
+/**/
+/* .profile-info .affiliation { */
+/*   color: #666; */
+/*   margin-bottom: 15px; */
+/* } */
+/**/
+/* .profile-photo { */
+/*   position: absolute; */
+/*   top: 0; */
+/*   right: 0; */
+/*   width: 160px; */
+/*   height: auto; */
+/*   border: 3px solid var(--brown); */
+/* } */
+/**/
+/* .quote-box { */
+/*   background: var(--orange); */
+/*   border: 2px solid var(--black); */
+/*   padding: 15px 20px; */
+/*   margin: 25px 0; */
+/*   font-style: italic; */
+/*   color: var(--dark-brown); */
+/* } */
+/**/
+/* .quote-box cite { */
+/*   font-style: normal; */
+/*   font-weight: bold; */
+/*   color: var(--black); */
+/*   display: block; */
+/*   margin-top: 8px; */
+/* } */
+/**/
+/* .callout { */
+/*   background: var(--orange); */
+/*   border: 2px solid var(--black); */
+/*   padding: 18px; */
+/*   margin: 25px 0; */
+/* } */
+/**/
+/* .callout h3 { */
+/*   color: var(--brown); */
+/*   margin: 0 0 12px 0; */
+/*   font-size: 1.2em; */
+/* } */

@@ -1,5 +1,3 @@
-/* Step 1: Just get the background right */
-
 :root {
   /* Site colors */
   --bg-main: #F5E5C5;
@@ -123,14 +121,17 @@ footer {
   height: 20px;
 }
 
-.picture-frame {
-  background: var(--brown);        /* content */
-  padding: 15px;                   /* content space */
-  border: 10px solid var(--orange); /* yellow mat */
-  outline: 1px solid var(--black);  /* black frame */
+/* Basic container */
+#wrapper {
+  width: 800px;
+  margin: 0 auto;
+  background: url(images/img03.jpg) repeat-y left top;
+  border-left: 1px solid var(--black);
+  border-right: 1px solid var(--black);
+  min-height: 500px;
 }
 
-/* Home/About page styles */
+/* About page styles */
 .about-page {
   max-width: 700px;
 }
@@ -196,16 +197,3 @@ a {
 a:hover {
   text-decoration: underline;
 }
-
-/* Basic container */
-#wrapper {
-  width: 800px;
-  margin: 0 auto;
-  background: url(images/img03.jpg) repeat-y left top;
-  border-left: 1px solid var(--black);
-  border-right: 1px solid var(--black);
-  min-height: 500px;
-}
-
-
-

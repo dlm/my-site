@@ -27,8 +27,3 @@ title = 'David L Millman'
     name = "CV"
     url = "/cv/"
     weight = 20
-
-[[menus.main]]
-    name = "Contact"
-    url = "/contact/"
-    weight = 30

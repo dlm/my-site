@@ -16,6 +16,16 @@
   --black: #000;
   --gray: #CDCDCD;
   --white: #FFFFFF;
+
+  /* Typography scale */
+  --font-size-small: 0.75rem;    /* 12px - navigation */
+  --font-size-base: 1rem;        /* 16px - body/content */
+  --font-size-medium: 0.875rem;  /* 14px - nav active */
+  --font-size-large: 1.125rem;   /* 18px */
+  --font-size-xl: 2.25rem;       /* 36px - site title */
+  --font-size-h1: 2.5rem;        /* 40px */
+  --font-size-h2: 1.8rem;        /* ~29px */
+  --font-size-h3: 1.2rem;        /* ~19px */
 }
 
 body {
@@ -54,7 +64,7 @@ body {
 
 #header .site-title {
   color: var(--black);
-  font-size: 36px;
+  font-size: var(--font-size-xl);
   margin: 0 0 10px 0;
   text-transform: lowercase;
 }
@@ -75,7 +85,7 @@ body {
   text-decoration: none;
   transition: background 0.2s;
   display: flex;
-  font-size: 12px;
+  font-size: var(--font-size-small);
   background: rgba(255, 255, 255, 0.3);
 }
 
@@ -85,7 +95,7 @@ body {
 }
 
 #navigation a.active {
-  font-size: 14px;
+  font-size: var(--font-size-medium);
   background: url(images/img04.jpg);
   background-size: 100% 100%;
   color: var(--white);
@@ -125,7 +135,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: var(--font-size-h1);
   letter-spacing: -2px;
   /* position: relative; */
 }
@@ -146,12 +156,12 @@ h1 {
 
 
 h2 {
-  font-size: 1.8em;
+  font-size: var(--font-size-h2);
   letter-spacing: -1px;
 }
 
 h3 {
-  font-size: 1.2em;
+  font-size: var(--font-size-h3);
 }
 
 p {

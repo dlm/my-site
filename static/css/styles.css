@@ -14,15 +14,15 @@
   --brown: #B64926;
   --dark-brown: #5C1600;
   --black: #000;
-  --gray: #ABABAB;
+  --gray: #CDCDCD;
+  --white: #FFFFFF;
 }
 
 body {
   margin: 20px 0 0 0;
   padding: 0;
   background: var(--bg-main) url(images/img01.jpg) repeat left top;
-  font-family: "Trebuchet MS", Arial, sans-serif;
-  font-size: 13px;
+  font-family: Georgia, "Times New Roman", Times, serif;
   color: var(--gray);
 }
 
@@ -52,11 +52,19 @@ body {
   text-transform: lowercase;
 }
 
+#header .site-title {
+  color: var(--black);
+  font-size: 36px;
+  margin: 0 0 10px 0;
+  text-transform: lowercase;
+}
+
 /* Navigation inside header */
 #navigation {
   display: flex;
   gap: 5px;
   margin-bottom: 10px;
+  font-family: "Trebuchet MS", Arial, sans-serif;
 }
 
 #navigation a {
@@ -72,25 +80,25 @@ body {
 }
 
 #navigation a:hover {
-  color: #FFFFFF;
+  color: var(--white);
   text-decoration: underline;
 }
 
 #navigation a.active {
   font-size: 14px;
-  font-family: Georgia, "Times New Roman", Times, serif;
   background: url(images/img04.jpg);
   background-size: 100% 100%;
-  color: #FFFFFF;
+  color: var(--white);
   font-weight: normal;
   text-decoration: none;
 }
 
 /* Content */
 #content {
-  background: #fff;
+  background: var(--brown);
   padding: 25px 30px;
   min-height: 400px;
+  font-size: 1rem;
 }
 
 .picture-frame {
@@ -111,7 +119,6 @@ body {
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-  font-family: Georgia, "Times New Roman", Times, serif;
   color: var(--black);
   margin: 0 0 10px 0;
   font-weight: normal;

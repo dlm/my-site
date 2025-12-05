@@ -1,33 +1,8 @@
 {{ define "main" }}
-  <div class="profile-header">
-    <div class="profile-info">
-      <h1>{{ .Params.name }}</h1>
-      <p class="position">{{ .Params.position }}</p>
-      <p class="affiliation">
-        <a href="#">{{ .Params.affiliation }}</a><br>
-        {{ .Params.university }}
-      </p>
+  <div class="about-page">
+    <img src="{{ .Params.photo | relURL }}" alt="David L. Millman" class="headshot">
+    <div class="bio-content">
+      {{ .Content }}
     </div>
-
-    <img src="{{ .Params.photo | relURL }}" alt="{{ .Params.name }}" class="profile-photo">
-  </div>
-
-  <div class="quote-box">
-    {{ .Params.quote.text }}<br>
-    <cite>- {{ .Params.quote.author }}</cite>
-  </div>
-
-  {{ range .Params.callouts }}
-    <div class="callout">
-      <h3>{{ .title }}</h3>
-      <p>{{ .content | markdownify }}</p>
-    </div>
-  {{ end }}
-
-
-  <div class="callout"> </div>
-
-  <div class="intro">
-    {{ .Content }}
   </div>
 {{ end }}

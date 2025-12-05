@@ -14,7 +14,7 @@ title = 'David L Millman'
 
 
 [[menus.main]]
-    name = "Home"
+    name = "About"
     url = "/"
     weight = 1
 

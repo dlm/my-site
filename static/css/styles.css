@@ -7,7 +7,7 @@
   --brown: #B64926;
   --dark-brown: #5C1600;
   --black: #000;
-  --gray: #CDCDCD;
+  --gray: #E0E0E0;
   --white: #FFFFFF;
 
   /* Typography scale */
@@ -130,8 +130,20 @@ footer {
   outline: 1px solid var(--black);  /* black frame */
 }
 
+/* Home/About page styles */
+.about-page {
+  max-width: 700px;
+}
 
-
+.headshot {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 3px solid var(--orange);
+  float: right;
+  margin: 0 0 20px 20px;
+}
 
 
 /* Typography */

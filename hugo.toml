@@ -4,6 +4,14 @@ title = 'David L Millman'
 [params]
     tagline = 'Some wity tagline'
 
+[params.social]
+    email = "dave@millman.us"
+    orcid = "0000-0003-4112-3026"
+    linkedin = "dlm0"
+    github = "dlm"
+    googlescholar = "UkEzX6UAAAAJ"
+    twitter = "dlmillman"
+
 
 [[menus.main]]
     name = "Home"

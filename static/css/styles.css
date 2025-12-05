@@ -36,48 +36,41 @@ body {
   color: var(--gray);
 }
 
-#wrapper {
-  width: 800px;
-  margin: 0 auto;
-  background: url(images/img03.jpg) repeat-y left top;
-  border-left: 1px solid var(--black);
-  border-right: 1px solid var(--black);
-}
-
-#header {
+/* Header */
+header {
   background: var(--orange) url(images/banner.jpg) no-repeat right top;
   border-top: 1px solid var(--black);
   border-bottom: 1px solid var(--black);
 }
 
-.header-content {
-  padding-left: 35px;
-  padding-top: 15px;
-}
-
-#header h1 {
+header h1 {
   color: var(--black);
   font-size: 36px;
   margin: 0 0 10px 0;
   text-transform: lowercase;
 }
 
-#header .site-title {
+header .header-content {
+  padding-left: 35px;
+  padding-top: 15px;
+}
+
+header .site-title {
   color: var(--black);
   font-size: var(--font-size-xl);
   margin: 0 0 10px 0;
   text-transform: lowercase;
 }
 
-/* Navigation inside header */
-#navigation {
+/* Navigation */
+nav {
   display: flex;
   gap: 5px;
   margin-bottom: 10px;
   font-family: "Trebuchet MS", Arial, sans-serif;
 }
 
-#navigation a {
+nav a {
   width: 85px;
   height: 28px;
   padding: 8px 0 0 10px;
@@ -89,12 +82,12 @@ body {
   background: rgba(255, 255, 255, 0.3);
 }
 
-#navigation a:hover {
+nav a:hover {
   color: var(--white);
   text-decoration: underline;
 }
 
-#navigation a.active {
+nav a.active {
   font-size: var(--font-size-medium);
   background: url(images/img04.jpg);
   background-size: 100% 100%;
@@ -103,13 +96,54 @@ body {
   text-decoration: none;
 }
 
-/* Content */
-#content {
+/* main */
+main {
   background: var(--brown);
   padding: 25px 30px;
   min-height: 400px;
   font-size: 1rem;
 }
+
+/* footer */
+footer {
+  padding: 20px 0;
+  text-align: center;
+  color: var(--brown);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brown);
+  transition: color 0.2s ease;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: var(--dark-brown);
+}
+
+.social-links svg {
+  width: 20px;
+  height: 20px;
+}
+
+#wrapper {
+  width: 800px;
+  margin: 0 auto;
+  background: url(images/img03.jpg) repeat-y left top;
+  border-left: 1px solid var(--black);
+  border-right: 1px solid var(--black);
+}
+
 
 .picture-frame {
   background: var(--brown);        /* content */
@@ -118,11 +152,6 @@ body {
   outline: 1px solid var(--black);  /* black frame */
 }
 
-#footer {
-  height: 50px;
-  padding: 10px;
-  text-align: center;
-}
 
 
 

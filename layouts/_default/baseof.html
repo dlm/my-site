@@ -10,20 +10,22 @@
 <body>
   <div id="wrapper">
     <header id="header">
-      <h1>{{ .Site.Title }}</h1>
+      <div class="header-content">
+        <h1>{{ .Site.Title }}</h1>
+        <nav id="navigation">
+          {{ range .Site.Menus.main }}
+            <a href="{{ .URL | relURL }}" {{ if eq $.RelPermalink .URL }} class="active" {{ end }}>
+              {{ .Name }}
+            </a>
+          {{ end }}
+        </nav>
+      </div>
     </header>
-
-    <nav id="navigation">
-      {{ range .Site.Menus.main }}
-        <a href="{{ .URL | relURL }}" {{ if eq $.RelPermalink .URL }} class="active" {{ end }}>
-          {{ .Name }}
-        </a>
-      {{ end }}
-    </nav>
 
     <main id="content">
       {{ block "main" . }}{{ end }}
     </main>
+
   </div>
 
   <footer id="footer">

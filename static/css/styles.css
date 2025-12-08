@@ -34,7 +34,6 @@ header {
   border-bottom: 1px solid var(--black);
 }
 
-
 header .header-content {
   padding-left: 35px;
   padding-top: 15px;
@@ -47,15 +46,15 @@ header .site-title {
   text-transform: lowercase;
 }
 
-/* Navigation */
-nav {
+/* Header Navigation */
+header nav {
   display: flex;
   gap: 5px;
   margin-bottom: 10px;
   font-family: "Trebuchet MS", Arial, sans-serif;
 }
 
-nav a {
+header nav a {
   width: 85px;
   height: 28px;
   padding: 8px 0 0 10px;
@@ -67,12 +66,7 @@ nav a {
   background: rgba(255, 255, 255, 0.3);
 }
 
-nav a:hover {
-  color: var(--white);
-  text-decoration: underline;
-}
-
-nav a.active {
+header nav a.active {
   font-size: var(--font-size-medium);
   background: url(images/img04.jpg);
   background-size: 100% 100%;
@@ -157,23 +151,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: var(--font-size-h1);
   letter-spacing: -2px;
-  /* position: relative; */
 }
-
-/*
-* To get the effect of the box floating next to the text, 
-* we made the h1 relative.
-*/
-/* h1::before { */
-/*   content: ""; */
-/*   display: block; */
-/*   position: absolute; */
-/*   width: 6px; */
-/*   height: 30px; */
-/*   background: var(--black); */
-/*   transform: translateX(-40px); */
-/* } */
-
 
 h2 {
   font-size: var(--font-size-h2);
@@ -190,10 +168,69 @@ p {
 }
 
 a {
-  color: var(--brown);
+  color: var(--orange);
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
+  color: var(--white);
 }
+
+/* Blog styles */
+.blog-list {
+  max-width: 700px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.blog-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  border-bottom: 1px solid var(--dark-brown);
+}
+
+.blog-item:last-child {
+  border-bottom: none;
+}
+
+.blog-item .post-title {
+  flex-grow: 1;
+  font-weight: bold;
+  font-size: var(--font-size-large);
+}
+
+.blog-item .post-date {
+  margin-left: 20px;
+  flex-shrink: 0;
+}
+
+/* Single blog post */
+.blog-post {
+  max-width: 700px;
+}
+
+.blog-post h1 {
+  margin-bottom: 10px;
+}
+
+.blog-post .post-date {
+  color: var(--dark-brown);
+  margin-bottom: 30px;
+}
+
+.post-content {
+  margin-bottom: 40px;
+}
+
+.blog-post nav {
+  padding-top: 30px;
+  border-top: 1px solid var(--dark-brown);
+  font-weight: normal;
+  white-space: nowrap;
+  text-decoration: none;
+}
+

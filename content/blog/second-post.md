@@ -1,6 +1,6 @@
 ---
-title: "First Post"
-date: 2025-12-02
+title: "Second Post"
+date: 2025-12-04
 ---
 This is a sample blog [post](https://example.com).
 

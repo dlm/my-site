@@ -46,10 +46,38 @@ static/css/styles.css     # Single CSS file with variables
 hugo.toml                 # Site config with social links
 ```
 
+### Blog System
+
+**Implementation**: Full blog functionality with Hugo's content management
+**Structure**: 
+- `content/blog/` directory for blog posts
+- `layouts/blog/list.html` - clean table-like list of posts (title + date)
+- `layouts/blog/single.html` - individual post template
+
+**Design Decisions**:
+- Table-like blog list similar to Mitchell Hashimoto's writing page
+- Semantic HTML: `<ul>` and `<li>` for blog list instead of `<article>` elements
+- Minimal design - no summaries or "read more" links, just title and date
+- Hugo's Chroma for syntax highlighting in code blocks
+
+**Styling**:
+- Code blocks: Dark brown background with orange left border accent
+- Inline code: Subtle translucent dark brown background
+- Typography: Consistent use of CSS variables for all font sizing
+- Color inheritance: `main` element sets base text color once
+- Accessibility: Focus states matching hover states for keyboard navigation
+
+### CSS Architecture Improvements
+
+**Variables**: Added `--dark-brown-subtle` for translucent backgrounds
+**Inheritance**: Centralized color setting in `main` element, removed repetitive declarations
+**Consistency**: All font sizes use CSS variables instead of hard-coded values
+**Accessibility**: Added `:focus` states for keyboard navigation
+
 ### Next Steps
 
 - Responsive design (currently desktop-focused with 800px wrapper)
-- Blog section setup
+- Image handling in blog posts
 - Test responsive behavior across devices
 
 ### Color Scheme

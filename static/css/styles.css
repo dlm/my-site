@@ -4,6 +4,7 @@
   --orange: #FFB03B;
   --brown: #B64926;
   --dark-brown: #5C1600;
+  --dark-brown-subtle: rgba(92, 22, 0, 0.4);
   --black: #000;
   --gray: #F0F0F0;
   --white: #FFFFFF;
@@ -81,6 +82,7 @@ main {
   padding: 25px 30px;
   min-height: 400px;
   font-size: 1rem;
+  color: var(--gray);
 }
 
 /* footer */
@@ -140,10 +142,8 @@ footer {
   margin: 0 0 20px 20px;
 }
 
-
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-  color: var(--black);
   margin: 0 0 10px 0;
   font-weight: normal;
 }
@@ -218,12 +218,11 @@ a:hover {
 }
 
 .blog-post .post-date {
-  color: var(--dark-brown);
   margin-bottom: 30px;
 }
 
 .post-content {
-  margin-bottom: 40px;
+  margin: 40px 0px;
 }
 
 .blog-post nav {
@@ -232,5 +231,47 @@ a:hover {
   font-weight: normal;
   white-space: nowrap;
   text-decoration: none;
+}
+
+/* Inline code blocks */
+.post-content code {
+  background: var(--dark-brown-subtle);
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+}
+
+/* Code blocks */
+.post-content pre {
+  padding: 20px;
+  border-radius: 5px;
+  overflow-x: auto;
+  margin: 20px 0;
+  border-left: 4px solid var(--orange);
+}
+
+.post-content pre code {
+  padding: 0;
+}
+
+/* Blog post headings */
+.post-content h2 {
+  margin: 40px 0 20px 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--orange);
+}
+
+.post-content h3 {
+  margin: 30px 0 15px 0;
+}
+
+/* Blockquotes */
+.post-content blockquote {
+  background: rgba(255, 176, 59, 0.1);
+  border-left: 4px solid var(--orange);
+  padding: 15px 20px;
+  margin: 20px 0;
+  font-style: italic;
 }
 

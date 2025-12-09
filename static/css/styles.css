@@ -81,7 +81,7 @@ main {
   background: var(--brown);
   padding: 25px 30px;
   min-height: 400px;
-  font-size: 1rem;
+  font-size: var(--font-size-base);
   color: var(--gray);
 }
 
@@ -172,7 +172,8 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+a:hover,
+a:focus {
   text-decoration: underline;
   color: var(--white);
 }
@@ -239,7 +240,7 @@ a:hover {
   padding: 2px 4px;
   border-radius: 3px;
   font-family: 'Courier New', monospace;
-  font-size: 0.9em;
+  font-size: var(--font-size-small);
 }
 
 /* Code blocks */

@@ -12,6 +12,8 @@ title = 'David L Millman'
     googlescholar = "UkEzX6UAAAAJ"
     twitter = "dlmillman"
 
+[markup.highlight]
+    style = "catppuccin-frappe"
 
 [[menus.main]]
     name = "About"

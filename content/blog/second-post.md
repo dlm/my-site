@@ -57,12 +57,16 @@ error, you always can. For example, via error wrapping:
 
 ```go
 func doSomeDBThing(db *sql.DB) (retErr error) {
-...
-defer func() {
-    rollbackErr := tx.Rollback()
-    if retErr != nil && rollback != nil {
-       retErr = fmt.Errorf("rolling back transaction: %w", err)
-    }
+    ...
+	defer func() {
+		if rollbackErr := tx.Rollback(); rollbackErr != nil {
+			retErr = errors.Join(
+				retErr,
+				fmt.Errorf("rolling back transaction: %w", rollbackErr),
+			)
+		}
+	}()
+    ...
 }
 ```
 

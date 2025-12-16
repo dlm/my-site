@@ -3,8 +3,28 @@ title: "About"
 photo: "images/headshot.jpg"
 ---
 
-I'm an Assistant Professor at Montana State University where I spend my days convincing computers to solve geometric puzzles that would make Euclid weep. My research focuses on computational geometry, which is basically getting machines to understand shapes better than most humans can parallel park.
+I’m David Millman, a computer scientist and systems engineer.
 
-Before landing in beautiful Montana, I collected degrees like Pokemon cards and published papers that approximately 12 people have read (including my mom, twice). I'm particularly passionate about making algorithms fast enough that you won't have time to make coffee while they run, though I make no promises about preventing you from making coffee anyway.
+I work at the intersection of algorithms, distributed systems, and developer
+tooling. My recent work focuses on how software systems can verify what they
+interact with, rather than relying on assumptions about their environment. In
+practice, this means building systems that can reason about the authenticity
+and integrity of the data, tools, and execution environments they depend on.
 
-When I'm not debugging code that somehow turned a perfect circle into what can only be described as "geometric abstract art," you'll find me hiking Montana's trails, where the only computational complexity I worry about is whether I packed enough snacks. I also enjoy explaining to dinner party guests why computational geometry is definitely more exciting than it sounds (spoiler: it usually isn't, but the snacks make up for it).
+I was previously a professor at [Montana State
+University](https://www.cs.montana.edu/), where my research focused on
+algorithms, computational geometry, and topological data analysis. That work
+continues to shape how I approach systems today: explicit guarantees, clear
+abstractions, and an emphasis on correctness and rigor.
+
+## This site
+
+This site is a home for notes, experiments, and writing. It documents ideas,
+systems, and lessons as they evolve rather than presenting a fixed point of
+view. It’s intentionally lightweight, closer to a public notebook than a
+polished portfolio.
+
+## Contact
+
+You can find me on [GitHub](https://github.com/dlm), or reach me by email at
+[dave@millman.us](mailto:dave@millman.us).

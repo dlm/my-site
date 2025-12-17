@@ -1,4 +1,4 @@
 ---
-title: "CV"
+title: "Projects"
 ---
-CV content coming soon.
+Projects content coming soon.

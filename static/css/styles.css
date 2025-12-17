@@ -117,6 +117,26 @@ footer {
   height: 20px;
 }
 
+/* Footer links */
+.footer-links {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: var(--brown);
+  font-size: var(--font-size-small);
+  font-weight: bold;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+  color: var(--dark-brown);
+  text-decoration: underline;
+}
+
 /* Basic container */
 #wrapper {
   width: 800px;

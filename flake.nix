@@ -16,6 +16,7 @@
         buildInputs = [
           pkgs.git
           pkgs.hugo
+          pkgs.just
 
           pkgs.nixfmt-rfc-style
         ];

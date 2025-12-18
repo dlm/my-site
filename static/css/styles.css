@@ -134,8 +134,13 @@ footer {
 .footer-links a:hover,
 .footer-links a:focus {
   color: var(--dark-brown);
-  text-decoration: underline;
 }
+
+.footer-links a.active {
+  color: var(--dark-brown);
+  text-decoration: none;
+}
+
 
 /* Basic container */
 #wrapper {

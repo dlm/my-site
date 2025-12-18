@@ -31,3 +31,18 @@ title = 'David L Millman'
     name = "Writing"
     pageRef = "/blog"
     weight = 30
+
+[[menus.footer]]
+    name = "CV"
+    url = "./docs/millman-cv.pdf"
+    weight = 10
+
+[[menus.footer]]
+    name = "Publications"
+    url = "./docs/millman.bib"
+    weight = 20
+
+[[menus.footer]]
+    name = "Colophon"
+    pageRef = "/colophon/"
+    weight = 30

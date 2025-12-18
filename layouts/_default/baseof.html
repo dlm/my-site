@@ -74,9 +74,15 @@
 
     <!-- Additional Links -->
     <div class="footer-links">
-      <a href="{{ .Site.Params.cv }}">CV</a>
-      <a href="{{ .Site.Params.bibtex }}">Publications</a>
-      <a href="{{ .Site.Params.colophon }}">Colophon</a>
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.footer }}
+      <a href="{{ .URL | relURL }}"
+         {{- if or ($currentPage.IsMenuCurrent .Menu .) ($currentPage.HasMenuCurrent .Menu .) }}
+           class="active"
+         {{- end }}>
+        {{ .Name }}
+      </a>
+      {{ end }}
     </div>
   </footer>
 

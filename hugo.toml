@@ -1,10 +1,6 @@
 baseURL = 'https://millman.us/'
 languageCode = 'en-us'
 title = 'David L Millman'
-[params]
-    cv = "./docs/millman-cv.pdf"
-    bibtex = "./docs/millman.bib"
-    colophon = "/colophon/"
 
 [params.social]
     email = "dave@millman.us"

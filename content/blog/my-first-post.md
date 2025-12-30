@@ -4,8 +4,11 @@ date: 2025-12-08
 draft: false
 ---
 
-Welcome to my new blog! I'm excited to share thoughts on computational geometry, academic life, and the occasional debugging adventure.
+Welcome to my new blog! I'm excited to share thoughts on computer science,
+software development and the occasional debugging adventure.
 
-This is where I'll write about research insights, teaching experiences, and maybe some stories about convincing computers to understand shapes (spoiler: it's harder than it sounds).
+This is where I'll write about technical insights, lessons learned,
+and personal discoveries that I think would be interesting to share.
 
-Stay tuned for more posts about algorithms, academia, and life in beautiful Montana!
+Stay tuned for more posts about algorithms, software, and maybe an occasional
+post about life in beautiful Montana!

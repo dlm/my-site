@@ -3,7 +3,8 @@ title: "Ignoring Transaction Rollback Errors in Golang"
 date: 2025-12-15
 ---
 
-(originally published 2023-04-01 on Medium)
+*Originally published 2023-04-01 on [Medium](https://medium.com/@dmillman/ignoring-transaction-rollback-errors-in-golang-a51fa375ffde).
+The version presented here has minor typographical corrections.*
 
 A few days ago I was working on a pull request that interacted with a
 relational database in go. In the go

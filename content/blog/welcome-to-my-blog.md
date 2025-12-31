@@ -1,7 +1,6 @@
 ---
 title: "Welcome to My Blog"
 date: 2025-12-08
-draft: false
 ---
 
 Welcome to my new blog! I'm excited to share thoughts on computer science,

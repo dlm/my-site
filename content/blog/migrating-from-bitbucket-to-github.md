@@ -1,41 +1,49 @@
 ---
-title: "Migrating my MSU Courses Material from Bitbuckt to Github"
+title: "Migrating my MSU Courses Material from Bitbucket to GitHub"
 date: 2025-12-22
-draft: true
 ---
 
-When I started at MSU I had this thought that since I was teaching at a public 
-univerity and the goal was to educate the children of Montana,
-it seemed wrong for me to lock the course content away behind a 
-course management system such as Brightspace.  Moreover, I was teaching
-CS courses.  What better a way to get the students to be comfortable with 
-modern tools than by managing all course materials (other than grades), via 
-git repositories.  (I will save how I organized this for a separate post.)
-But the main point was that I maintained an authortative version of the repo publically. 
-It had all the material, assignments, etc.  Originally, I kept them all in 
-https://bitbucket.org/msu-cs/workspace/repositories/.  I chose bitbutcket because 
-at the time it also supported mercurial, and my main collaborator perfered mercuruial to 
-git.  (Personally, I liked mercurial but since the industry seemed to be going to git, I thought it was better 
-for my courses to use git. ... but I digress).
-When it became clear that the students wanted to use not just git, but github, 
-I looked around and was able to claim https://github.com/msu (eat your heart out Michigan State!!)
+A while back, I was a professor in the Computer Science department at Montana
+State University (MSU).  Because MSU is a public university in which the
+mission was to educate the people of Montana, I thought it was wrong to lock
+the course content away behind a course management system such as Brightspace.
+Moreover, I was teaching courses in CS.  So, what better way to get students
+comfortable with modern tools than by managing all course materials (other than
+grades) via git.
 
-Well, a few days ago, I opened my email to find that bitbucket was planning on
-deleting "inacive" repos.  That was kind of annoying to me because while I am
-not actively working on those classes, I do like that the material is available
-and other factuly can point students to those resources for courses that are
-not longer taught since I left (for example, Computer Graphics or the Graduate
-Level Database course). 
+I maintained a public authoritative version of the repo containing the course
+materials. Materials included assignments, my notes, answers (if appropriate),
+code samples, etc. Originally, I hosted the repos on Bitbucket in the [msu-cs
+workspace](https://bitbucket.org/msu-cs/workspace/repositories/). At the time,
+Bitbucket also supported mercurial and half of my collaborators used
+mercurial, which made it a natural choice.
 
-So, I decided to migrate all my old course material to github.  Since I am 
-(slowly) migrating to nushell, I thought this was a great opportunity to 
-write my first "real" nushell script.  I have to say, it was wonderful!
-While yes, the script is simple, just read in a list of repos, 
-clone each repo as a mirror, create a repo on github and push the mirror.
-But, the code reads like an actual program with the ergonomics of a script
-and it has types!  
+Over time, Bitbucket dropped mercurial support and it became clear that GitHub
+was going to "win". Moreover, students wanted to use GitHub specifically. So, I
+decided to start posting my course materials on GitHub.  By some amazing luck
+(and persistence), I was able to claim the [MSU
+handle](https://github.com/msu). (Eat your heart out Michigan State!!)
 
-... todo: say some more things that I liked to bring it home.
+Well, a few days ago, I opened my email to find that Bitbucket was planning on
+deleting "inactive" repos.  That is annoying because while I am not actively
+working on those classes they are still used. Specifically, they serve as a
+resource in at least two cases that I know of. First, a previous Graphics
+student got a job working on a rendering engine and he returned to the course
+material as he was working on particular projects.  Second, a current faculty
+member had a funded project that had a heavy visualization component that could
+not be supported by out-of-the-box viz tools. That faculty member had no
+background in graphics and so he pointed his student to my course materials.
 
-Here is a link to the code if you need to do the same thing.
+So, I decided to migrate all my old course material to GitHub.  Since I am
+(slowly) migrating to nushell, I thought this was a great opportunity to write
+my first "real" nushell script.  I have to say, nu is wonderful! Yes, the
+script is simple---read a list of repos, clone each repo as a mirror, create a
+repo on GitHub, and push the mirror---but the code reads like an actual program
+with the ergonomics of a script.  Added bonus: function arguments can have types.
+
+I have a few other small projects that I have been meaning to create that seem
+like great options for nu.  So stay tuned for more as I experiment with nu.
+
+Here is the [code](https://github.com/dlm/util/tree/master/bb-to-github).
+Perhaps it can be a starting point for you if you need to do the same thing.
 

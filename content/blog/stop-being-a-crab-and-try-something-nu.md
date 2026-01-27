@@ -1,7 +1,6 @@
 ---
 title: "Stop Being a Crab and Try Something Nu"
 date: 2026-01-15
-draft: true
 ---
 
 I have been doing Computer Science for a while now.  Specifically, my first

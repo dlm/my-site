@@ -23,18 +23,28 @@ But, this year, I decided to take some time and so I figured, why not spend
 some cycles on projects that have been rolling around in my head for a while.
 And, if I have the time, why not take advantage of it and use a new language?
 
-But does it matter?  If I asked most of my colleagues from academia, they would
-say that language choice is not important.  After all, all programs ultimately
-produce instructions for a CPU.  But from going back and forth between academia
-and industry, I don't agree.  I think like a human language, a programming
-language can have a significant impact on how one thinks about problem solving.
-And this is backed up by the literature. **TODO: add references to 3
-papers and for each paper a one sentence summary.**
+But does it matter?  If I asked my more theory-minded colleagues from academia,
+they would say that language choice is not important.  After all, all programs
+ultimately produce instructions for a CPU.  But from going back and forth
+between academia and industry, I don't agree.  I think like a human language, a
+programming language can have a significant impact on how one thinks about
+problem solving.
 
-So yeah, language does matter.  But, what to choose?  For the first time
-in a long time, I get to choose based purely on my interests. Previously, I had
-to consider the learning curve for my students or the team I was leading. But
-this time, why not choose languages purely because I want to?
+Interestingly, back in 2001, the ACM published [curriculum
+recommendations](https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2001.pdf)
+that discussed using various methodologies for teaching computer science.
+Moreover, significant work has gone into studying learning outcomes with
+[functional-first](https://www2.ccs.neu.edu/racket/pubs/cse2003-fffk.pdf),
+[imperative-first](https://cs.stanford.edu/people/eroberts/papers/SIGCSE-1993/UsingCInCS1.pdf)
+and [object-first](https://dl.acm.org/doi/pdf/10.1145/611892.611966)
+approaches. Including some [comparisons between
+methodologies](https://dl.acm.org/doi/abs/10.5555/364132.364177). But there is
+little work on how these languages affect problem solving and design on larger
+scales with intermediate and advanced developers. So it seems that language
+does matter (at least when getting started).  But, what to choose?  For the
+first time in a long time, I get to choose based purely on my interests.
+Previously, I had to consider the learning curve for my students or the team I
+was leading. But this time, why not choose languages purely because I want to?
 
 Well, I have always really liked functional programming. In college, back in the
 early 00s, I learned SML and Haskell and in graduate school, I did some work

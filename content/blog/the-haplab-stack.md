@@ -1,7 +1,6 @@
 ---
 title: "The Haplab Stack"
 date: 2026-03-31
-draft: true
 ---
 
 Over the past month, I have been trying to form my own opinion on multi-agent

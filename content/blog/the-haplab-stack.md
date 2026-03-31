@@ -83,8 +83,9 @@ Feel free to play around with it; it is kind of fun for a few minutes.
 
 ## Versions
 
-Codex version 0.63.0 w/ gpt-5.1-codex-max
-Claude version v2.0.50 w/ Sonnet 4.5
-Amp version 0.0.1763985694-g51fa6e
-Sidecar version 0.77.0
-TD version 0.41.0
+In this experiment, I used the following versions:
+* Codex version 0.63.0 w/ gpt-5.1-codex-max
+* Claude version v2.0.50 w/ Sonnet 4.5
+* Amp version 0.0.1763985694-g51fa6e
+* Sidecar version 0.77.0
+* TD version 0.41.0

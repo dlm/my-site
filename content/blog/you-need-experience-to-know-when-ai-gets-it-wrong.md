@@ -1,5 +1,5 @@
 ---
-title: "Reception of LLM Generated Code"
+title: "You Need Experience to Know When AI Gets It Wrong"
 date: 2026-02-08
 draft: true
 ---

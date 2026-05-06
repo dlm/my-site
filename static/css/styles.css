@@ -270,6 +270,7 @@ a:focus {
 
 /* Code blocks */
 .post-content pre {
+  background: var(--dark-brown-subtle);
   padding: 20px;
   border-radius: 5px;
   overflow-x: auto;
@@ -279,6 +280,7 @@ a:focus {
 
 .post-content pre code {
   padding: 0;
+  background: none;
 }
 
 /* Blog post headings */

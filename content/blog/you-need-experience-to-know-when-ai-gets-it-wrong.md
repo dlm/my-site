@@ -1,7 +1,6 @@
 ---
 title: "You Need Experience to Know When AI Gets It Wrong"
 date: 2026-02-08
-draft: true
 ---
 
 I had an interesting conversation with one of my colleagues at the end of last

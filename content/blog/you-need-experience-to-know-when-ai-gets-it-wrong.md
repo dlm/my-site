@@ -8,8 +8,8 @@ I had an interesting conversation with one of my colleagues at the end of last
 week. He was just trying claude code for the first time on a web project.  He
 is not a web developer, he doesn't have much experience with modern web
 development, and by his own admission, he is not interested in developing those
-skills. I found our discussion thought provoking because in the conversation, he
-mentioned that he was amazed by how good claude code was. But also 
+skills. I found our discussion thought-provoking because in the conversation, he
+mentioned that he was amazed by how good claude code was. He also
 shared a story about how he could not get an image cropped in the way he wanted.
 After fighting with the tool, he ended up using an image editor.  To me,
 this seems like a contradiction in the assessment of the utility of these
@@ -18,7 +18,7 @@ tools.
 But, I don't think my colleague is alone in his contradictory assessment. It
 feels like about half of the tech related posts I see on social media are from
 people with strongly held opinions about how amazing LLM based coding agents
-are. But, if I investigate my experiences and weight the few "influencers" that
+are. But, if I investigate my experiences and weigh the few "influencers" that
 I know are somewhat decent engineers, I see a different picture.  And to be
 frank, I think it may have something to do with experience.
 
@@ -29,7 +29,7 @@ is provided.)
 > Let's add a feature so that I can press a key combo while on container X.  The
 > key combo pops up a rofi window where I can see the list of workspaces.  I can
 > either select one workspace or type the name of a new workspace and the
-> container X will be sent to that workspace and we will moved to that workspace.
+> container X will be sent to that workspace and we will be moved to that workspace.
 
 This is a very simple script that would be very easy to write manually. But, to
 my surprise, the result was kind of "insane".  Here is the suggested
@@ -75,13 +75,13 @@ fi
 i3-msg --quiet "move container to workspace \"${choice//\"/\\\"}\"; workspace \"${choice//\"/\\\"}\"" >/dev/null
 ```
 
-Of particular note is the following two items.  First, the usage of variables
+Of particular note are the following two items.  First, the usage of variables
 for rofi. These are unnecessary and could just be inlined.  I am somewhat curious
 though why an LLM chose to factor out `rofi` and not `i3-msg`?
 Second, is the use of the python script embedded in the bash script.  Such
 a design requires fragile quoting and escaping. Crazy!
 
-There are a lot of ways to make this more "sane".  Some would be just use
+There are a lot of ways to make this more "sane".  Some would be to just use
 python (and not python and bash) or use `jq`.  Personally, I am on a nushell
 kick right now and so I suggested that we rewrite in nu.  That produced
 something that was much better:
@@ -133,7 +133,7 @@ wouldn't have enough experience (or maybe not enough confidence) to point out
 just how convoluted (and error prone) that code was.
 
 So not to be rude, but what I think I am observing is that a lot of the people
-speaking the loudest about how good LLMs based coding tool may lack the
+speaking the loudest about how good LLMs based coding tools may lack the
 experience to actually assess the utility of these tools. And perhaps we are
 seeing some sort of cognitive bias coming into play. I kind of liken it to a
 Dunning-Kruger-like effect (but maybe slightly different). I don't think I am
@@ -144,7 +144,7 @@ perceive significant improvement.
 
 So, my take on what is going on here is that most of the excitement is an issue
 of inexperience.  Yes, there are some great anecdotes but those tend to be
-working in conjunction with a very skilled engineers that are treating coding
+working in conjunction with very skilled engineers that are treating coding
 agents as yet another tool just like a sophisticated text editor, an LSP, or a
 debugger.  So yes, these tools are exciting, and hopefully it allows more
 people to build stuff, but I suspect that to really get the full benefit of it,

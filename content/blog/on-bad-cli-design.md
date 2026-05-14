@@ -1,7 +1,6 @@
 ---
 title: "On Bad CLI Design"
 date: 2026-05-14
-draft: true
 ---
 
 Yesterday (May 13, 2026), Anthropic announced that it will no longer consider
@@ -156,4 +155,3 @@ boundary does not.
 Either way, I guess I will have
 some updates to `ask`.  Maybe I can `ask claude how do you suggest I update
 ask?`.  But I better do that before June 15!
-

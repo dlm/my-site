@@ -142,10 +142,18 @@ claude chat
 claude api
 ```
 
-would be much easier to manage (and one could even have `claude` alias to
-`claude chat`).  But, here we are, where `-p` is described as an output flag
-that changes billing semantics.  Perhaps moving to this subcommand structure
-over a few iterations could
-have avoided this issue altogether.  But in either case, I guess I will have
+would be much easier to manage, and one could even have `claude` alias to
+`claude chat`.
+
+But here we are: `-p` is presented as an output or execution-mode flag, while
+also changing billing semantics. That violates the expectation that flags are
+orthogonal modifiers rather than hidden context switches.
+
+If Anthropic wanted to separate interactive chat from API-style usage, that is
+their call. But a subcommand boundary would have expressed that cleanly. A flag
+boundary does not.
+
+Either way, I guess I will have
 some updates to `ask`.  Maybe I can `ask claude how do you suggest I update
 ask?`.  But I better do that before June 15!
+

@@ -12,11 +12,11 @@ the use of the `claude -p` flag as part of a subscription usage.
 > the same and stay reserved for interactive use of Claude Code, Claude Cowork,
 > and Claude.
 
-For those unfamilar with this option it:
+For those unfamiliar with this option it:
 
-> -p, --print      Print response and exit (useful for pipes). Note: The
-> workspace trust dialog is skipped when Claude is run with the -p mode. Only
-> use this flag in directories you trust
+```bash
+-p, --print      Print response and exit (useful for pipes). Note: The workspace trust dialog is skipped when Claude is run with the -p mode. Only use this flag in directories you trust
+```
 
 It is my understanding that the reason for this change is because tools
 are using claude in a way that is not beneficial to Anthropic by using this
@@ -79,7 +79,7 @@ def "main claude" [
 }
 ```
 
-Which also allows me to `ask claude --contine` if the response requires
+Which also allows me to `ask claude --continue` if the response requires
 continuing in claude code. Great, so very simple. Now, let's get in to it.
 
 My gripe with this change is in design.  I think that in general, the

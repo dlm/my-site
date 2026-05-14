@@ -5,14 +5,14 @@ draft: true
 ---
 
 Yesterday (May 13, 2026), Anthropic announced that it will no longer consider
-the use of the `claude -p` flag as part of a subscription usage.
+the use of the `claude -p` flag against subscription usage limits.
 
 > Starting June 15, 2026, Claude Agent SDK and claude -p usage no longer counts
 > toward your Claude plan’s usage limits. Your subscription usage limits stay
 > the same and stay reserved for interactive use of Claude Code, Claude Cowork,
 > and Claude.
 
-For those unfamiliar with this option it:
+For those unfamiliar with this option, it:
 
 ```bash
 -p, --print      Print response and exit (useful for pipes). Note: The workspace trust dialog is skipped when Claude is run with the -p mode. Only use this flag in directories you trust
@@ -125,6 +125,7 @@ claude -p     # print / non-interactive mode, billed from pool B
 That is, the flag is doing two jobs at once:
 1. selecting interaction mode: interactive vs print
 2. selecting billing/accounting pool
+
 That is the non-orthogonality. So, let's see what the `gh` cli would be with
 that type of design:
 
@@ -143,7 +144,8 @@ claude api
 
 would be much easier to manage (and one could even have `claude` alias to
 `claude chat`).  But, here we are, where `-p` is described as an output flag
-that changes billing semantics.  Perhaps a change over a few iterations could
+that changes billing semantics.  Perhaps moving to this subcommand structure
+over a few iterations could
 have avoided this issue altogether.  But in either case, I guess I will have
 some updates to `ask`.  Maybe I can `ask claude how do you suggest I update
 ask?`.  But I better do that before June 15!

@@ -89,8 +89,8 @@ So, why does the ToS change create a bad design?
 Because part of composability is the expectation that flags are orthogonal
 modifiers. Changing a flag shouldn't silently switch your billing pool.
 
-Let's consider an analogy of why this is terrible design using a totally
-different domain. The `gh` tool (github's cli, which is overall, pretty good)
+Let's consider an analogy from a different domain.
+The `gh` tool (github's cli, which is overall, pretty good)
 is designed as:
 
 ```bash
@@ -108,9 +108,7 @@ gh --list-repo
 ```
 
 Because pr, issue, and repo are not “options.” They are resources. The `gh`
-then uses flags inside those domains for orthogonal modifiers:
-
-For example:
+then uses flags inside those domains for orthogonal modifiers. For example:
 
 ```bash
 gh issue list --state closed --assignee monalisa
@@ -128,7 +126,7 @@ That is, the flag is doing two jobs at once:
 1. selecting interaction mode: interactive vs print
 2. selecting billing/accounting pool
 That is the non-orthogonality. So, let's see what the `gh` cli would be with
-that type of URL:
+that type of design:
 
 ```
 gh issue list              # uses normal GitHub quota

@@ -38,15 +38,15 @@ flag. So for example, in OpenClaw we see the
       ],
 ```
 
-I think this business change surfaces some terrible design in the claude cli.
-But, before I dive in, I want to take a second and describe why I care.  I have
-a tool called `ask`.  You can find the source in my [env
+That is, they build an entire agent on the `-p` flag.
+We can contrast that with a tool of mine called `ask`.
+You can find the source in my [env
 repo](https://github.com/dlm/env/blob/78f4384d1eccf24403d4baa63fb2c199d8b81a82/bin/scripts/ask).
 Generally, this tool is a quick cli that wraps some tools so that I can quickly
 run some queries without leaving my terminal.  For example, `ask define <word>`
 will give me the definition of a word and `ask ip` will get my public ip from
 [ipify.org](https://www.ipify.org/).  So, of course, I would add a function to
-oneshot query to claude.  I don't need to open up claude code or go to the web
+oneshot claude query.  I don't need to open up claude code or go to the web
 for something that I know will only be a single call.  The `nu` function is
 simple:
 
@@ -80,9 +80,10 @@ def "main claude" [
 ```
 
 Which also allows me to `ask claude --continue` if the response requires
-continuing in claude code. Great, so very simple. Now, let's get in to it.
+continuing in claude code.  So, it seems that they want to limit the agent
+building use case, but that comes at the expense of good unix tool design.
 
-My gripe with this change is in design.  I think that in general, the
+I think that in general, the
 unix philosophy is a good thing.  Sharp composable tools are good thing.  And,
 in fact, the `claude -p` flag was a great example of that.  So, why does the
 ToS change create a bad design?  At least from my perspective, part of a tool

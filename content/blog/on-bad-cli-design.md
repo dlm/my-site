@@ -83,14 +83,11 @@ Which also allows me to `ask claude --continue` if the response requires
 continuing in claude code.  So, it seems that they want to limit the agent
 building use case, but that comes at the expense of good unix tool design.
 
-I think that in general, the
-unix philosophy is a good thing.  Sharp composable tools are good thing.  And,
-in fact, the `claude -p` flag was a great example of that.  So, why does the
-ToS change create a bad design?  At least from my perspective, part of a tool
-being composible is around the expected changes to global state.  So, while I
-do understand that one could build a system in which different subcommands pull
-from different usage pools, I find it completely non-intuitive that simply
-changing the flags would pull for different usage pools.
+The unix philosophy is a good thing.  Sharp composable tools are a good thing.  And,
+in fact, the `claude -p` flag was a great example of a composable tool.
+So, why does the ToS change create a bad design?
+Because part of composability is the expectation that flags are orthogonal
+modifiers. Changing a flag shouldn't silently switch your billing pool.
 
 Let's consider an analogy of why this is terrible design using a totally
 different domain. The `gh` tool (github's cli, which is overall, pretty good)

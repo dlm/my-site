@@ -134,16 +134,16 @@ gh issue list --json       # suddenly uses a different paid quota
 ```
 
 The problem is that `--json` is output formatting. If the claude design was
-actually good, this would not be an issue. Perhaps a setup like:
+actually good, we would not have this issue. Perhaps a setup like:
 
 ```bash
 claude chat
 claude api
 ```
 
-Would make this much easier to manage (and one could even have `claude` alias
-to `claude chat`).  But, I think the problem is that the `-p` looks like an
-execution-mode flag, but now that it changes billing semantics. That violates
-the expectation that flags are orthogonal modifiers, not hidden context
-switches. But, I guess that is what happens when you just vibe code your way
-into a hot mess.
+would be much easier to manage (and one could even have `claude` alias to
+`claude chat`).  But, here we are, where `-p` is described as an output flag
+that changes billing semantics.  Perhaps a change over a few iterations could
+have avoided this issue altogether.  But in either case, I guess I will have
+some updates to `ask`.  Maybe I can `ask claude how do you suggest I update
+ask?`.  But I better do that before June 15!

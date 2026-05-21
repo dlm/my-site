@@ -294,6 +294,16 @@ a:focus {
   margin: 30px 0 15px 0;
 }
 
+/* Images */
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
+  border: 3px solid var(--orange);
+}
+
 /* Blockquotes */
 .post-content blockquote {
   background: rgba(255, 176, 59, 0.1);

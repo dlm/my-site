@@ -8,7 +8,7 @@ So back in graduate school (2007-2012), I had a Western Digital My Book World
 Edition.  I used it for backing up my systems.   It was very cool at the time
 to have my very own NAS.  Recently, I decided that I was going to try to clean
 up all of my old hardware and unfortunately, when I plugged in the device, it
-would not boot. Even thought I probably interacted with 100s of bad hard drives
+would not boot. Even though I probably interacted with 100s of bad hard drives
 when I worked at Apple, I had never once tried to do any data recovery.  So, I
 had a day, why not try some data recovery?
 
@@ -31,7 +31,7 @@ but that's okay, it was kind of ugly anyway.
 
 ![The WD My Book World Edition cracked open, showing the drive, motherboard, and mounting bracket](IMG_1454.jpeg)
 
-The motherboard was shockingly similar to a rasburry pi, which would not be released for another (almost) 5 years.
+The motherboard was shockingly similar to a Raspberry Pi, which would not be released for another (almost) 5 years.
 
 ![The WD NAS controller board — ethernet, USB, and SATA connectors visible](IMG_1455.jpeg)
 
@@ -64,7 +64,7 @@ sdc
 
 Every partition on the disk is a Linux MD RAID member. It caused me to scratch
 my head as this is a *single-disk* consumer NAS, and yet the entire disk is
-partitioned as RAID. That's seemed unusual, but after some thought, it does
+partitioned as RAID. That seemed unusual, but after some thought, it does
 kind of make sense. If WD can make everything use RAID, it should simplify all
 their internal tooling.
 
@@ -90,9 +90,9 @@ cat /proc/mdstat
 ```
 
 I found three small partitions (sdc1–3) assembled, but in degraded state and a
-larger partion (sdc4) that failed because of an invalid superblock checksum.
+larger partition (sdc4) that failed because of an invalid superblock checksum.
 
-So I concluded that hte RAID metadata was corrupt. :(
+So I concluded that the RAID metadata was corrupt.
 
 ---
 
@@ -216,7 +216,7 @@ This showed some promise, but then things got worse.
 
 ---
 
-## Failure event
+## Attempt 5: The Drive Dies
 
 During fsck attempts the usb disconneced and I got an error where "Synchronize
 Cache failed".  Then in quick sequence the disk disappeared (confirmed with lsblk),

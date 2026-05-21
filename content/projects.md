@@ -102,3 +102,16 @@ alternative to literate programming. Written in Go.
 [abi](https://github.com/dlm/abi) is a minimal Go library for Ethereum ABI
 encoding and decoding. No reflection, no code generation, zero dependencies.
 Written in Go.
+
+---
+
+## Joke Projects
+
+Not everything needs to ship to production.
+
+### Code HIIT
+
+[Code HIIT](https://dlm.github.io/code-hiit/) applies the principles of
+high-intensity interval training to the one muscle that matters most: your
+fingers. Timed drills for symbols, brackets, regex, and other characters that
+separate real programmers from people who use GUIs. Intervals for coders.

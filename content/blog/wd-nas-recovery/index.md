@@ -5,19 +5,17 @@ draft: true
 ---
 
 So back in graduate school (2007-2012), I had a Western Digital My Book World
-Edition.  I used it for backing up my systems.   It was very cool at the time
-to have my very own NAS.  Recently, I decided that I was going to try to clean
+Edition. I used it for backing up my systems. It was very cool at the time
+to have my very own NAS. Recently, I decided that I was going to try to clean
 up all of my old hardware and unfortunately, when I plugged in the device, it
 would not boot. Even though I probably interacted with 100s of bad hard drives
-when I worked at Apple, I had never once tried to do any data recovery.  So, I
+when I worked at Apple, I had never once tried to do any data recovery. So, I
 had a day, why not try some data recovery?
 
-I thought this was going to be easy.  I figured I would pop open the enclosure,
-plug it in, grab any files worth keeping, done. What followed was a full-stack
-debugging session across RAID metadata, filesystem internals, and hardware
-failure — and a front-row seat to how old disks actually die under stress.
-
-RIP WD drive, here's what happened.
+I figured I would pop open the enclosure, pull the drive, plug it in, and
+grab any files worth keeping. Instead, I got a full-stack debugging session on
+RAID metadata, filesystem internals, and hardware failure---ending with a
+front-row seat to how old disks actually die under stress.
 
 ---
 
@@ -35,7 +33,7 @@ The motherboard was shockingly similar to a Raspberry Pi, which would not be rel
 
 ![The WD NAS controller board — ethernet, USB, and SATA connectors visible](nas-motherboard.jpeg)
 
-Also in the enclosure was a neat little controller for the on/off button of the NAS.
+Also in the enclosure was a dedicated PCB for the on/off button.
 
 ![Small PCB from inside the enclosure](button-controller-pcb.jpeg)
 
@@ -112,11 +110,11 @@ Total Devices : 1
 Checksum mismatch
 ```
 
-So this was a RAID1 mirror that expected two disks and one was present, moreover
-the one we have had a corrupt superblock checksum. Side note, if you ask
-"claude" about it, it will try to tell you that there is a drive missing, but
-as we know, WD just configured single-disk devices as RAID1. Either way, the
-metadata was damaged enough that the kernel couldn't assemble it.
+So this was a RAID1 mirror that expected two disks and only one was present,
+moreover the one we have had a corrupt superblock checksum. A naive reading
+might suggest a drive is simply missing, but as we saw earlier, WD just
+configured single-disk devices as RAID1. Either way, the metadata was damaged
+enough that the kernel couldn't assemble it.
 
 ---
 
@@ -161,8 +159,10 @@ EXT4-fs: group descriptors corrupted
 
 So even though the filesystem was detectable, its metadata was corrupt too. The
 group descriptors — the index ext3 uses to find data blocks — were damaged, and
-without them the kernel wouldn't mount it.  I was curious about the EXT4 based
-messages as I was trying to mount as ext3, but could not track down an answer.
+without them the kernel wouldn't mount it.
+The EXT4 messages while mounting as ext3 was confusing, I couldn't
+figure out why I was getting it so at some point I decided to move on.
+(As Gary Bernhardt once said, "every project has to have some magic.")
 
 ---
 
@@ -218,8 +218,8 @@ This showed some promise, but then things got worse.
 
 ## Attempt 5: The Drive Dies
 
-During fsck attempts the usb disconneced and I got an error where "Synchronize
-Cache failed".  Then in quick sequence the disk disappeared (confirmed with lsblk),
+During fsck attempts the usb disconnected and I got an error where "Synchronize
+Cache failed". Then in quick sequence the disk disappeared (confirmed with lsblk),
 the dock LED started flashing, and on reconnect the drive would not spin up.
 
 My first thought was that the dock or power supply had given out. I swapped in
@@ -237,22 +237,25 @@ So on reflection, a few things I learned:
 1. Consumer NAS devices use layered storage even on a single disk:  I suspect
    that this is to create uniformity on WD products.
 
-2. MD RAID v0.90 can be bypassed:  Because of that, the filesystem still
+2. MD RAID v0.90 can be bypassed:  Because of that, the filesystem was still
    mountable (in principle).
 
 3. ext3 failure modes (and potential workarounds): The journal blocks can
-   become corrupted but backup superblocks may still exist and recoverable if
-   the disk is stable
+   become corrupted, but backup superblocks may still exist and be usable---if
+   the disk stays alive long enough.
 
 4. Failure pattern followed the sequence: `filesystem corruption → fsck → heavy
    I/O → USB reset → disk death`
 
 With some reflection, perhaps with a sensitive (old) disk, next time it may be
 worth trying to (when possible) avoid `fsck` and random reads and definitely
-work off a sequental image such as `ddrescue`.  Note that I did know about the
+work off a sequential image such as `ddrescue`. Note that I did know about the
 image as an option, but creating that image presented some disk space
 challenges. Since I wasn't really concerned with getting the data back and in
 reality only interested in the journey, finding a large enough disk to work off
 of was not worth the effort.
 
-So, I ended up with no data recovered, but I sure did have a fun time!
+So, no data recovered. But if the data had actually mattered: image the drive
+first with `ddrescue`, work off the copy, and treat every read as potentially
+the last one. An old disk will not announce failure — and the `fsck` that was
+supposed to save the data may be what loses it.

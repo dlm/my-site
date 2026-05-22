@@ -27,20 +27,20 @@ requires cracking open the plastic shell. There's no graceful way to do this;
 it's plastic clips and patience.  I ended up cracking the shell in the process,
 but that's okay, it was kind of ugly anyway.
 
-![The WD My Book World Edition cracked open, showing the drive, motherboard, and mounting bracket](enclosure-disassembled.jpeg)
+![The WD My Book World Edition cracked open, showing the drive, motherboard, and mounting bracket](enclosure-disassembled.jpg)
 
 The motherboard was shockingly similar to a Raspberry Pi, which would not be released for another (almost) 5 years.
 
-![The WD NAS controller board — ethernet, USB, and SATA connectors visible](nas-motherboard.jpeg)
+![The WD NAS controller board — ethernet, USB, and SATA connectors visible](nas-motherboard.jpg)
 
 Also in the enclosure was a dedicated PCB for the on/off button.
 
-![Small PCB from inside the enclosure](button-controller-pcb.jpeg)
+![Small PCB from inside the enclosure](button-controller-pcb.jpg)
 
 Once the drive was free, I connected it via a powered SATA→USB dock on my NUC
 running NixOS.
 
-![The SATA→USB dock with the harvested drive (photo coming soon)](dock.jpeg)
+![The SATA→USB dock with the harvested drive (photo coming soon)](dock.jpg)
 
 ---
 

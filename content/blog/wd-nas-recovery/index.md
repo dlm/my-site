@@ -1,7 +1,6 @@
 ---
 title: "Recovering Data from a Dead WD NAS (and Watching It Die)"
 date: 2026-05-21
-draft: true
 ---
 
 So back in graduate school (2007-2012), I had a Western Digital My Book World

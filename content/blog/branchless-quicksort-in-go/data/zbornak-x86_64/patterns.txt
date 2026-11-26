@@ -1,0 +1,41 @@
+=== RUN   TestPatternContenders
+    contenders_test.go:98: pdq-go          n=100    geomean 1.13x  median 1.11x  slower(>5%)   1/150  worst 0.81x (m=100 dist=2 mode=4)
+    contenders_test.go:98: pdq-go          n=1000   geomean 1.05x  median 1.09x  slower(>5%)  16/150  worst 0.52x (m=1 dist=1 mode=2)
+    contenders_test.go:98: pdq-go          n=100000 geomean 1.17x  median 1.15x  slower(>5%)   0/150  worst 1.02x (m=8 dist=0 mode=1)
+    contenders_test.go:98: pdq-branchless  n=100    geomean 0.98x  median 0.97x  slower(>5%)  74/150  worst 0.69x (m=50 dist=2 mode=0)
+    contenders_test.go:98: pdq-branchless  n=1000   geomean 0.83x  median 0.86x  slower(>5%)  87/150  worst 0.41x (m=8 dist=1 mode=5)
+    contenders_test.go:98: pdq-branchless  n=100000 geomean 1.02x  median 1.14x  slower(>5%)  53/150  worst 0.38x (m=8 dist=0 mode=0)
+    contenders_test.go:98: blq             n=100    geomean 1.16x  median 1.08x  slower(>5%)  61/150  worst 0.65x (m=1 dist=4 mode=5)
+    contenders_test.go:98: blq             n=1000   geomean 1.07x  median 0.97x  slower(>5%)  59/150  worst 0.48x (m=500 dist=2 mode=0)
+    contenders_test.go:98: blq             n=100000 geomean 1.23x  median 1.27x  slower(>5%)  41/150  worst 0.15x (m=50000 dist=2 mode=1)
+--- PASS: TestPatternContenders (121.52s)
+=== RUN   TestPatternTimes
+    patterns_test.go:122: 450 cases; blq slower (>5%) in 161; median speedup 1.07x
+    patterns_test.go:124: n=100000 m=50000 stagger/reverse         speedup 0.15x  std 269.378µs  blq 1.824851ms
+    patterns_test.go:124: n=100000 m=50000 stagger/copy            speedup 0.21x  std 389.417µs  blq 1.813437ms
+    patterns_test.go:124: n=100000 m=50000 stagger/dither          speedup 0.39x  std 709.316µs  blq 1.820695ms
+    patterns_test.go:124: n=1000 m=500 stagger/copy                speedup 0.48x  std 2.802µs  blq 5.823µs
+    patterns_test.go:124: n=1000 m=500 stagger/reverse             speedup 0.50x  std 2.841µs  blq 5.73µs
+    patterns_test.go:124: n=1000 m=8 shuffle/reverse               speedup 0.61x  std 3.549µs  blq 5.843µs
+    patterns_test.go:124: n=100000 m=64 shuffle/reverse2           speedup 0.62x  std 808.256µs  blq 1.310859ms
+    patterns_test.go:124: n=100000 m=1 shuffle/dither              speedup 0.62x  std 627.647µs  blq 1.014109ms
+    patterns_test.go:136: geomean n=100    copy        1.34x
+    patterns_test.go:136: geomean n=100    dither      0.91x
+    patterns_test.go:136: geomean n=100    reverse     1.06x
+    patterns_test.go:136: geomean n=100    reverse1    0.95x
+    patterns_test.go:136: geomean n=100    reverse2    1.08x
+    patterns_test.go:136: geomean n=100    sort        1.82x
+    patterns_test.go:136: geomean n=1000   copy        1.18x
+    patterns_test.go:136: geomean n=1000   dither      0.94x
+    patterns_test.go:136: geomean n=1000   reverse     0.94x
+    patterns_test.go:136: geomean n=1000   reverse1    0.93x
+    patterns_test.go:136: geomean n=1000   reverse2    1.03x
+    patterns_test.go:136: geomean n=1000   sort        1.57x
+    patterns_test.go:136: geomean n=100000 copy        1.34x
+    patterns_test.go:136: geomean n=100000 dither      1.13x
+    patterns_test.go:136: geomean n=100000 reverse     1.21x
+    patterns_test.go:136: geomean n=100000 reverse1    1.20x
+    patterns_test.go:136: geomean n=100000 reverse2    1.23x
+    patterns_test.go:136: geomean n=100000 sort        1.29x
+--- PASS: TestPatternTimes (57.58s)
+PASS

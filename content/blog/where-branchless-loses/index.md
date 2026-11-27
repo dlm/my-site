@@ -19,7 +19,7 @@ runs not in `run-benchmarks.sh` (same footnote as post 1).
 ## The pattern matrix
 
 - On the stdlib's pattern matrix (450 structured inputs), blqsort was slower
-  than `slices.Sort` in about a third of the cases on Intel (161/450), worst
+  than `slices.Sort` in about a third of the cases on Intel (160/450), worst
   0.15x. Yet the geometric mean over the matrix at n=100K is 1.23x on Intel
   and 1.49x on M1: averages hide the losses.
 - Instrumenting the stdlib pdqsort showed why: on those inputs it does
@@ -33,10 +33,10 @@ runs not in `run-benchmarks.sh` (same footnote as post 1).
 
 | input | | `slices.Sort` | blqsort | zermelo (radix) | sorty (1 goroutine) |
 |---|---|---|---|---|---|
-| `i % 8` | Intel | **2.02** | 2.15 | 4.57 | 6.90 |
-| | M1 Pro | **2.99** | 3.12 | 3.70 | 10.1 |
-| `i ^ 0xcccc` | Intel | 20.4 | 21.4 | 14.0 | **13.0** |
-| | M1 Pro | 24.7 | 17.3 | **12.4** | 18.0 |
+| `i % 8` | Intel | **2.01** | 2.14 | 4.56 | 6.85 |
+| | M1 Pro | **2.93** | 3.08 | 3.67 | 10.0 |
+| `i ^ 0xcccc` | Intel | 20.3 | 21.2 | 14.0 | **13.2** |
+| | M1 Pro | 24.3 | 17.2 | **12.4** | 18.0 |
 
 ## Go's own sort benchmarks
 
@@ -46,12 +46,12 @@ runs not in `run-benchmarks.sh` (same footnote as post 1).
 
 | Go stdlib benchmark | input | Intel | M1 Pro |
 |---|---|---|---|
-| SortInt1K | `i ^ 0x2cc`, 1K | 0.82x | 1.01x |
-| SortInt64K | `i ^ 0xcccc`, 64K | 0.99x | 1.57x |
-| SortInt1K_Mod8 | `i % 8`, 1K | 0.86x | 0.86x |
-| SortInt1K_Sorted | 1K | 1.37x | 1.84x |
-| SortInt1K_Reversed | 1K | 1.00x | 1.22x |
-| SortString1K | strings, 1K | 0.86x | 1.05x |
+| SortInt1K | `i ^ 0x2cc`, 1K | 0.82x | 1.00x |
+| SortInt64K | `i ^ 0xcccc`, 64K | 1.00x | 1.56x |
+| SortInt1K_Mod8 | `i % 8`, 1K | 0.87x | 0.87x |
+| SortInt1K_Sorted | 1K | 1.38x | 1.85x |
+| SortInt1K_Reversed | 1K | 1.01x | 1.21x |
+| SortString1K | strings, 1K | 0.88x | 1.10x |
 
 - Two caveats on the 1K rows: they shift with the build, and every
   iteration sorts the *same* input, which the branch predictor learns
@@ -59,7 +59,7 @@ runs not in `run-benchmarks.sh` (same footnote as post 1).
   Build examples: in an earlier run with everything in one package, Intel
   SortInt1K was 1.08x; and Intel SortInt1K_Reversed was 1.11x in a run at an
   earlier commit with identical library code (only the experiments
-  differed), 1.00x here.
+  differed), 1.01x here.
 
 ## Things that didn't help
 
@@ -72,8 +72,8 @@ runs not in `run-benchmarks.sh` (same footnote as post 1).
   4% on random and 18% on few-unique data[^oneoff]. (Upstream's unbounded insertion
   sort also looks quadratic on two large sorted blocks; read, not run.)
 - Branchless pdqsort (Orson Peters' BlockQuicksort-style partition in Go's
-  pdqsort): about half of blqsort's gain on random data (int64 1M: 1.60x
-  Intel, 2.12x M1, vs blqsort 2.56x / 3.65x), and *worse* on structured data
+  pdqsort): about half of blqsort's gain on random data (int64 1M: 1.61x
+  Intel, 2.13x M1, vs blqsort 2.59x / 3.60x), and *worse* on structured data
   (SortInt1K_Mod8 0.45x on Intel), because the adaptivity that matters is branch
   prediction, which any branchless partition gives up.
 
@@ -91,6 +91,5 @@ runs not in `run-benchmarks.sh` (same footnote as post 1).
   it up on purpose, and wins exactly when there's nothing to predict.
 
 [^oneoff]: This number comes from a one-off experiment I ran while working on
-    the port. It shaped a design decision rather than compare libraries, so
-    it isn't part of the benchmark suite in blqsort-experiments or the data
-    published with the first post.
+    the port, not from the benchmark suite in blqsort-experiments, so it
+    isn't in the data published with the first post.

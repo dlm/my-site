@@ -1,595 +1,595 @@
 goos: darwin
 goarch: arm64
-pkg: github.com/dlm/blqsort/experiments
+pkg: github.com/dlm/blqsort-experiments
 cpu: Apple M1 Pro
-BenchmarkContenders/int64/n=1000/std         	  119016	     10241 ns/op
-BenchmarkContenders/int64/n=1000/std         	  119917	     10023 ns/op
-BenchmarkContenders/int64/n=1000/std         	  120128	     10007 ns/op
-BenchmarkContenders/int64/n=1000/std         	  119401	     10024 ns/op
-BenchmarkContenders/int64/n=1000/std         	  119958	     10011 ns/op
-BenchmarkContenders/float64/n=1000/std       	   82411	     14008 ns/op
-BenchmarkContenders/float64/n=1000/std       	   87636	     13679 ns/op
-BenchmarkContenders/float64/n=1000/std       	   86894	     14067 ns/op
-BenchmarkContenders/float64/n=1000/std       	   88237	     13711 ns/op
-BenchmarkContenders/float64/n=1000/std       	   87204	     13675 ns/op
-BenchmarkContenders/fewunique/n=1000/std     	  306668	      3939 ns/op
-BenchmarkContenders/fewunique/n=1000/std     	  313310	      3926 ns/op
-BenchmarkContenders/fewunique/n=1000/std     	  305408	      3928 ns/op
-BenchmarkContenders/fewunique/n=1000/std     	  305118	      3931 ns/op
-BenchmarkContenders/fewunique/n=1000/std     	  305109	      3950 ns/op
-BenchmarkContenders/int64/n=1000/pdq-go      	  129843	      9144 ns/op
-BenchmarkContenders/int64/n=1000/pdq-go      	  131733	      9059 ns/op
-BenchmarkContenders/int64/n=1000/pdq-go      	  130719	      9152 ns/op
-BenchmarkContenders/int64/n=1000/pdq-go      	  132826	      9153 ns/op
-BenchmarkContenders/int64/n=1000/pdq-go      	  132956	      9096 ns/op
-BenchmarkContenders/float64/n=1000/pdq-go    	  115534	      9870 ns/op
-BenchmarkContenders/float64/n=1000/pdq-go    	  121671	     10150 ns/op
-BenchmarkContenders/float64/n=1000/pdq-go    	  126310	      9810 ns/op
-BenchmarkContenders/float64/n=1000/pdq-go    	  121023	      9783 ns/op
-BenchmarkContenders/float64/n=1000/pdq-go    	  121677	      9800 ns/op
-BenchmarkContenders/fewunique/n=1000/pdq-go  	  336754	      3423 ns/op
-BenchmarkContenders/fewunique/n=1000/pdq-go  	  357026	      3365 ns/op
-BenchmarkContenders/fewunique/n=1000/pdq-go  	  383126	      3312 ns/op
-BenchmarkContenders/fewunique/n=1000/pdq-go  	  359080	      3352 ns/op
-BenchmarkContenders/fewunique/n=1000/pdq-go  	  372902	      3390 ns/op
-BenchmarkContenders/int64/n=1000/pdq-branchless         	  113882	     10525 ns/op
-BenchmarkContenders/int64/n=1000/pdq-branchless         	  115489	     10512 ns/op
-BenchmarkContenders/int64/n=1000/pdq-branchless         	  114326	     10519 ns/op
-BenchmarkContenders/int64/n=1000/pdq-branchless         	  114214	     10532 ns/op
-BenchmarkContenders/int64/n=1000/pdq-branchless         	  114637	     10523 ns/op
-BenchmarkContenders/float64/n=1000/pdq-branchless       	  104132	     11548 ns/op
-BenchmarkContenders/float64/n=1000/pdq-branchless       	  105033	     11402 ns/op
-BenchmarkContenders/float64/n=1000/pdq-branchless       	  106275	     11329 ns/op
-BenchmarkContenders/float64/n=1000/pdq-branchless       	  108598	     11303 ns/op
-BenchmarkContenders/float64/n=1000/pdq-branchless       	  105955	     11339 ns/op
-BenchmarkContenders/fewunique/n=1000/pdq-branchless     	  318120	      3968 ns/op
-BenchmarkContenders/fewunique/n=1000/pdq-branchless     	  299305	      4034 ns/op
-BenchmarkContenders/fewunique/n=1000/pdq-branchless     	  323894	      3958 ns/op
-BenchmarkContenders/fewunique/n=1000/pdq-branchless     	  322044	      3962 ns/op
-BenchmarkContenders/fewunique/n=1000/pdq-branchless     	  301573	      4037 ns/op
-BenchmarkContenders/int64/n=1000/blq                    	  136419	      8751 ns/op
-BenchmarkContenders/int64/n=1000/blq                    	  138024	      8719 ns/op
-BenchmarkContenders/int64/n=1000/blq                    	  137475	      8734 ns/op
-BenchmarkContenders/int64/n=1000/blq                    	  137142	      8728 ns/op
-BenchmarkContenders/int64/n=1000/blq                    	  139981	      8718 ns/op
-BenchmarkContenders/float64/n=1000/blq                  	  132679	      9193 ns/op
-BenchmarkContenders/float64/n=1000/blq                  	  137080	      9013 ns/op
-BenchmarkContenders/float64/n=1000/blq                  	  132906	      9190 ns/op
-BenchmarkContenders/float64/n=1000/blq                  	  131737	      9052 ns/op
-BenchmarkContenders/float64/n=1000/blq                  	  135469	      9129 ns/op
-BenchmarkContenders/fewunique/n=1000/blq                	  288728	      4408 ns/op
-BenchmarkContenders/fewunique/n=1000/blq                	  269779	      4498 ns/op
-BenchmarkContenders/fewunique/n=1000/blq                	  268718	      4449 ns/op
-BenchmarkContenders/fewunique/n=1000/blq                	  270206	      4447 ns/op
-BenchmarkContenders/fewunique/n=1000/blq                	  266386	      4467 ns/op
-BenchmarkContenders/int64/n=100000/std                  	     223	   5349882 ns/op
-BenchmarkContenders/int64/n=100000/std                  	     224	   5350535 ns/op
-BenchmarkContenders/int64/n=100000/std                  	     224	   5345762 ns/op
-BenchmarkContenders/int64/n=100000/std                  	     223	   5352147 ns/op
-BenchmarkContenders/int64/n=100000/std                  	     224	   5342198 ns/op
-BenchmarkContenders/float64/n=100000/std                	     168	   7134094 ns/op
-BenchmarkContenders/float64/n=100000/std                	     168	   7151543 ns/op
-BenchmarkContenders/float64/n=100000/std                	     168	   7127831 ns/op
-BenchmarkContenders/float64/n=100000/std                	     168	   7143417 ns/op
-BenchmarkContenders/float64/n=100000/std                	     168	   7128698 ns/op
-BenchmarkContenders/fewunique/n=100000/std              	    1104	   1070715 ns/op
-BenchmarkContenders/fewunique/n=100000/std              	    1123	   1071553 ns/op
-BenchmarkContenders/fewunique/n=100000/std              	    1116	   1070085 ns/op
-BenchmarkContenders/fewunique/n=100000/std              	    1120	   1070182 ns/op
-BenchmarkContenders/fewunique/n=100000/std              	    1123	   1073041 ns/op
-BenchmarkContenders/int64/n=100000/pdq-go               	     230	   5188350 ns/op
-BenchmarkContenders/int64/n=100000/pdq-go               	     230	   5198471 ns/op
-BenchmarkContenders/int64/n=100000/pdq-go               	     230	   5187943 ns/op
-BenchmarkContenders/int64/n=100000/pdq-go               	     230	   5197122 ns/op
-BenchmarkContenders/int64/n=100000/pdq-go               	     230	   5198293 ns/op
-BenchmarkContenders/float64/n=100000/pdq-go             	     182	   6540440 ns/op
-BenchmarkContenders/float64/n=100000/pdq-go             	     176	   6691343 ns/op
-BenchmarkContenders/float64/n=100000/pdq-go             	     182	   6546280 ns/op
-BenchmarkContenders/float64/n=100000/pdq-go             	     182	   6551394 ns/op
-BenchmarkContenders/float64/n=100000/pdq-go             	     182	   6550199 ns/op
-BenchmarkContenders/fewunique/n=100000/pdq-go           	    1132	   1047817 ns/op
-BenchmarkContenders/fewunique/n=100000/pdq-go           	    1149	   1042040 ns/op
-BenchmarkContenders/fewunique/n=100000/pdq-go           	    1155	   1040906 ns/op
-BenchmarkContenders/fewunique/n=100000/pdq-go           	    1153	   1040934 ns/op
-BenchmarkContenders/fewunique/n=100000/pdq-go           	    1154	   1041056 ns/op
-BenchmarkContenders/int64/n=100000/pdq-branchless       	     447	   2678392 ns/op
-BenchmarkContenders/int64/n=100000/pdq-branchless       	     447	   2681470 ns/op
-BenchmarkContenders/int64/n=100000/pdq-branchless       	     447	   2676840 ns/op
-BenchmarkContenders/int64/n=100000/pdq-branchless       	     447	   2675134 ns/op
-BenchmarkContenders/int64/n=100000/pdq-branchless       	     446	   2685123 ns/op
-BenchmarkContenders/float64/n=100000/pdq-branchless     	     399	   3032653 ns/op
-BenchmarkContenders/float64/n=100000/pdq-branchless     	     392	   3064595 ns/op
-BenchmarkContenders/float64/n=100000/pdq-branchless     	     386	   3060471 ns/op
-BenchmarkContenders/float64/n=100000/pdq-branchless     	     394	   3034762 ns/op
-BenchmarkContenders/float64/n=100000/pdq-branchless     	     392	   3065990 ns/op
-BenchmarkContenders/fewunique/n=100000/pdq-branchless   	    2805	    424268 ns/op
-BenchmarkContenders/fewunique/n=100000/pdq-branchless   	    2826	    421218 ns/op
-BenchmarkContenders/fewunique/n=100000/pdq-branchless   	    2894	    427265 ns/op
-BenchmarkContenders/fewunique/n=100000/pdq-branchless   	    2799	    410469 ns/op
-BenchmarkContenders/fewunique/n=100000/pdq-branchless   	    2950	    415101 ns/op
-BenchmarkContenders/int64/n=100000/blq                  	     807	   1519523 ns/op
-BenchmarkContenders/int64/n=100000/blq                  	     733	   1532026 ns/op
-BenchmarkContenders/int64/n=100000/blq                  	     799	   1498637 ns/op
-BenchmarkContenders/int64/n=100000/blq                  	     806	   1484632 ns/op
-BenchmarkContenders/int64/n=100000/blq                  	     798	   1485334 ns/op
-BenchmarkContenders/float64/n=100000/blq                	     472	   2530682 ns/op
-BenchmarkContenders/float64/n=100000/blq                	     474	   2525889 ns/op
-BenchmarkContenders/float64/n=100000/blq                	     475	   2532533 ns/op
-BenchmarkContenders/float64/n=100000/blq                	     475	   2530618 ns/op
-BenchmarkContenders/float64/n=100000/blq                	     472	   2523082 ns/op
-BenchmarkContenders/fewunique/n=100000/blq              	    2553	    465091 ns/op
-BenchmarkContenders/fewunique/n=100000/blq              	    2595	    478042 ns/op
-BenchmarkContenders/fewunique/n=100000/blq              	    2488	    472641 ns/op
-BenchmarkContenders/fewunique/n=100000/blq              	    2518	    473168 ns/op
-BenchmarkContenders/fewunique/n=100000/blq              	    2575	    471519 ns/op
-BenchmarkContenders/int64/n=1000000/std                 	      18	  65109944 ns/op
-BenchmarkContenders/int64/n=1000000/std                 	      18	  64751213 ns/op
-BenchmarkContenders/int64/n=1000000/std                 	      18	  64751079 ns/op
-BenchmarkContenders/int64/n=1000000/std                 	      18	  64822456 ns/op
-BenchmarkContenders/int64/n=1000000/std                 	      18	  65802965 ns/op
-BenchmarkContenders/float64/n=1000000/std               	      13	  87361468 ns/op
-BenchmarkContenders/float64/n=1000000/std               	      13	  87014779 ns/op
-BenchmarkContenders/float64/n=1000000/std               	      13	  87270106 ns/op
-BenchmarkContenders/float64/n=1000000/std               	      13	  86778673 ns/op
-BenchmarkContenders/float64/n=1000000/std               	      13	  86761196 ns/op
-BenchmarkContenders/fewunique/n=1000000/std             	     100	  10314494 ns/op
-BenchmarkContenders/fewunique/n=1000000/std             	     100	  10477812 ns/op
-BenchmarkContenders/fewunique/n=1000000/std             	     100	  10254544 ns/op
-BenchmarkContenders/fewunique/n=1000000/std             	     100	  10177578 ns/op
-BenchmarkContenders/fewunique/n=1000000/std             	     100	  10141269 ns/op
-BenchmarkContenders/int64/n=1000000/pdq-go              	      19	  62162132 ns/op
-BenchmarkContenders/int64/n=1000000/pdq-go              	      19	  62307535 ns/op
-BenchmarkContenders/int64/n=1000000/pdq-go              	      19	  62322039 ns/op
-BenchmarkContenders/int64/n=1000000/pdq-go              	      18	  62310407 ns/op
-BenchmarkContenders/int64/n=1000000/pdq-go              	      19	  62227772 ns/op
-BenchmarkContenders/float64/n=1000000/pdq-go            	      14	  78573688 ns/op
-BenchmarkContenders/float64/n=1000000/pdq-go            	      14	  78686902 ns/op
-BenchmarkContenders/float64/n=1000000/pdq-go            	      14	  78544536 ns/op
-BenchmarkContenders/float64/n=1000000/pdq-go            	      14	  78598482 ns/op
-BenchmarkContenders/float64/n=1000000/pdq-go            	      14	  78713530 ns/op
-BenchmarkContenders/fewunique/n=1000000/pdq-go          	     120	   9944239 ns/op
-BenchmarkContenders/fewunique/n=1000000/pdq-go          	     120	   9970906 ns/op
-BenchmarkContenders/fewunique/n=1000000/pdq-go          	     100	  10163303 ns/op
-BenchmarkContenders/fewunique/n=1000000/pdq-go          	     100	  10491014 ns/op
-BenchmarkContenders/fewunique/n=1000000/pdq-go          	     100	  10131866 ns/op
-BenchmarkContenders/int64/n=1000000/pdq-branchless      	      38	  30574129 ns/op
-BenchmarkContenders/int64/n=1000000/pdq-branchless      	      38	  30537715 ns/op
-BenchmarkContenders/int64/n=1000000/pdq-branchless      	      37	  30493251 ns/op
-BenchmarkContenders/int64/n=1000000/pdq-branchless      	      39	  30412974 ns/op
-BenchmarkContenders/int64/n=1000000/pdq-branchless      	      39	  30625495 ns/op
-BenchmarkContenders/float64/n=1000000/pdq-branchless    	      33	  33739721 ns/op
-BenchmarkContenders/float64/n=1000000/pdq-branchless    	      33	  33300250 ns/op
-BenchmarkContenders/float64/n=1000000/pdq-branchless    	      36	  33449128 ns/op
-BenchmarkContenders/float64/n=1000000/pdq-branchless    	      36	  34852284 ns/op
-BenchmarkContenders/float64/n=1000000/pdq-branchless    	      36	  33516376 ns/op
-BenchmarkContenders/fewunique/n=1000000/pdq-branchless  	     292	   4099912 ns/op
-BenchmarkContenders/fewunique/n=1000000/pdq-branchless  	     292	   4100126 ns/op
-BenchmarkContenders/fewunique/n=1000000/pdq-branchless  	     290	   4104862 ns/op
-BenchmarkContenders/fewunique/n=1000000/pdq-branchless  	     291	   4108074 ns/op
-BenchmarkContenders/fewunique/n=1000000/pdq-branchless  	     292	   4098355 ns/op
-BenchmarkContenders/int64/n=1000000/blq                 	      67	  17778905 ns/op
-BenchmarkContenders/int64/n=1000000/blq                 	      67	  17763878 ns/op
-BenchmarkContenders/int64/n=1000000/blq                 	      67	  17776036 ns/op
-BenchmarkContenders/int64/n=1000000/blq                 	      67	  17774514 ns/op
-BenchmarkContenders/int64/n=1000000/blq                 	      67	  17810021 ns/op
-BenchmarkContenders/float64/n=1000000/blq               	      40	  28679249 ns/op
-BenchmarkContenders/float64/n=1000000/blq               	      42	  28644813 ns/op
-BenchmarkContenders/float64/n=1000000/blq               	      40	  28645323 ns/op
-BenchmarkContenders/float64/n=1000000/blq               	      42	  28653892 ns/op
-BenchmarkContenders/float64/n=1000000/blq               	      40	  28671778 ns/op
-BenchmarkContenders/fewunique/n=1000000/blq             	     217	   5516651 ns/op
-BenchmarkContenders/fewunique/n=1000000/blq             	     217	   5519177 ns/op
-BenchmarkContenders/fewunique/n=1000000/blq             	     216	   5517500 ns/op
-BenchmarkContenders/fewunique/n=1000000/blq             	     216	   5532750 ns/op
-BenchmarkContenders/fewunique/n=1000000/blq             	     217	   5523633 ns/op
-BenchmarkContenders/int64/n=10000000/std                	       2	 747985208 ns/op
-BenchmarkContenders/int64/n=10000000/std                	       2	 745137230 ns/op
-BenchmarkContenders/int64/n=10000000/std                	       2	 756164416 ns/op
-BenchmarkContenders/int64/n=10000000/std                	       2	 760910542 ns/op
-BenchmarkContenders/int64/n=10000000/std                	       2	 757466646 ns/op
-BenchmarkContenders/float64/n=10000000/std              	       1	1001454374 ns/op
-BenchmarkContenders/float64/n=10000000/std              	       2	1001287374 ns/op
-BenchmarkContenders/float64/n=10000000/std              	       1	1003242000 ns/op
-BenchmarkContenders/float64/n=10000000/std              	       2	 989142000 ns/op
-BenchmarkContenders/float64/n=10000000/std              	       2	 990074854 ns/op
-BenchmarkContenders/fewunique/n=10000000/std            	      12	  97112403 ns/op
-BenchmarkContenders/fewunique/n=10000000/std            	      12	  97328406 ns/op
-BenchmarkContenders/fewunique/n=10000000/std            	      12	  96940084 ns/op
-BenchmarkContenders/fewunique/n=10000000/std            	      12	  97154437 ns/op
-BenchmarkContenders/fewunique/n=10000000/std            	      12	  97737302 ns/op
-BenchmarkContenders/int64/n=10000000/pdq-go             	       2	 726550292 ns/op
-BenchmarkContenders/int64/n=10000000/pdq-go             	       2	 727795334 ns/op
-BenchmarkContenders/int64/n=10000000/pdq-go             	       2	 725826854 ns/op
-BenchmarkContenders/int64/n=10000000/pdq-go             	       2	 727082834 ns/op
-BenchmarkContenders/int64/n=10000000/pdq-go             	       2	 725604270 ns/op
-BenchmarkContenders/float64/n=10000000/pdq-go           	       2	 907650916 ns/op
-BenchmarkContenders/float64/n=10000000/pdq-go           	       2	 906268542 ns/op
-BenchmarkContenders/float64/n=10000000/pdq-go           	       2	 926154604 ns/op
-BenchmarkContenders/float64/n=10000000/pdq-go           	       2	 915827938 ns/op
-BenchmarkContenders/float64/n=10000000/pdq-go           	       2	 905955604 ns/op
-BenchmarkContenders/fewunique/n=10000000/pdq-go         	      12	  94719403 ns/op
-BenchmarkContenders/fewunique/n=10000000/pdq-go         	      12	  94876278 ns/op
-BenchmarkContenders/fewunique/n=10000000/pdq-go         	      12	  94664066 ns/op
-BenchmarkContenders/fewunique/n=10000000/pdq-go         	      12	  94880195 ns/op
-BenchmarkContenders/fewunique/n=10000000/pdq-go         	      12	  94742365 ns/op
-BenchmarkContenders/int64/n=10000000/pdq-branchless     	       4	 329770771 ns/op
-BenchmarkContenders/int64/n=10000000/pdq-branchless     	       3	 338646778 ns/op
-BenchmarkContenders/int64/n=10000000/pdq-branchless     	       3	 336352458 ns/op
-BenchmarkContenders/int64/n=10000000/pdq-branchless     	       3	 337221930 ns/op
-BenchmarkContenders/int64/n=10000000/pdq-branchless     	       3	 336003070 ns/op
-BenchmarkContenders/float64/n=10000000/pdq-branchless   	       3	 371453917 ns/op
-BenchmarkContenders/float64/n=10000000/pdq-branchless   	       3	 372951027 ns/op
-BenchmarkContenders/float64/n=10000000/pdq-branchless   	       3	 375118542 ns/op
-BenchmarkContenders/float64/n=10000000/pdq-branchless   	       3	 371174805 ns/op
-BenchmarkContenders/float64/n=10000000/pdq-branchless   	       3	 372565625 ns/op
-BenchmarkContenders/fewunique/n=10000000/pdq-branchless 	      22	  50821064 ns/op
-BenchmarkContenders/fewunique/n=10000000/pdq-branchless 	      22	  50505477 ns/op
-BenchmarkContenders/fewunique/n=10000000/pdq-branchless 	      22	  50507938 ns/op
-BenchmarkContenders/fewunique/n=10000000/pdq-branchless 	      22	  50513595 ns/op
-BenchmarkContenders/fewunique/n=10000000/pdq-branchless 	      22	  50732223 ns/op
-BenchmarkContenders/int64/n=10000000/blq                	       5	 203859075 ns/op
-BenchmarkContenders/int64/n=10000000/blq                	       5	 204045150 ns/op
-BenchmarkContenders/int64/n=10000000/blq                	       5	 203894192 ns/op
-BenchmarkContenders/int64/n=10000000/blq                	       5	 208462092 ns/op
-BenchmarkContenders/int64/n=10000000/blq                	       5	 204373234 ns/op
-BenchmarkContenders/float64/n=10000000/blq              	       4	 314592854 ns/op
-BenchmarkContenders/float64/n=10000000/blq              	       4	 316695948 ns/op
-BenchmarkContenders/float64/n=10000000/blq              	       4	 314709239 ns/op
-BenchmarkContenders/float64/n=10000000/blq              	       4	 315082021 ns/op
-BenchmarkContenders/float64/n=10000000/blq              	       4	 315076771 ns/op
-BenchmarkContenders/fewunique/n=10000000/blq            	      26	  42865107 ns/op
-BenchmarkContenders/fewunique/n=10000000/blq            	      26	  42817660 ns/op
-BenchmarkContenders/fewunique/n=10000000/blq            	      26	  42865075 ns/op
-BenchmarkContenders/fewunique/n=10000000/blq            	      26	  42835319 ns/op
-BenchmarkContenders/fewunique/n=10000000/blq            	      27	  42872119 ns/op
-BenchmarkLibraries/int64/n=1000/slices.Sort             	  131742	      9444 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=1000/slices.Sort             	  126246	      9523 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=1000/slices.Sort             	  127167	      9524 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=1000/slices.Sort             	  123099	      9736 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=1000/slices.Sort             	  124953	      9545 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=1000/blqsort.Sort            	  144135	      8764 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=1000/blqsort.Sort            	  132650	      8899 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=1000/blqsort.Sort            	  133484	      8809 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=1000/blqsort.Sort            	  137301	      8769 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=1000/blqsort.Sort            	  135037	      8785 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=1000/zermelo.Sort            	   86052	     13922 ns/op	    8192 B/op	       1 allocs/op
-BenchmarkLibraries/int64/n=1000/zermelo.Sort            	   89036	     13655 ns/op	    8192 B/op	       1 allocs/op
-BenchmarkLibraries/int64/n=1000/zermelo.Sort            	   84990	     14043 ns/op	    8192 B/op	       1 allocs/op
-BenchmarkLibraries/int64/n=1000/zermelo.Sort            	   84375	     14075 ns/op	    8192 B/op	       1 allocs/op
-BenchmarkLibraries/int64/n=1000/zermelo.Sort            	   84271	     14115 ns/op	    8192 B/op	       1 allocs/op
-BenchmarkLibraries/int64/n=1000/zermelo.SortBYOB        	   89467	     13377 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=1000/zermelo.SortBYOB        	   89718	     13356 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=1000/zermelo.SortBYOB        	   90638	     13323 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=1000/zermelo.SortBYOB        	   90746	     13600 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=1000/zermelo.SortBYOB        	   87663	     13474 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=1000/sorty.SortSlice         	   98227	     11874 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraries/int64/n=1000/sorty.SortSlice         	  103144	     11863 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraries/int64/n=1000/sorty.SortSlice         	  102034	     11813 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraries/int64/n=1000/sorty.SortSlice         	  102568	     11809 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraries/int64/n=1000/sorty.SortSlice         	  102121	     11789 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=1000/slices.Sort           	   80755	     13633 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=1000/slices.Sort           	   92002	     12969 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=1000/slices.Sort           	   93879	     12923 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=1000/slices.Sort           	   94899	     13450 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=1000/slices.Sort           	   94243	     13865 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=1000/blqsort.Sort          	  131809	      9162 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=1000/blqsort.Sort          	  132322	      9118 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=1000/blqsort.Sort          	  129578	      9134 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=1000/blqsort.Sort          	  132798	      9286 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=1000/blqsort.Sort          	  131540	      9133 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=1000/zermelo.SortFloats    	   77121	     16081 ns/op	    8192 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=1000/zermelo.SortFloats    	   76345	     16225 ns/op	    8192 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=1000/zermelo.SortFloats    	   74649	     16069 ns/op	    8192 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=1000/zermelo.SortFloats    	   74694	     15904 ns/op	    8192 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=1000/zermelo.SortFloats    	   75892	     15874 ns/op	    8192 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=1000/zermelo.SortFloatsBYOB         	   78849	     15153 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=1000/zermelo.SortFloatsBYOB         	   79563	     15204 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=1000/zermelo.SortFloatsBYOB         	   75520	     15526 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=1000/zermelo.SortFloatsBYOB         	   77491	     15488 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=1000/zermelo.SortFloatsBYOB         	   79832	     15136 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=1000/sorty.SortSlice                	   91012	     12889 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=1000/sorty.SortSlice                	   95458	     12710 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=1000/sorty.SortSlice                	   95377	     12868 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=1000/sorty.SortSlice                	   96982	     12743 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=1000/sorty.SortSlice                	   92077	     13111 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraries/int64/n=100000/slices.Sort                    	     223	   5462093 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=100000/slices.Sort                    	     219	   5475108 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=100000/slices.Sort                    	     202	   5693920 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=100000/slices.Sort                    	     218	   5432557 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=100000/slices.Sort                    	     220	   5413321 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=100000/blqsort.Sort                   	     802	   1489884 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=100000/blqsort.Sort                   	     808	   1485157 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=100000/blqsort.Sort                   	     780	   1489729 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=100000/blqsort.Sort                   	     808	   1491654 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=100000/blqsort.Sort                   	     782	   1492078 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=100000/zermelo.Sort                   	    1014	   1135810 ns/op	  802816 B/op	       1 allocs/op
-BenchmarkLibraries/int64/n=100000/zermelo.Sort                   	    1054	   1137010 ns/op	  802816 B/op	       1 allocs/op
-BenchmarkLibraries/int64/n=100000/zermelo.Sort                   	    1051	   1137511 ns/op	  802816 B/op	       1 allocs/op
-BenchmarkLibraries/int64/n=100000/zermelo.Sort                   	    1052	   1137736 ns/op	  802816 B/op	       1 allocs/op
-BenchmarkLibraries/int64/n=100000/zermelo.Sort                   	    1048	   1144023 ns/op	  802816 B/op	       1 allocs/op
-BenchmarkLibraries/int64/n=100000/zermelo.SortBYOB               	    1089	   1100683 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=100000/zermelo.SortBYOB               	    1082	   1100717 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=100000/zermelo.SortBYOB               	    1095	   1101602 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=100000/zermelo.SortBYOB               	    1092	   1100913 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=100000/zermelo.SortBYOB               	    1095	   1103238 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=100000/sorty.SortSlice                	     256	   4651274 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraries/int64/n=100000/sorty.SortSlice                	     259	   4640201 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraries/int64/n=100000/sorty.SortSlice                	     259	   4637715 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraries/int64/n=100000/sorty.SortSlice                	     259	   4636858 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraries/int64/n=100000/sorty.SortSlice                	     259	   4638421 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=100000/slices.Sort                  	     168	   7159689 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=100000/slices.Sort                  	     168	   7175517 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=100000/slices.Sort                  	     162	   7298638 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=100000/slices.Sort                  	     166	   7165244 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=100000/slices.Sort                  	     166	   7159029 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=100000/blqsort.Sort                 	     458	   2563230 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=100000/blqsort.Sort                 	     456	   2562479 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=100000/blqsort.Sort                 	     462	   2565959 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=100000/blqsort.Sort                 	     458	   2560988 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=100000/blqsort.Sort                 	     464	   2534119 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=100000/zermelo.SortFloats           	     760	   1528024 ns/op	  802816 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=100000/zermelo.SortFloats           	     754	   1537047 ns/op	  802816 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=100000/zermelo.SortFloats           	     786	   1530376 ns/op	  802816 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=100000/zermelo.SortFloats           	     792	   1525968 ns/op	  802816 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=100000/zermelo.SortFloats           	     787	   1526774 ns/op	  802816 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=100000/zermelo.SortFloatsBYOB       	     812	   1484163 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=100000/zermelo.SortFloatsBYOB       	     812	   1490204 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=100000/zermelo.SortFloatsBYOB       	     810	   1484494 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=100000/zermelo.SortFloatsBYOB       	     810	   1481559 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=100000/zermelo.SortFloatsBYOB       	     800	   1480448 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=100000/sorty.SortSlice              	     208	   5702094 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=100000/sorty.SortSlice              	     208	   5690996 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=100000/sorty.SortSlice              	     208	   5694342 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=100000/sorty.SortSlice              	     208	   5699163 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=100000/sorty.SortSlice              	     211	   5694622 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraries/int64/n=1000000/slices.Sort                   	      18	  63884919 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=1000000/slices.Sort                   	      18	  63703933 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=1000000/slices.Sort                   	      18	  65293178 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=1000000/slices.Sort                   	      18	  64680799 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=1000000/slices.Sort                   	      18	  65267382 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=1000000/blqsort.Sort                  	      63	  17922966 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=1000000/blqsort.Sort                  	      67	  17980804 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=1000000/blqsort.Sort                  	      66	  17850471 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=1000000/blqsort.Sort                  	      67	  17980858 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=1000000/blqsort.Sort                  	      67	  17948652 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=1000000/zermelo.Sort                  	      87	  12716938 ns/op	 8003584 B/op	       1 allocs/op
-BenchmarkLibraries/int64/n=1000000/zermelo.Sort                  	      88	  12744615 ns/op	 8003584 B/op	       1 allocs/op
-BenchmarkLibraries/int64/n=1000000/zermelo.Sort                  	      91	  12725222 ns/op	 8003584 B/op	       1 allocs/op
-BenchmarkLibraries/int64/n=1000000/zermelo.Sort                  	      94	  12589359 ns/op	 8003584 B/op	       1 allocs/op
-BenchmarkLibraries/int64/n=1000000/zermelo.Sort                  	      91	  12267734 ns/op	 8003584 B/op	       1 allocs/op
-BenchmarkLibraries/int64/n=1000000/zermelo.SortBYOB              	      97	  12039408 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=1000000/zermelo.SortBYOB              	      97	  11883160 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=1000000/zermelo.SortBYOB              	     100	  11866658 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=1000000/zermelo.SortBYOB              	     100	  11909046 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=1000000/zermelo.SortBYOB              	      98	  11956549 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=1000000/sorty.SortSlice               	      20	  56957769 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraries/int64/n=1000000/sorty.SortSlice               	      20	  56889888 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraries/int64/n=1000000/sorty.SortSlice               	      20	  57103342 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraries/int64/n=1000000/sorty.SortSlice               	      20	  56892598 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraries/int64/n=1000000/sorty.SortSlice               	      20	  56983860 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=1000000/slices.Sort                 	      13	  85693401 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=1000000/slices.Sort                 	      13	  85891272 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=1000000/slices.Sort                 	      13	  86032978 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=1000000/slices.Sort                 	      13	  89303933 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=1000000/slices.Sort                 	      13	  86134830 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=1000000/blqsort.Sort                	      40	  28764600 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=1000000/blqsort.Sort                	      40	  28738075 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=1000000/blqsort.Sort                	      42	  28625219 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=1000000/blqsort.Sort                	      42	  28660986 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=1000000/blqsort.Sort                	      42	  28709519 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=1000000/zermelo.SortFloats          	      70	  16151532 ns/op	 8003584 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=1000000/zermelo.SortFloats          	      73	  16182776 ns/op	 8003584 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=1000000/zermelo.SortFloats          	      75	  16195805 ns/op	 8003584 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=1000000/zermelo.SortFloats          	      75	  16217494 ns/op	 8003584 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=1000000/zermelo.SortFloats          	      75	  16086450 ns/op	 8003584 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=1000000/zermelo.SortFloatsBYOB      	      74	  16001015 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=1000000/zermelo.SortFloatsBYOB      	      74	  15995226 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=1000000/zermelo.SortFloatsBYOB      	      74	  15957906 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=1000000/zermelo.SortFloatsBYOB      	      75	  15875076 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=1000000/zermelo.SortFloatsBYOB      	      75	  15921825 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=1000000/sorty.SortSlice             	      15	  70287111 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=1000000/sorty.SortSlice             	      16	  70661490 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=1000000/sorty.SortSlice             	      16	  70287099 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=1000000/sorty.SortSlice             	      16	  70297534 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=1000000/sorty.SortSlice             	      16	  70479089 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraries/int64/n=10000000/slices.Sort                  	       2	 745148833 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=10000000/slices.Sort                  	       2	 748369125 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=10000000/slices.Sort                  	       2	 746847646 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=10000000/slices.Sort                  	       2	 756662500 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=10000000/slices.Sort                  	       2	 749188562 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=10000000/blqsort.Sort                 	       5	 205956584 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=10000000/blqsort.Sort                 	       5	 205314559 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=10000000/blqsort.Sort                 	       5	 206122983 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=10000000/blqsort.Sort                 	       5	 204895533 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=10000000/blqsort.Sort                 	       5	 205177650 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=10000000/zermelo.Sort                 	       7	 153764994 ns/op	80003072 B/op	       1 allocs/op
-BenchmarkLibraries/int64/n=10000000/zermelo.Sort                 	       7	 150027851 ns/op	80003072 B/op	       1 allocs/op
-BenchmarkLibraries/int64/n=10000000/zermelo.Sort                 	       7	 151180750 ns/op	80003072 B/op	       1 allocs/op
-BenchmarkLibraries/int64/n=10000000/zermelo.Sort                 	       7	 150782357 ns/op	80003072 B/op	       1 allocs/op
-BenchmarkLibraries/int64/n=10000000/zermelo.Sort                 	       7	 150325661 ns/op	80003072 B/op	       1 allocs/op
-BenchmarkLibraries/int64/n=10000000/zermelo.SortBYOB             	       7	 149546024 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=10000000/zermelo.SortBYOB             	       7	 151303012 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=10000000/zermelo.SortBYOB             	       7	 151886554 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=10000000/zermelo.SortBYOB             	       7	 150878488 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=10000000/zermelo.SortBYOB             	       7	 151645893 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/int64/n=10000000/sorty.SortSlice              	       2	 677220896 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraries/int64/n=10000000/sorty.SortSlice              	       2	 676319167 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraries/int64/n=10000000/sorty.SortSlice              	       2	 680615980 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraries/int64/n=10000000/sorty.SortSlice              	       2	 677225708 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraries/int64/n=10000000/sorty.SortSlice              	       2	 695225104 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=10000000/slices.Sort                	       1	1011562334 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=10000000/slices.Sort                	       2	 992513062 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=10000000/slices.Sort                	       2	 987815438 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=10000000/slices.Sort                	       1	1075193875 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=10000000/slices.Sort                	       1	1081038541 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=10000000/blqsort.Sort               	       4	 327795156 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=10000000/blqsort.Sort               	       4	 317816740 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=10000000/blqsort.Sort               	       4	 314347135 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=10000000/blqsort.Sort               	       4	 313218719 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=10000000/blqsort.Sort               	       4	 315770093 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=10000000/zermelo.SortFloats         	       6	 188529146 ns/op	80003072 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=10000000/zermelo.SortFloats         	       6	 186818166 ns/op	80003072 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=10000000/zermelo.SortFloats         	       6	 204153326 ns/op	80003072 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=10000000/zermelo.SortFloats         	       6	 197809007 ns/op	80003072 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=10000000/zermelo.SortFloats         	       6	 191744104 ns/op	80003072 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=10000000/zermelo.SortFloatsBYOB     	       6	 187255326 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=10000000/zermelo.SortFloatsBYOB     	       6	 186347993 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=10000000/zermelo.SortFloatsBYOB     	       6	 184606701 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=10000000/zermelo.SortFloatsBYOB     	       6	 191526875 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=10000000/zermelo.SortFloatsBYOB     	       6	 183513292 ns/op	       0 B/op	       0 allocs/op
-BenchmarkLibraries/float64/n=10000000/sorty.SortSlice            	       2	 835266020 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=10000000/sorty.SortSlice            	       2	 854391229 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=10000000/sorty.SortSlice            	       2	 810913875 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=10000000/sorty.SortSlice            	       2	 805851916 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraries/float64/n=10000000/sorty.SortSlice            	       2	 807844188 ns/op	      24 B/op	       1 allocs/op
-BenchmarkLibraryShapes/random/slices.Sort                        	      18	  64492752 ns/op
-BenchmarkLibraryShapes/random/slices.Sort                        	      16	  64664422 ns/op
-BenchmarkLibraryShapes/random/slices.Sort                        	      18	  64105495 ns/op
-BenchmarkLibraryShapes/random/slices.Sort                        	      18	  64284514 ns/op
-BenchmarkLibraryShapes/random/slices.Sort                        	      18	  64317685 ns/op
-BenchmarkLibraryShapes/random/blqsort.Sort                       	      67	  17627169 ns/op
-BenchmarkLibraryShapes/random/blqsort.Sort                       	      67	  17616174 ns/op
-BenchmarkLibraryShapes/random/blqsort.Sort                       	      67	  17622490 ns/op
-BenchmarkLibraryShapes/random/blqsort.Sort                       	      67	  17654299 ns/op
-BenchmarkLibraryShapes/random/blqsort.Sort                       	      67	  17665051 ns/op
-BenchmarkLibraryShapes/random/zermelo.Sort                       	      96	  12320227 ns/op
-BenchmarkLibraryShapes/random/zermelo.Sort                       	     100	  12315247 ns/op
-BenchmarkLibraryShapes/random/zermelo.Sort                       	      98	  12762540 ns/op
-BenchmarkLibraryShapes/random/zermelo.Sort                       	     100	  12670447 ns/op
-BenchmarkLibraryShapes/random/zermelo.Sort                       	      97	  12674792 ns/op
-BenchmarkLibraryShapes/random/zermelo.SortBYOB                   	      93	  12051401 ns/op
-BenchmarkLibraryShapes/random/zermelo.SortBYOB                   	      96	  12039134 ns/op
-BenchmarkLibraryShapes/random/zermelo.SortBYOB                   	     100	  12038277 ns/op
-BenchmarkLibraryShapes/random/zermelo.SortBYOB                   	      99	  12003142 ns/op
-BenchmarkLibraryShapes/random/zermelo.SortBYOB                   	     100	  11717293 ns/op
-BenchmarkLibraryShapes/random/sorty.SortSlice                    	      20	  56685336 ns/op
-BenchmarkLibraryShapes/random/sorty.SortSlice                    	      20	  56523367 ns/op
-BenchmarkLibraryShapes/random/sorty.SortSlice                    	      20	  56926938 ns/op
-BenchmarkLibraryShapes/random/sorty.SortSlice                    	      20	  57655790 ns/op
-BenchmarkLibraryShapes/random/sorty.SortSlice                    	      20	  56449858 ns/op
-BenchmarkLibraryShapes/fewunique/slices.Sort                     	     100	  11311972 ns/op
-BenchmarkLibraryShapes/fewunique/slices.Sort                     	     100	  11311287 ns/op
-BenchmarkLibraryShapes/fewunique/slices.Sort                     	     100	  11344597 ns/op
-BenchmarkLibraryShapes/fewunique/slices.Sort                     	     100	  11319977 ns/op
-BenchmarkLibraryShapes/fewunique/slices.Sort                     	     100	  11437535 ns/op
-BenchmarkLibraryShapes/fewunique/blqsort.Sort                    	     246	   4882842 ns/op
-BenchmarkLibraryShapes/fewunique/blqsort.Sort                    	     244	   4862492 ns/op
-BenchmarkLibraryShapes/fewunique/blqsort.Sort                    	     244	   4863390 ns/op
-BenchmarkLibraryShapes/fewunique/blqsort.Sort                    	     244	   4879044 ns/op
-BenchmarkLibraryShapes/fewunique/blqsort.Sort                    	     247	   4857434 ns/op
-BenchmarkLibraryShapes/fewunique/zermelo.Sort                    	     301	   3967808 ns/op
-BenchmarkLibraryShapes/fewunique/zermelo.Sort                    	     298	   3977084 ns/op
-BenchmarkLibraryShapes/fewunique/zermelo.Sort                    	     300	   3970020 ns/op
-BenchmarkLibraryShapes/fewunique/zermelo.Sort                    	     302	   3973236 ns/op
-BenchmarkLibraryShapes/fewunique/zermelo.Sort                    	     301	   3963864 ns/op
-BenchmarkLibraryShapes/fewunique/zermelo.SortBYOB                	     309	   3847026 ns/op
-BenchmarkLibraryShapes/fewunique/zermelo.SortBYOB                	     313	   3839098 ns/op
-BenchmarkLibraryShapes/fewunique/zermelo.SortBYOB                	     314	   3827893 ns/op
-BenchmarkLibraryShapes/fewunique/zermelo.SortBYOB                	     310	   3842683 ns/op
-BenchmarkLibraryShapes/fewunique/zermelo.SortBYOB                	     307	   3874310 ns/op
-BenchmarkLibraryShapes/fewunique/sorty.SortSlice                 	      69	  17221458 ns/op
-BenchmarkLibraryShapes/fewunique/sorty.SortSlice                 	      69	  17236607 ns/op
-BenchmarkLibraryShapes/fewunique/sorty.SortSlice                 	      69	  17700676 ns/op
-BenchmarkLibraryShapes/fewunique/sorty.SortSlice                 	      62	  17676021 ns/op
-BenchmarkLibraryShapes/fewunique/sorty.SortSlice                 	      69	  17321106 ns/op
-BenchmarkLibraryShapes/sorted/slices.Sort                        	    1928	    626767 ns/op
-BenchmarkLibraryShapes/sorted/slices.Sort                        	    1918	    628161 ns/op
-BenchmarkLibraryShapes/sorted/slices.Sort                        	    1923	    625385 ns/op
-BenchmarkLibraryShapes/sorted/slices.Sort                        	    1918	    634787 ns/op
-BenchmarkLibraryShapes/sorted/slices.Sort                        	    1864	    644109 ns/op
-BenchmarkLibraryShapes/sorted/blqsort.Sort                       	    3471	    340449 ns/op
-BenchmarkLibraryShapes/sorted/blqsort.Sort                       	    3556	    339489 ns/op
-BenchmarkLibraryShapes/sorted/blqsort.Sort                       	    3550	    329435 ns/op
-BenchmarkLibraryShapes/sorted/blqsort.Sort                       	    3658	    317677 ns/op
-BenchmarkLibraryShapes/sorted/blqsort.Sort                       	    3771	    317778 ns/op
-BenchmarkLibraryShapes/sorted/zermelo.Sort                       	    1410	    837500 ns/op
-BenchmarkLibraryShapes/sorted/zermelo.Sort                       	    1443	    822640 ns/op
-BenchmarkLibraryShapes/sorted/zermelo.Sort                       	    1504	    792440 ns/op
-BenchmarkLibraryShapes/sorted/zermelo.Sort                       	    1507	    817660 ns/op
-BenchmarkLibraryShapes/sorted/zermelo.Sort                       	    1515	    793663 ns/op
-BenchmarkLibraryShapes/sorted/zermelo.SortBYOB                   	    1687	    704672 ns/op
-BenchmarkLibraryShapes/sorted/zermelo.SortBYOB                   	    1698	    712435 ns/op
-BenchmarkLibraryShapes/sorted/zermelo.SortBYOB                   	    1714	    700963 ns/op
-BenchmarkLibraryShapes/sorted/zermelo.SortBYOB                   	    1708	    702507 ns/op
-BenchmarkLibraryShapes/sorted/zermelo.SortBYOB                   	    1702	    703128 ns/op
-BenchmarkLibraryShapes/sorted/sorty.SortSlice                    	     166	   7285882 ns/op
-BenchmarkLibraryShapes/sorted/sorty.SortSlice                    	     165	   7203664 ns/op
-BenchmarkLibraryShapes/sorted/sorty.SortSlice                    	     168	   7143174 ns/op
-BenchmarkLibraryShapes/sorted/sorty.SortSlice                    	     166	   7147812 ns/op
-BenchmarkLibraryShapes/sorted/sorty.SortSlice                    	     166	   7149957 ns/op
-BenchmarkLibraryShapes/reversed/slices.Sort                      	    1298	    924532 ns/op
-BenchmarkLibraryShapes/reversed/slices.Sort                      	    1298	    924709 ns/op
-BenchmarkLibraryShapes/reversed/slices.Sort                      	    1298	    925508 ns/op
-BenchmarkLibraryShapes/reversed/slices.Sort                      	    1299	    924229 ns/op
-BenchmarkLibraryShapes/reversed/slices.Sort                      	    1282	   1002054 ns/op
-BenchmarkLibraryShapes/reversed/blqsort.Sort                     	    1509	    764905 ns/op
-BenchmarkLibraryShapes/reversed/blqsort.Sort                     	    1588	    784881 ns/op
-BenchmarkLibraryShapes/reversed/blqsort.Sort                     	    1518	    793832 ns/op
-BenchmarkLibraryShapes/reversed/blqsort.Sort                     	    1506	    796592 ns/op
-BenchmarkLibraryShapes/reversed/blqsort.Sort                     	    1507	    789827 ns/op
-BenchmarkLibraryShapes/reversed/zermelo.Sort                     	      91	  13356570 ns/op
-BenchmarkLibraryShapes/reversed/zermelo.Sort                     	      94	  12825629 ns/op
-BenchmarkLibraryShapes/reversed/zermelo.Sort                     	      91	  13239312 ns/op
-BenchmarkLibraryShapes/reversed/zermelo.Sort                     	      93	  12799340 ns/op
-BenchmarkLibraryShapes/reversed/zermelo.Sort                     	      92	  12935218 ns/op
-BenchmarkLibraryShapes/reversed/zermelo.SortBYOB                 	      88	  12678126 ns/op
-BenchmarkLibraryShapes/reversed/zermelo.SortBYOB                 	      93	  12643948 ns/op
-BenchmarkLibraryShapes/reversed/zermelo.SortBYOB                 	      96	  12714971 ns/op
-BenchmarkLibraryShapes/reversed/zermelo.SortBYOB                 	      92	  12639193 ns/op
-BenchmarkLibraryShapes/reversed/zermelo.SortBYOB                 	      92	  12578436 ns/op
-BenchmarkLibraryShapes/reversed/sorty.SortSlice                  	     163	   7306613 ns/op
-BenchmarkLibraryShapes/reversed/sorty.SortSlice                  	     163	   7314943 ns/op
-BenchmarkLibraryShapes/reversed/sorty.SortSlice                  	     163	   7305140 ns/op
-BenchmarkLibraryShapes/reversed/sorty.SortSlice                  	     163	   7308107 ns/op
-BenchmarkLibraryShapes/reversed/sorty.SortSlice                  	     163	   7297904 ns/op
-BenchmarkLibraryShapes/mod8/slices.Sort                          	     404	   3008121 ns/op
-BenchmarkLibraryShapes/mod8/slices.Sort                          	     402	   2982717 ns/op
-BenchmarkLibraryShapes/mod8/slices.Sort                          	     402	   2978876 ns/op
-BenchmarkLibraryShapes/mod8/slices.Sort                          	     400	   2990766 ns/op
-BenchmarkLibraryShapes/mod8/slices.Sort                          	     400	   2991895 ns/op
-BenchmarkLibraryShapes/mod8/blqsort.Sort                         	     384	   3119177 ns/op
-BenchmarkLibraryShapes/mod8/blqsort.Sort                         	     384	   3119446 ns/op
-BenchmarkLibraryShapes/mod8/blqsort.Sort                         	     382	   3140824 ns/op
-BenchmarkLibraryShapes/mod8/blqsort.Sort                         	     382	   3123639 ns/op
-BenchmarkLibraryShapes/mod8/blqsort.Sort                         	     387	   3114157 ns/op
-BenchmarkLibraryShapes/mod8/zermelo.Sort                         	     309	   3853412 ns/op
-BenchmarkLibraryShapes/mod8/zermelo.Sort                         	     312	   3951900 ns/op
-BenchmarkLibraryShapes/mod8/zermelo.Sort                         	     309	   3831905 ns/op
-BenchmarkLibraryShapes/mod8/zermelo.Sort                         	     312	   3836605 ns/op
-BenchmarkLibraryShapes/mod8/zermelo.Sort                         	     309	   3858772 ns/op
-BenchmarkLibraryShapes/mod8/zermelo.SortBYOB                     	     321	   3712887 ns/op
-BenchmarkLibraryShapes/mod8/zermelo.SortBYOB                     	     325	   3697076 ns/op
-BenchmarkLibraryShapes/mod8/zermelo.SortBYOB                     	     324	   3703673 ns/op
-BenchmarkLibraryShapes/mod8/zermelo.SortBYOB                     	     324	   3689204 ns/op
-BenchmarkLibraryShapes/mod8/zermelo.SortBYOB                     	     321	   3706697 ns/op
-BenchmarkLibraryShapes/mod8/sorty.SortSlice                      	     100	  10155501 ns/op
-BenchmarkLibraryShapes/mod8/sorty.SortSlice                      	     100	  10121950 ns/op
-BenchmarkLibraryShapes/mod8/sorty.SortSlice                      	     100	  10108218 ns/op
-BenchmarkLibraryShapes/mod8/sorty.SortSlice                      	     100	  10124836 ns/op
-BenchmarkLibraryShapes/mod8/sorty.SortSlice                      	     100	  10145275 ns/op
-BenchmarkLibraryShapes/xor/slices.Sort                           	      48	  24675993 ns/op
-BenchmarkLibraryShapes/xor/slices.Sort                           	      48	  24560829 ns/op
-BenchmarkLibraryShapes/xor/slices.Sort                           	      45	  24707377 ns/op
-BenchmarkLibraryShapes/xor/slices.Sort                           	      48	  24685887 ns/op
-BenchmarkLibraryShapes/xor/slices.Sort                           	      46	  24642637 ns/op
-BenchmarkLibraryShapes/xor/blqsort.Sort                          	      69	  17303467 ns/op
-BenchmarkLibraryShapes/xor/blqsort.Sort                          	      69	  17251287 ns/op
-BenchmarkLibraryShapes/xor/blqsort.Sort                          	      69	  17258617 ns/op
-BenchmarkLibraryShapes/xor/blqsort.Sort                          	      69	  17254514 ns/op
-BenchmarkLibraryShapes/xor/blqsort.Sort                          	      69	  17151278 ns/op
-BenchmarkLibraryShapes/xor/zermelo.Sort                          	      88	  12568735 ns/op
-BenchmarkLibraryShapes/xor/zermelo.Sort                          	      93	  12616360 ns/op
-BenchmarkLibraryShapes/xor/zermelo.Sort                          	      97	  13028697 ns/op
-BenchmarkLibraryShapes/xor/zermelo.Sort                          	      91	  12573391 ns/op
-BenchmarkLibraryShapes/xor/zermelo.Sort                          	      98	  12607106 ns/op
-BenchmarkLibraryShapes/xor/zermelo.SortBYOB                      	      96	  12381873 ns/op
-BenchmarkLibraryShapes/xor/zermelo.SortBYOB                      	      97	  12396362 ns/op
-BenchmarkLibraryShapes/xor/zermelo.SortBYOB                      	      94	  12400730 ns/op
-BenchmarkLibraryShapes/xor/zermelo.SortBYOB                      	      98	  12410945 ns/op
-BenchmarkLibraryShapes/xor/zermelo.SortBYOB                      	      93	  12395016 ns/op
-BenchmarkLibraryShapes/xor/sorty.SortSlice                       	      66	  17944417 ns/op
-BenchmarkLibraryShapes/xor/sorty.SortSlice                       	      66	  17945850 ns/op
-BenchmarkLibraryShapes/xor/sorty.SortSlice                       	      66	  17958198 ns/op
-BenchmarkLibraryShapes/xor/sorty.SortSlice                       	      66	  17952208 ns/op
-BenchmarkLibraryShapes/xor/sorty.SortSlice                       	      66	  17955912 ns/op
+BenchmarkContenders/int64/n=1000/std         	  127623	      9167 ns/op
+BenchmarkContenders/int64/n=1000/std         	  130615	      9078 ns/op
+BenchmarkContenders/int64/n=1000/std         	  135568	      9043 ns/op
+BenchmarkContenders/int64/n=1000/std         	  131737	      9178 ns/op
+BenchmarkContenders/int64/n=1000/std         	  131848	      9394 ns/op
+BenchmarkContenders/float64/n=1000/std       	   66886	     18647 ns/op
+BenchmarkContenders/float64/n=1000/std       	   82503	     14789 ns/op
+BenchmarkContenders/float64/n=1000/std       	   94314	     12307 ns/op
+BenchmarkContenders/float64/n=1000/std       	   68142	     16329 ns/op
+BenchmarkContenders/float64/n=1000/std       	   83260	     12806 ns/op
+BenchmarkContenders/fewunique/n=1000/std     	  339610	      3557 ns/op
+BenchmarkContenders/fewunique/n=1000/std     	  337662	      3551 ns/op
+BenchmarkContenders/fewunique/n=1000/std     	  336954	      3565 ns/op
+BenchmarkContenders/fewunique/n=1000/std     	  336967	      3563 ns/op
+BenchmarkContenders/fewunique/n=1000/std     	  330560	      3560 ns/op
+BenchmarkContenders/int64/n=1000/pdq-go      	  135036	      8814 ns/op
+BenchmarkContenders/int64/n=1000/pdq-go      	  143602	      8840 ns/op
+BenchmarkContenders/int64/n=1000/pdq-go      	  136496	      8873 ns/op
+BenchmarkContenders/int64/n=1000/pdq-go      	  124858	      8488 ns/op
+BenchmarkContenders/int64/n=1000/pdq-go      	  130880	      8478 ns/op
+BenchmarkContenders/float64/n=1000/pdq-go    	  132104	      8968 ns/op
+BenchmarkContenders/float64/n=1000/pdq-go    	  138801	      8697 ns/op
+BenchmarkContenders/float64/n=1000/pdq-go    	  138914	      8654 ns/op
+BenchmarkContenders/float64/n=1000/pdq-go    	  137608	      8854 ns/op
+BenchmarkContenders/float64/n=1000/pdq-go    	  137106	      8661 ns/op
+BenchmarkContenders/fewunique/n=1000/pdq-go  	  386110	      3202 ns/op
+BenchmarkContenders/fewunique/n=1000/pdq-go  	  365790	      3223 ns/op
+BenchmarkContenders/fewunique/n=1000/pdq-go  	  372850	      3203 ns/op
+BenchmarkContenders/fewunique/n=1000/pdq-go  	  368743	      3197 ns/op
+BenchmarkContenders/fewunique/n=1000/pdq-go  	  366114	      3202 ns/op
+BenchmarkContenders/int64/n=1000/pdq-branchless         	  118243	      9984 ns/op
+BenchmarkContenders/int64/n=1000/pdq-branchless         	  117416	     10028 ns/op
+BenchmarkContenders/int64/n=1000/pdq-branchless         	  119313	      9946 ns/op
+BenchmarkContenders/int64/n=1000/pdq-branchless         	  119326	     10058 ns/op
+BenchmarkContenders/int64/n=1000/pdq-branchless         	  119328	      9901 ns/op
+BenchmarkContenders/float64/n=1000/pdq-branchless       	  112291	     10747 ns/op
+BenchmarkContenders/float64/n=1000/pdq-branchless       	  112748	     10656 ns/op
+BenchmarkContenders/float64/n=1000/pdq-branchless       	  111602	     10726 ns/op
+BenchmarkContenders/float64/n=1000/pdq-branchless       	  112342	     10691 ns/op
+BenchmarkContenders/float64/n=1000/pdq-branchless       	  112574	     10678 ns/op
+BenchmarkContenders/fewunique/n=1000/pdq-branchless     	  319663	      3777 ns/op
+BenchmarkContenders/fewunique/n=1000/pdq-branchless     	  319458	      3780 ns/op
+BenchmarkContenders/fewunique/n=1000/pdq-branchless     	  305286	      3788 ns/op
+BenchmarkContenders/fewunique/n=1000/pdq-branchless     	  318696	      3778 ns/op
+BenchmarkContenders/fewunique/n=1000/pdq-branchless     	  319674	      3750 ns/op
+BenchmarkContenders/int64/n=1000/blq                    	  141877	      8439 ns/op
+BenchmarkContenders/int64/n=1000/blq                    	  146199	      8386 ns/op
+BenchmarkContenders/int64/n=1000/blq                    	  142098	      8318 ns/op
+BenchmarkContenders/int64/n=1000/blq                    	  142303	      8361 ns/op
+BenchmarkContenders/int64/n=1000/blq                    	  147150	      8380 ns/op
+BenchmarkContenders/float64/n=1000/blq                  	  136888	      8671 ns/op
+BenchmarkContenders/float64/n=1000/blq                  	  137040	      8704 ns/op
+BenchmarkContenders/float64/n=1000/blq                  	  137049	      8645 ns/op
+BenchmarkContenders/float64/n=1000/blq                  	  137530	      8750 ns/op
+BenchmarkContenders/float64/n=1000/blq                  	  137289	      8694 ns/op
+BenchmarkContenders/fewunique/n=1000/blq                	  284785	      4195 ns/op
+BenchmarkContenders/fewunique/n=1000/blq                	  285759	      4171 ns/op
+BenchmarkContenders/fewunique/n=1000/blq                	  284830	      4195 ns/op
+BenchmarkContenders/fewunique/n=1000/blq                	  285322	      4196 ns/op
+BenchmarkContenders/fewunique/n=1000/blq                	  290328	      4162 ns/op
+BenchmarkContenders/int64/n=100000/std                  	     223	   5363544 ns/op
+BenchmarkContenders/int64/n=100000/std                  	     224	   5340581 ns/op
+BenchmarkContenders/int64/n=100000/std                  	     224	   5348833 ns/op
+BenchmarkContenders/int64/n=100000/std                  	     223	   5349236 ns/op
+BenchmarkContenders/int64/n=100000/std                  	     224	   5343181 ns/op
+BenchmarkContenders/float64/n=100000/std                	     168	   7136914 ns/op
+BenchmarkContenders/float64/n=100000/std                	     168	   7129245 ns/op
+BenchmarkContenders/float64/n=100000/std                	     166	   7156951 ns/op
+BenchmarkContenders/float64/n=100000/std                	     166	   7137064 ns/op
+BenchmarkContenders/float64/n=100000/std                	     168	   7125323 ns/op
+BenchmarkContenders/fewunique/n=100000/std              	    1114	   1070441 ns/op
+BenchmarkContenders/fewunique/n=100000/std              	    1088	   1068080 ns/op
+BenchmarkContenders/fewunique/n=100000/std              	    1124	   1068820 ns/op
+BenchmarkContenders/fewunique/n=100000/std              	    1129	   1067816 ns/op
+BenchmarkContenders/fewunique/n=100000/std              	    1123	   1067648 ns/op
+BenchmarkContenders/int64/n=100000/pdq-go               	     226	   5269384 ns/op
+BenchmarkContenders/int64/n=100000/pdq-go               	     225	   5268869 ns/op
+BenchmarkContenders/int64/n=100000/pdq-go               	     228	   5257048 ns/op
+BenchmarkContenders/int64/n=100000/pdq-go               	     228	   5257355 ns/op
+BenchmarkContenders/int64/n=100000/pdq-go               	     228	   5250090 ns/op
+BenchmarkContenders/float64/n=100000/pdq-go             	     183	   6495064 ns/op
+BenchmarkContenders/float64/n=100000/pdq-go             	     183	   6513503 ns/op
+BenchmarkContenders/float64/n=100000/pdq-go             	     184	   6499774 ns/op
+BenchmarkContenders/float64/n=100000/pdq-go             	     183	   6498337 ns/op
+BenchmarkContenders/float64/n=100000/pdq-go             	     183	   6503890 ns/op
+BenchmarkContenders/fewunique/n=100000/pdq-go           	    1131	   1051511 ns/op
+BenchmarkContenders/fewunique/n=100000/pdq-go           	    1144	   1050428 ns/op
+BenchmarkContenders/fewunique/n=100000/pdq-go           	    1142	   1047115 ns/op
+BenchmarkContenders/fewunique/n=100000/pdq-go           	    1149	   1042373 ns/op
+BenchmarkContenders/fewunique/n=100000/pdq-go           	    1152	   1046880 ns/op
+BenchmarkContenders/int64/n=100000/pdq-branchless       	     441	   2683107 ns/op
+BenchmarkContenders/int64/n=100000/pdq-branchless       	     444	   2687185 ns/op
+BenchmarkContenders/int64/n=100000/pdq-branchless       	     448	   2676921 ns/op
+BenchmarkContenders/int64/n=100000/pdq-branchless       	     447	   2674481 ns/op
+BenchmarkContenders/int64/n=100000/pdq-branchless       	     447	   2683041 ns/op
+BenchmarkContenders/float64/n=100000/pdq-branchless     	     397	   3019867 ns/op
+BenchmarkContenders/float64/n=100000/pdq-branchless     	     396	   3029903 ns/op
+BenchmarkContenders/float64/n=100000/pdq-branchless     	     386	   3126067 ns/op
+BenchmarkContenders/float64/n=100000/pdq-branchless     	     391	   3034912 ns/op
+BenchmarkContenders/float64/n=100000/pdq-branchless     	     394	   3039393 ns/op
+BenchmarkContenders/fewunique/n=100000/pdq-branchless   	    2733	    437996 ns/op
+BenchmarkContenders/fewunique/n=100000/pdq-branchless   	    2636	    453146 ns/op
+BenchmarkContenders/fewunique/n=100000/pdq-branchless   	    2746	    436165 ns/op
+BenchmarkContenders/fewunique/n=100000/pdq-branchless   	    2758	    438319 ns/op
+BenchmarkContenders/fewunique/n=100000/pdq-branchless   	    2756	    439330 ns/op
+BenchmarkContenders/int64/n=100000/blq                  	     804	   1485286 ns/op
+BenchmarkContenders/int64/n=100000/blq                  	     808	   1481566 ns/op
+BenchmarkContenders/int64/n=100000/blq                  	     810	   1490027 ns/op
+BenchmarkContenders/int64/n=100000/blq                  	     810	   1480477 ns/op
+BenchmarkContenders/int64/n=100000/blq                  	     810	   1484002 ns/op
+BenchmarkContenders/float64/n=100000/blq                	     469	   2550765 ns/op
+BenchmarkContenders/float64/n=100000/blq                	     469	   2551158 ns/op
+BenchmarkContenders/float64/n=100000/blq                	     469	   2545725 ns/op
+BenchmarkContenders/float64/n=100000/blq                	     471	   2543667 ns/op
+BenchmarkContenders/float64/n=100000/blq                	     465	   2554361 ns/op
+BenchmarkContenders/fewunique/n=100000/blq              	    2526	    467078 ns/op
+BenchmarkContenders/fewunique/n=100000/blq              	    2575	    469149 ns/op
+BenchmarkContenders/fewunique/n=100000/blq              	    2482	    462291 ns/op
+BenchmarkContenders/fewunique/n=100000/blq              	    2600	    460055 ns/op
+BenchmarkContenders/fewunique/n=100000/blq              	    2616	    467255 ns/op
+BenchmarkContenders/int64/n=1000000/std                 	      18	  63801287 ns/op
+BenchmarkContenders/int64/n=1000000/std                 	      18	  63681308 ns/op
+BenchmarkContenders/int64/n=1000000/std                 	      18	  63901618 ns/op
+BenchmarkContenders/int64/n=1000000/std                 	      18	  63684803 ns/op
+BenchmarkContenders/int64/n=1000000/std                 	      18	  63886262 ns/op
+BenchmarkContenders/float64/n=1000000/std               	      13	  85486398 ns/op
+BenchmarkContenders/float64/n=1000000/std               	      13	  85408077 ns/op
+BenchmarkContenders/float64/n=1000000/std               	      13	  85786638 ns/op
+BenchmarkContenders/float64/n=1000000/std               	      13	  85455971 ns/op
+BenchmarkContenders/float64/n=1000000/std               	      13	  85587340 ns/op
+BenchmarkContenders/fewunique/n=1000000/std             	     100	  10110898 ns/op
+BenchmarkContenders/fewunique/n=1000000/std             	     100	  10108543 ns/op
+BenchmarkContenders/fewunique/n=1000000/std             	     100	  10060562 ns/op
+BenchmarkContenders/fewunique/n=1000000/std             	     100	  10120215 ns/op
+BenchmarkContenders/fewunique/n=1000000/std             	     100	  10067835 ns/op
+BenchmarkContenders/int64/n=1000000/pdq-go              	      18	  62569262 ns/op
+BenchmarkContenders/int64/n=1000000/pdq-go              	      18	  62577065 ns/op
+BenchmarkContenders/int64/n=1000000/pdq-go              	      18	  62574151 ns/op
+BenchmarkContenders/int64/n=1000000/pdq-go              	      18	  62538312 ns/op
+BenchmarkContenders/int64/n=1000000/pdq-go              	      18	  62549259 ns/op
+BenchmarkContenders/float64/n=1000000/pdq-go            	      14	  77942902 ns/op
+BenchmarkContenders/float64/n=1000000/pdq-go            	      14	  77987244 ns/op
+BenchmarkContenders/float64/n=1000000/pdq-go            	      14	  77939310 ns/op
+BenchmarkContenders/float64/n=1000000/pdq-go            	      14	  77953185 ns/op
+BenchmarkContenders/float64/n=1000000/pdq-go            	      14	  77949140 ns/op
+BenchmarkContenders/fewunique/n=1000000/pdq-go          	     100	  10021781 ns/op
+BenchmarkContenders/fewunique/n=1000000/pdq-go          	     100	  10007628 ns/op
+BenchmarkContenders/fewunique/n=1000000/pdq-go          	     100	  10009385 ns/op
+BenchmarkContenders/fewunique/n=1000000/pdq-go          	     100	  10005535 ns/op
+BenchmarkContenders/fewunique/n=1000000/pdq-go          	     120	   9995570 ns/op
+BenchmarkContenders/int64/n=1000000/pdq-branchless      	      39	  29998302 ns/op
+BenchmarkContenders/int64/n=1000000/pdq-branchless      	      39	  29990443 ns/op
+BenchmarkContenders/int64/n=1000000/pdq-branchless      	      39	  29986798 ns/op
+BenchmarkContenders/int64/n=1000000/pdq-branchless      	      39	  30056144 ns/op
+BenchmarkContenders/int64/n=1000000/pdq-branchless      	      39	  29996284 ns/op
+BenchmarkContenders/float64/n=1000000/pdq-branchless    	      34	  33299346 ns/op
+BenchmarkContenders/float64/n=1000000/pdq-branchless    	      34	  33291773 ns/op
+BenchmarkContenders/float64/n=1000000/pdq-branchless    	      36	  33575977 ns/op
+BenchmarkContenders/float64/n=1000000/pdq-branchless    	      34	  33719062 ns/op
+BenchmarkContenders/float64/n=1000000/pdq-branchless    	      34	  33536775 ns/op
+BenchmarkContenders/fewunique/n=1000000/pdq-branchless  	     289	   4120367 ns/op
+BenchmarkContenders/fewunique/n=1000000/pdq-branchless  	     291	   4133257 ns/op
+BenchmarkContenders/fewunique/n=1000000/pdq-branchless  	     289	   4121267 ns/op
+BenchmarkContenders/fewunique/n=1000000/pdq-branchless  	     289	   4145353 ns/op
+BenchmarkContenders/fewunique/n=1000000/pdq-branchless  	     291	   4130893 ns/op
+BenchmarkContenders/int64/n=1000000/blq                 	      67	  17735906 ns/op
+BenchmarkContenders/int64/n=1000000/blq                 	      67	  17715656 ns/op
+BenchmarkContenders/int64/n=1000000/blq                 	      67	  17695303 ns/op
+BenchmarkContenders/int64/n=1000000/blq                 	      67	  17757841 ns/op
+BenchmarkContenders/int64/n=1000000/blq                 	      67	  17821142 ns/op
+BenchmarkContenders/float64/n=1000000/blq               	      40	  28793929 ns/op
+BenchmarkContenders/float64/n=1000000/blq               	      40	  28713737 ns/op
+BenchmarkContenders/float64/n=1000000/blq               	      40	  28728143 ns/op
+BenchmarkContenders/float64/n=1000000/blq               	      40	  29185080 ns/op
+BenchmarkContenders/float64/n=1000000/blq               	      39	  28948170 ns/op
+BenchmarkContenders/fewunique/n=1000000/blq             	     213	   5574254 ns/op
+BenchmarkContenders/fewunique/n=1000000/blq             	     214	   5566484 ns/op
+BenchmarkContenders/fewunique/n=1000000/blq             	     211	   5640086 ns/op
+BenchmarkContenders/fewunique/n=1000000/blq             	     214	   5553161 ns/op
+BenchmarkContenders/fewunique/n=1000000/blq             	     217	   5508531 ns/op
+BenchmarkContenders/int64/n=10000000/std                	       2	 754258416 ns/op
+BenchmarkContenders/int64/n=10000000/std                	       2	 747714542 ns/op
+BenchmarkContenders/int64/n=10000000/std                	       2	 742947104 ns/op
+BenchmarkContenders/int64/n=10000000/std                	       2	 749214688 ns/op
+BenchmarkContenders/int64/n=10000000/std                	       2	 743773875 ns/op
+BenchmarkContenders/float64/n=10000000/std              	       2	 988769896 ns/op
+BenchmarkContenders/float64/n=10000000/std              	       2	 988273084 ns/op
+BenchmarkContenders/float64/n=10000000/std              	       2	 993527271 ns/op
+BenchmarkContenders/float64/n=10000000/std              	       1	1016580083 ns/op
+BenchmarkContenders/float64/n=10000000/std              	       2	 992523500 ns/op
+BenchmarkContenders/fewunique/n=10000000/std            	      12	  96875990 ns/op
+BenchmarkContenders/fewunique/n=10000000/std            	      12	  97652358 ns/op
+BenchmarkContenders/fewunique/n=10000000/std            	      12	  97334944 ns/op
+BenchmarkContenders/fewunique/n=10000000/std            	      12	  97454042 ns/op
+BenchmarkContenders/fewunique/n=10000000/std            	      12	  96857681 ns/op
+BenchmarkContenders/int64/n=10000000/pdq-go             	       2	 738365228 ns/op
+BenchmarkContenders/int64/n=10000000/pdq-go             	       2	 728098979 ns/op
+BenchmarkContenders/int64/n=10000000/pdq-go             	       2	 730050646 ns/op
+BenchmarkContenders/int64/n=10000000/pdq-go             	       2	 731368916 ns/op
+BenchmarkContenders/int64/n=10000000/pdq-go             	       2	 730726646 ns/op
+BenchmarkContenders/float64/n=10000000/pdq-go           	       2	 897319229 ns/op
+BenchmarkContenders/float64/n=10000000/pdq-go           	       2	 899273625 ns/op
+BenchmarkContenders/float64/n=10000000/pdq-go           	       2	 897877646 ns/op
+BenchmarkContenders/float64/n=10000000/pdq-go           	       2	 901304770 ns/op
+BenchmarkContenders/float64/n=10000000/pdq-go           	       2	 898521208 ns/op
+BenchmarkContenders/fewunique/n=10000000/pdq-go         	      12	  95411219 ns/op
+BenchmarkContenders/fewunique/n=10000000/pdq-go         	      12	  95233642 ns/op
+BenchmarkContenders/fewunique/n=10000000/pdq-go         	      12	  95562899 ns/op
+BenchmarkContenders/fewunique/n=10000000/pdq-go         	      12	  95191132 ns/op
+BenchmarkContenders/fewunique/n=10000000/pdq-go         	      12	  95558326 ns/op
+BenchmarkContenders/int64/n=10000000/pdq-branchless     	       4	 330851594 ns/op
+BenchmarkContenders/int64/n=10000000/pdq-branchless     	       4	 332334937 ns/op
+BenchmarkContenders/int64/n=10000000/pdq-branchless     	       4	 330887500 ns/op
+BenchmarkContenders/int64/n=10000000/pdq-branchless     	       4	 330879490 ns/op
+BenchmarkContenders/int64/n=10000000/pdq-branchless     	       4	 331069844 ns/op
+BenchmarkContenders/float64/n=10000000/pdq-branchless   	       3	 368152555 ns/op
+BenchmarkContenders/float64/n=10000000/pdq-branchless   	       3	 368120000 ns/op
+BenchmarkContenders/float64/n=10000000/pdq-branchless   	       3	 368856861 ns/op
+BenchmarkContenders/float64/n=10000000/pdq-branchless   	       3	 368182736 ns/op
+BenchmarkContenders/float64/n=10000000/pdq-branchless   	       3	 368487667 ns/op
+BenchmarkContenders/fewunique/n=10000000/pdq-branchless 	      22	  50634233 ns/op
+BenchmarkContenders/fewunique/n=10000000/pdq-branchless 	      22	  50641140 ns/op
+BenchmarkContenders/fewunique/n=10000000/pdq-branchless 	      22	  50795670 ns/op
+BenchmarkContenders/fewunique/n=10000000/pdq-branchless 	      22	  50625508 ns/op
+BenchmarkContenders/fewunique/n=10000000/pdq-branchless 	      22	  50590121 ns/op
+BenchmarkContenders/int64/n=10000000/blq                	       5	 203546350 ns/op
+BenchmarkContenders/int64/n=10000000/blq                	       5	 202658733 ns/op
+BenchmarkContenders/int64/n=10000000/blq                	       5	 203132984 ns/op
+BenchmarkContenders/int64/n=10000000/blq                	       5	 203242208 ns/op
+BenchmarkContenders/int64/n=10000000/blq                	       5	 202804233 ns/op
+BenchmarkContenders/float64/n=10000000/blq              	       4	 315026156 ns/op
+BenchmarkContenders/float64/n=10000000/blq              	       4	 322529823 ns/op
+BenchmarkContenders/float64/n=10000000/blq              	       4	 315463062 ns/op
+BenchmarkContenders/float64/n=10000000/blq              	       4	 315666479 ns/op
+BenchmarkContenders/float64/n=10000000/blq              	       4	 315482563 ns/op
+BenchmarkContenders/fewunique/n=10000000/blq            	      27	  42710282 ns/op
+BenchmarkContenders/fewunique/n=10000000/blq            	      27	  42553693 ns/op
+BenchmarkContenders/fewunique/n=10000000/blq            	      27	  42607298 ns/op
+BenchmarkContenders/fewunique/n=10000000/blq            	      27	  42656384 ns/op
+BenchmarkContenders/fewunique/n=10000000/blq            	      27	  42615957 ns/op
+BenchmarkLibraries/int64/n=1000/slices.Sort             	  127869	      9208 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=1000/slices.Sort             	  127732	      9410 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=1000/slices.Sort             	  128118	      9420 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=1000/slices.Sort             	  127814	      9467 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=1000/slices.Sort             	  128616	      9397 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=1000/blqsort.Sort            	  137623	      8711 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=1000/blqsort.Sort            	  138268	      8715 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=1000/blqsort.Sort            	  136885	      8809 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=1000/blqsort.Sort            	  137628	      8710 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=1000/blqsort.Sort            	  138468	      8698 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=1000/zermelo.Sort            	   87145	     13736 ns/op	    8192 B/op	       1 allocs/op
+BenchmarkLibraries/int64/n=1000/zermelo.Sort            	   85940	     13965 ns/op	    8192 B/op	       1 allocs/op
+BenchmarkLibraries/int64/n=1000/zermelo.Sort            	   85723	     13966 ns/op	    8192 B/op	       1 allocs/op
+BenchmarkLibraries/int64/n=1000/zermelo.Sort            	   86196	     13957 ns/op	    8192 B/op	       1 allocs/op
+BenchmarkLibraries/int64/n=1000/zermelo.Sort            	   86504	     13951 ns/op	    8192 B/op	       1 allocs/op
+BenchmarkLibraries/int64/n=1000/zermelo.SortBYOB        	   89390	     13433 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=1000/zermelo.SortBYOB        	   89487	     13381 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=1000/zermelo.SortBYOB        	   89707	     13401 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=1000/zermelo.SortBYOB        	   89775	     13433 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=1000/zermelo.SortBYOB        	   91124	     13370 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=1000/sorty.SortSlice         	   95805	     12057 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraries/int64/n=1000/sorty.SortSlice         	  102739	     11886 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraries/int64/n=1000/sorty.SortSlice         	   99258	     12118 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraries/int64/n=1000/sorty.SortSlice         	   97749	     12079 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraries/int64/n=1000/sorty.SortSlice         	  102350	     12128 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=1000/slices.Sort           	   75457	     15610 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=1000/slices.Sort           	   94210	     14011 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=1000/slices.Sort           	   93325	     14256 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=1000/slices.Sort           	   72481	     14418 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=1000/slices.Sort           	   87069	     14151 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=1000/blqsort.Sort          	  132204	      9025 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=1000/blqsort.Sort          	  134043	      9002 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=1000/blqsort.Sort          	  133702	      9031 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=1000/blqsort.Sort          	  133381	      9029 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=1000/blqsort.Sort          	  133514	      9052 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=1000/zermelo.SortFloats    	   76178	     15617 ns/op	    8192 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=1000/zermelo.SortFloats    	   76892	     15652 ns/op	    8192 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=1000/zermelo.SortFloats    	   76389	     15487 ns/op	    8192 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=1000/zermelo.SortFloats    	   78424	     15634 ns/op	    8192 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=1000/zermelo.SortFloats    	   75588	     15764 ns/op	    8192 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=1000/zermelo.SortFloatsBYOB         	   79208	     15117 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=1000/zermelo.SortFloatsBYOB         	   79292	     15119 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=1000/zermelo.SortFloatsBYOB         	   79249	     15136 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=1000/zermelo.SortFloatsBYOB         	   79302	     15142 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=1000/zermelo.SortFloatsBYOB         	   79456	     15124 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=1000/sorty.SortSlice                	   87406	     12980 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=1000/sorty.SortSlice                	   94963	     12927 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=1000/sorty.SortSlice                	   94756	     12887 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=1000/sorty.SortSlice                	   91882	     13052 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=1000/sorty.SortSlice                	   89805	     12974 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraries/int64/n=100000/slices.Sort                    	     223	   5345402 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=100000/slices.Sort                    	     223	   5361141 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=100000/slices.Sort                    	     222	   5387019 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=100000/slices.Sort                    	     224	   5343560 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=100000/slices.Sort                    	     223	   5352189 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=100000/blqsort.Sort                   	     806	   1509673 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=100000/blqsort.Sort                   	     799	   1488691 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=100000/blqsort.Sort                   	     808	   1487362 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=100000/blqsort.Sort                   	     808	   1484289 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=100000/blqsort.Sort                   	     807	   1486312 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=100000/zermelo.Sort                   	    1070	   1124651 ns/op	  802816 B/op	       1 allocs/op
+BenchmarkLibraries/int64/n=100000/zermelo.Sort                   	    1069	   1118559 ns/op	  802816 B/op	       1 allocs/op
+BenchmarkLibraries/int64/n=100000/zermelo.Sort                   	    1063	   1128499 ns/op	  802816 B/op	       1 allocs/op
+BenchmarkLibraries/int64/n=100000/zermelo.Sort                   	    1075	   1117917 ns/op	  802816 B/op	       1 allocs/op
+BenchmarkLibraries/int64/n=100000/zermelo.Sort                   	    1065	   1129553 ns/op	  802816 B/op	       1 allocs/op
+BenchmarkLibraries/int64/n=100000/zermelo.SortBYOB               	    1080	   1100918 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=100000/zermelo.SortBYOB               	    1094	   1096078 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=100000/zermelo.SortBYOB               	    1096	   1100451 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=100000/zermelo.SortBYOB               	    1094	   1098733 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=100000/zermelo.SortBYOB               	    1094	   1097446 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=100000/sorty.SortSlice                	     259	   4619332 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraries/int64/n=100000/sorty.SortSlice                	     259	   4610058 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraries/int64/n=100000/sorty.SortSlice                	     258	   4626603 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraries/int64/n=100000/sorty.SortSlice                	     259	   4615524 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraries/int64/n=100000/sorty.SortSlice                	     259	   4620715 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=100000/slices.Sort                  	     168	   7123007 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=100000/slices.Sort                  	     168	   7111892 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=100000/slices.Sort                  	     166	   7143110 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=100000/slices.Sort                  	     168	   7123500 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=100000/slices.Sort                  	     168	   7119115 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=100000/blqsort.Sort                 	     459	   2583141 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=100000/blqsort.Sort                 	     470	   2545792 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=100000/blqsort.Sort                 	     468	   2571644 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=100000/blqsort.Sort                 	     469	   2555107 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=100000/blqsort.Sort                 	     468	   2559200 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=100000/zermelo.SortFloats           	     790	   1515348 ns/op	  802816 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=100000/zermelo.SortFloats           	     788	   1517006 ns/op	  802816 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=100000/zermelo.SortFloats           	     783	   1522035 ns/op	  802816 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=100000/zermelo.SortFloats           	     790	   1519553 ns/op	  802816 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=100000/zermelo.SortFloats           	     792	   1518420 ns/op	  802816 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=100000/zermelo.SortFloatsBYOB       	     811	   1477844 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=100000/zermelo.SortFloatsBYOB       	     813	   1477561 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=100000/zermelo.SortFloatsBYOB       	     812	   1481638 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=100000/zermelo.SortFloatsBYOB       	     812	   1478725 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=100000/zermelo.SortFloatsBYOB       	     811	   1480370 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=100000/sorty.SortSlice              	     210	   5674949 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=100000/sorty.SortSlice              	     211	   5676353 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=100000/sorty.SortSlice              	     210	   5684808 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=100000/sorty.SortSlice              	     211	   5691774 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=100000/sorty.SortSlice              	     211	   5682482 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraries/int64/n=1000000/slices.Sort                   	      18	  63741947 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=1000000/slices.Sort                   	      18	  63789229 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=1000000/slices.Sort                   	      18	  63825257 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=1000000/slices.Sort                   	      18	  63791660 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=1000000/slices.Sort                   	      18	  64343613 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=1000000/blqsort.Sort                  	      64	  17836311 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=1000000/blqsort.Sort                  	      67	  17679422 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=1000000/blqsort.Sort                  	      67	  17776315 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=1000000/blqsort.Sort                  	      67	  17696131 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=1000000/blqsort.Sort                  	      67	  17688069 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=1000000/zermelo.Sort                  	      91	  11860096 ns/op	 8003584 B/op	       1 allocs/op
+BenchmarkLibraries/int64/n=1000000/zermelo.Sort                  	     100	  11776759 ns/op	 8003584 B/op	       1 allocs/op
+BenchmarkLibraries/int64/n=1000000/zermelo.Sort                  	     100	  11859057 ns/op	 8003584 B/op	       1 allocs/op
+BenchmarkLibraries/int64/n=1000000/zermelo.Sort                  	     100	  11810218 ns/op	 8003584 B/op	       1 allocs/op
+BenchmarkLibraries/int64/n=1000000/zermelo.Sort                  	     100	  11873686 ns/op	 8003584 B/op	       1 allocs/op
+BenchmarkLibraries/int64/n=1000000/zermelo.SortBYOB              	      98	  11761839 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=1000000/zermelo.SortBYOB              	     100	  11712117 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=1000000/zermelo.SortBYOB              	     100	  11760553 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=1000000/zermelo.SortBYOB              	     100	  11728962 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=1000000/zermelo.SortBYOB              	     100	  11703955 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=1000000/sorty.SortSlice               	      20	  56898821 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraries/int64/n=1000000/sorty.SortSlice               	      20	  56723675 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraries/int64/n=1000000/sorty.SortSlice               	      20	  56793185 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraries/int64/n=1000000/sorty.SortSlice               	      20	  56873977 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraries/int64/n=1000000/sorty.SortSlice               	      20	  56718261 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=1000000/slices.Sort                 	      13	  85723522 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=1000000/slices.Sort                 	      13	  85430683 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=1000000/slices.Sort                 	      13	  85495138 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=1000000/slices.Sort                 	      13	  85665304 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=1000000/slices.Sort                 	      13	  85570372 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=1000000/blqsort.Sort                	      40	  28732477 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=1000000/blqsort.Sort                	      40	  28856475 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=1000000/blqsort.Sort                	      40	  28719543 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=1000000/blqsort.Sort                	      40	  28800287 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=1000000/blqsort.Sort                	      40	  28732518 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=1000000/zermelo.SortFloats          	      73	  15810705 ns/op	 8003584 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=1000000/zermelo.SortFloats          	      76	  15838470 ns/op	 8003584 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=1000000/zermelo.SortFloats          	      76	  15777245 ns/op	 8003584 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=1000000/zermelo.SortFloats          	      76	  15796140 ns/op	 8003584 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=1000000/zermelo.SortFloats          	      76	  15849062 ns/op	 8003584 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=1000000/zermelo.SortFloatsBYOB      	      75	  15558399 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=1000000/zermelo.SortFloatsBYOB      	      76	  16089360 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=1000000/zermelo.SortFloatsBYOB      	      76	  15557656 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=1000000/zermelo.SortFloatsBYOB      	      76	  15549852 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=1000000/zermelo.SortFloatsBYOB      	      75	  15620984 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=1000000/sorty.SortSlice             	      16	  70026820 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=1000000/sorty.SortSlice             	      16	  70287060 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=1000000/sorty.SortSlice             	      16	  70116875 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=1000000/sorty.SortSlice             	      16	  70160554 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=1000000/sorty.SortSlice             	      16	  70495596 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraries/int64/n=10000000/slices.Sort                  	       2	 745614000 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=10000000/slices.Sort                  	       2	 744573480 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=10000000/slices.Sort                  	       2	 742504084 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=10000000/slices.Sort                  	       2	 744640730 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=10000000/slices.Sort                  	       2	 749031626 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=10000000/blqsort.Sort                 	       5	 202831850 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=10000000/blqsort.Sort                 	       5	 203415900 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=10000000/blqsort.Sort                 	       5	 202811683 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=10000000/blqsort.Sort                 	       5	 202867508 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=10000000/blqsort.Sort                 	       5	 203121642 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=10000000/zermelo.Sort                 	       7	 150771208 ns/op	80003072 B/op	       1 allocs/op
+BenchmarkLibraries/int64/n=10000000/zermelo.Sort                 	       7	 150884679 ns/op	80003072 B/op	       1 allocs/op
+BenchmarkLibraries/int64/n=10000000/zermelo.Sort                 	       7	 150932923 ns/op	80003072 B/op	       1 allocs/op
+BenchmarkLibraries/int64/n=10000000/zermelo.Sort                 	       7	 151325970 ns/op	80003072 B/op	       1 allocs/op
+BenchmarkLibraries/int64/n=10000000/zermelo.Sort                 	       7	 150883393 ns/op	80003072 B/op	       1 allocs/op
+BenchmarkLibraries/int64/n=10000000/zermelo.SortBYOB             	       7	 150245030 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=10000000/zermelo.SortBYOB             	       7	 150873982 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=10000000/zermelo.SortBYOB             	       7	 150797631 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=10000000/zermelo.SortBYOB             	       7	 150294792 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=10000000/zermelo.SortBYOB             	       7	 150206548 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/int64/n=10000000/sorty.SortSlice              	       2	 657736958 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraries/int64/n=10000000/sorty.SortSlice              	       2	 656112334 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraries/int64/n=10000000/sorty.SortSlice              	       2	 657328854 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraries/int64/n=10000000/sorty.SortSlice              	       2	 656358645 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraries/int64/n=10000000/sorty.SortSlice              	       2	 656046437 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=10000000/slices.Sort                	       2	 987580458 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=10000000/slices.Sort                	       2	 988720396 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=10000000/slices.Sort                	       2	 985681729 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=10000000/slices.Sort                	       2	 987903417 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=10000000/slices.Sort                	       2	 986429250 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=10000000/blqsort.Sort               	       4	 315699573 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=10000000/blqsort.Sort               	       4	 316032208 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=10000000/blqsort.Sort               	       4	 315404177 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=10000000/blqsort.Sort               	       4	 314801166 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=10000000/blqsort.Sort               	       4	 316068146 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=10000000/zermelo.SortFloats         	       6	 186132403 ns/op	80003072 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=10000000/zermelo.SortFloats         	       6	 184683132 ns/op	80003072 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=10000000/zermelo.SortFloats         	       6	 184678708 ns/op	80003072 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=10000000/zermelo.SortFloats         	       6	 183763979 ns/op	80003072 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=10000000/zermelo.SortFloats         	       6	 185179118 ns/op	80003072 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=10000000/zermelo.SortFloatsBYOB     	       6	 183671812 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=10000000/zermelo.SortFloatsBYOB     	       6	 184292250 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=10000000/zermelo.SortFloatsBYOB     	       6	 183871118 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=10000000/zermelo.SortFloatsBYOB     	       6	 183918145 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=10000000/zermelo.SortFloatsBYOB     	       6	 183758923 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLibraries/float64/n=10000000/sorty.SortSlice            	       2	 804185062 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=10000000/sorty.SortSlice            	       2	 809263417 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=10000000/sorty.SortSlice            	       2	 805207771 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=10000000/sorty.SortSlice            	       2	 805903875 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraries/float64/n=10000000/sorty.SortSlice            	       2	 804114271 ns/op	      24 B/op	       1 allocs/op
+BenchmarkLibraryShapes/random/slices.Sort                        	      18	  64372572 ns/op
+BenchmarkLibraryShapes/random/slices.Sort                        	      16	  64894860 ns/op
+BenchmarkLibraryShapes/random/slices.Sort                        	      18	  63974546 ns/op
+BenchmarkLibraryShapes/random/slices.Sort                        	      18	  64102678 ns/op
+BenchmarkLibraryShapes/random/slices.Sort                        	      18	  64179234 ns/op
+BenchmarkLibraryShapes/random/blqsort.Sort                       	      67	  17617851 ns/op
+BenchmarkLibraryShapes/random/blqsort.Sort                       	      67	  17634026 ns/op
+BenchmarkLibraryShapes/random/blqsort.Sort                       	      68	  17562210 ns/op
+BenchmarkLibraryShapes/random/blqsort.Sort                       	      67	  17627298 ns/op
+BenchmarkLibraryShapes/random/blqsort.Sort                       	      67	  17575496 ns/op
+BenchmarkLibraryShapes/random/zermelo.Sort                       	      96	  11813620 ns/op
+BenchmarkLibraryShapes/random/zermelo.Sort                       	     100	  11705741 ns/op
+BenchmarkLibraryShapes/random/zermelo.Sort                       	     100	  11659951 ns/op
+BenchmarkLibraryShapes/random/zermelo.Sort                       	     100	  11643555 ns/op
+BenchmarkLibraryShapes/random/zermelo.Sort                       	     100	  11703208 ns/op
+BenchmarkLibraryShapes/random/zermelo.SortBYOB                   	     100	  11568072 ns/op
+BenchmarkLibraryShapes/random/zermelo.SortBYOB                   	     100	  11609273 ns/op
+BenchmarkLibraryShapes/random/zermelo.SortBYOB                   	     100	  11547369 ns/op
+BenchmarkLibraryShapes/random/zermelo.SortBYOB                   	     100	  11566067 ns/op
+BenchmarkLibraryShapes/random/zermelo.SortBYOB                   	     100	  11600767 ns/op
+BenchmarkLibraryShapes/random/sorty.SortSlice                    	      20	  56326848 ns/op
+BenchmarkLibraryShapes/random/sorty.SortSlice                    	      20	  56350175 ns/op
+BenchmarkLibraryShapes/random/sorty.SortSlice                    	      20	  56422704 ns/op
+BenchmarkLibraryShapes/random/sorty.SortSlice                    	      20	  56351054 ns/op
+BenchmarkLibraryShapes/random/sorty.SortSlice                    	      20	  56413079 ns/op
+BenchmarkLibraryShapes/fewunique/slices.Sort                     	     100	  11284406 ns/op
+BenchmarkLibraryShapes/fewunique/slices.Sort                     	     100	  11295860 ns/op
+BenchmarkLibraryShapes/fewunique/slices.Sort                     	     100	  11310830 ns/op
+BenchmarkLibraryShapes/fewunique/slices.Sort                     	     100	  11262947 ns/op
+BenchmarkLibraryShapes/fewunique/slices.Sort                     	     100	  11288410 ns/op
+BenchmarkLibraryShapes/fewunique/blqsort.Sort                    	     244	   4871465 ns/op
+BenchmarkLibraryShapes/fewunique/blqsort.Sort                    	     247	   4850075 ns/op
+BenchmarkLibraryShapes/fewunique/blqsort.Sort                    	     246	   4868407 ns/op
+BenchmarkLibraryShapes/fewunique/blqsort.Sort                    	     247	   4854813 ns/op
+BenchmarkLibraryShapes/fewunique/blqsort.Sort                    	     247	   4852126 ns/op
+BenchmarkLibraryShapes/fewunique/zermelo.Sort                    	     300	   3958153 ns/op
+BenchmarkLibraryShapes/fewunique/zermelo.Sort                    	     303	   3942123 ns/op
+BenchmarkLibraryShapes/fewunique/zermelo.Sort                    	     304	   3941546 ns/op
+BenchmarkLibraryShapes/fewunique/zermelo.Sort                    	     304	   3933538 ns/op
+BenchmarkLibraryShapes/fewunique/zermelo.Sort                    	     303	   3954030 ns/op
+BenchmarkLibraryShapes/fewunique/zermelo.SortBYOB                	     313	   3812846 ns/op
+BenchmarkLibraryShapes/fewunique/zermelo.SortBYOB                	     313	   3817378 ns/op
+BenchmarkLibraryShapes/fewunique/zermelo.SortBYOB                	     312	   3816702 ns/op
+BenchmarkLibraryShapes/fewunique/zermelo.SortBYOB                	     314	   3810878 ns/op
+BenchmarkLibraryShapes/fewunique/zermelo.SortBYOB                	     313	   3835178 ns/op
+BenchmarkLibraryShapes/fewunique/sorty.SortSlice                 	      69	  17190353 ns/op
+BenchmarkLibraryShapes/fewunique/sorty.SortSlice                 	      69	  17193797 ns/op
+BenchmarkLibraryShapes/fewunique/sorty.SortSlice                 	      69	  17222429 ns/op
+BenchmarkLibraryShapes/fewunique/sorty.SortSlice                 	      69	  17198738 ns/op
+BenchmarkLibraryShapes/fewunique/sorty.SortSlice                 	      69	  17248272 ns/op
+BenchmarkLibraryShapes/sorted/slices.Sort                        	    1905	    636070 ns/op
+BenchmarkLibraryShapes/sorted/slices.Sort                        	    1908	    631863 ns/op
+BenchmarkLibraryShapes/sorted/slices.Sort                        	    1892	    631161 ns/op
+BenchmarkLibraryShapes/sorted/slices.Sort                        	    1908	    631574 ns/op
+BenchmarkLibraryShapes/sorted/slices.Sort                        	    1908	    630340 ns/op
+BenchmarkLibraryShapes/sorted/blqsort.Sort                       	    3746	    321230 ns/op
+BenchmarkLibraryShapes/sorted/blqsort.Sort                       	    3726	    322162 ns/op
+BenchmarkLibraryShapes/sorted/blqsort.Sort                       	    3716	    323020 ns/op
+BenchmarkLibraryShapes/sorted/blqsort.Sort                       	    3742	    321720 ns/op
+BenchmarkLibraryShapes/sorted/blqsort.Sort                       	    3740	    321847 ns/op
+BenchmarkLibraryShapes/sorted/zermelo.Sort                       	    1442	    806910 ns/op
+BenchmarkLibraryShapes/sorted/zermelo.Sort                       	    1495	    801636 ns/op
+BenchmarkLibraryShapes/sorted/zermelo.Sort                       	    1489	    804945 ns/op
+BenchmarkLibraryShapes/sorted/zermelo.Sort                       	    1494	    804244 ns/op
+BenchmarkLibraryShapes/sorted/zermelo.Sort                       	    1497	    805655 ns/op
+BenchmarkLibraryShapes/sorted/zermelo.SortBYOB                   	    1670	    709051 ns/op
+BenchmarkLibraryShapes/sorted/zermelo.SortBYOB                   	    1698	    708937 ns/op
+BenchmarkLibraryShapes/sorted/zermelo.SortBYOB                   	    1698	    707631 ns/op
+BenchmarkLibraryShapes/sorted/zermelo.SortBYOB                   	    1695	    709250 ns/op
+BenchmarkLibraryShapes/sorted/zermelo.SortBYOB                   	    1686	    708183 ns/op
+BenchmarkLibraryShapes/sorted/sorty.SortSlice                    	     166	   7164953 ns/op
+BenchmarkLibraryShapes/sorted/sorty.SortSlice                    	     168	   7143094 ns/op
+BenchmarkLibraryShapes/sorted/sorty.SortSlice                    	     166	   7151712 ns/op
+BenchmarkLibraryShapes/sorted/sorty.SortSlice                    	     166	   7156918 ns/op
+BenchmarkLibraryShapes/sorted/sorty.SortSlice                    	     166	   7144225 ns/op
+BenchmarkLibraryShapes/reversed/slices.Sort                      	    1321	    908443 ns/op
+BenchmarkLibraryShapes/reversed/slices.Sort                      	    1327	    905695 ns/op
+BenchmarkLibraryShapes/reversed/slices.Sort                      	    1318	    906833 ns/op
+BenchmarkLibraryShapes/reversed/slices.Sort                      	    1322	    905720 ns/op
+BenchmarkLibraryShapes/reversed/slices.Sort                      	    1324	    907700 ns/op
+BenchmarkLibraryShapes/reversed/blqsort.Sort                     	    1602	    747611 ns/op
+BenchmarkLibraryShapes/reversed/blqsort.Sort                     	    1608	    747800 ns/op
+BenchmarkLibraryShapes/reversed/blqsort.Sort                     	    1602	    747156 ns/op
+BenchmarkLibraryShapes/reversed/blqsort.Sort                     	    1604	    749105 ns/op
+BenchmarkLibraryShapes/reversed/blqsort.Sort                     	    1608	    749076 ns/op
+BenchmarkLibraryShapes/reversed/zermelo.Sort                     	      93	  12801393 ns/op
+BenchmarkLibraryShapes/reversed/zermelo.Sort                     	      92	  12787648 ns/op
+BenchmarkLibraryShapes/reversed/zermelo.Sort                     	      92	  12817732 ns/op
+BenchmarkLibraryShapes/reversed/zermelo.Sort                     	      92	  12831099 ns/op
+BenchmarkLibraryShapes/reversed/zermelo.Sort                     	      92	  12798579 ns/op
+BenchmarkLibraryShapes/reversed/zermelo.SortBYOB                 	      91	  12826883 ns/op
+BenchmarkLibraryShapes/reversed/zermelo.SortBYOB                 	      85	  12592080 ns/op
+BenchmarkLibraryShapes/reversed/zermelo.SortBYOB                 	      96	  12629849 ns/op
+BenchmarkLibraryShapes/reversed/zermelo.SortBYOB                 	      96	  12651842 ns/op
+BenchmarkLibraryShapes/reversed/zermelo.SortBYOB                 	      96	  12580577 ns/op
+BenchmarkLibraryShapes/reversed/sorty.SortSlice                  	     163	   7310693 ns/op
+BenchmarkLibraryShapes/reversed/sorty.SortSlice                  	     163	   7300704 ns/op
+BenchmarkLibraryShapes/reversed/sorty.SortSlice                  	     164	   7300080 ns/op
+BenchmarkLibraryShapes/reversed/sorty.SortSlice                  	     163	   7309737 ns/op
+BenchmarkLibraryShapes/reversed/sorty.SortSlice                  	     163	   7305869 ns/op
+BenchmarkLibraryShapes/mod8/slices.Sort                          	     404	   2954167 ns/op
+BenchmarkLibraryShapes/mod8/slices.Sort                          	     408	   2930055 ns/op
+BenchmarkLibraryShapes/mod8/slices.Sort                          	     409	   2929081 ns/op
+BenchmarkLibraryShapes/mod8/slices.Sort                          	     404	   2941162 ns/op
+BenchmarkLibraryShapes/mod8/slices.Sort                          	     409	   2930031 ns/op
+BenchmarkLibraryShapes/mod8/blqsort.Sort                         	     388	   3090366 ns/op
+BenchmarkLibraryShapes/mod8/blqsort.Sort                         	     388	   3079327 ns/op
+BenchmarkLibraryShapes/mod8/blqsort.Sort                         	     388	   3102097 ns/op
+BenchmarkLibraryShapes/mod8/blqsort.Sort                         	     388	   3081422 ns/op
+BenchmarkLibraryShapes/mod8/blqsort.Sort                         	     388	   3079136 ns/op
+BenchmarkLibraryShapes/mod8/zermelo.Sort                         	     313	   3798086 ns/op
+BenchmarkLibraryShapes/mod8/zermelo.Sort                         	     315	   3782066 ns/op
+BenchmarkLibraryShapes/mod8/zermelo.Sort                         	     315	   3796481 ns/op
+BenchmarkLibraryShapes/mod8/zermelo.Sort                         	     315	   3789004 ns/op
+BenchmarkLibraryShapes/mod8/zermelo.Sort                         	     315	   3791877 ns/op
+BenchmarkLibraryShapes/mod8/zermelo.SortBYOB                     	     322	   3676019 ns/op
+BenchmarkLibraryShapes/mod8/zermelo.SortBYOB                     	     327	   3675916 ns/op
+BenchmarkLibraryShapes/mod8/zermelo.SortBYOB                     	     326	   3673511 ns/op
+BenchmarkLibraryShapes/mod8/zermelo.SortBYOB                     	     327	   3661713 ns/op
+BenchmarkLibraryShapes/mod8/zermelo.SortBYOB                     	     326	   3674054 ns/op
+BenchmarkLibraryShapes/mod8/sorty.SortSlice                      	     100	  10027214 ns/op
+BenchmarkLibraryShapes/mod8/sorty.SortSlice                      	     100	  10039417 ns/op
+BenchmarkLibraryShapes/mod8/sorty.SortSlice                      	     100	  10065582 ns/op
+BenchmarkLibraryShapes/mod8/sorty.SortSlice                      	     100	  10029899 ns/op
+BenchmarkLibraryShapes/mod8/sorty.SortSlice                      	     100	  10025509 ns/op
+BenchmarkLibraryShapes/xor/slices.Sort                           	      48	  24439031 ns/op
+BenchmarkLibraryShapes/xor/slices.Sort                           	      49	  24323298 ns/op
+BenchmarkLibraryShapes/xor/slices.Sort                           	      49	  24346287 ns/op
+BenchmarkLibraryShapes/xor/slices.Sort                           	      49	  24410408 ns/op
+BenchmarkLibraryShapes/xor/slices.Sort                           	      49	  24335121 ns/op
+BenchmarkLibraryShapes/xor/blqsort.Sort                          	      69	  17184578 ns/op
+BenchmarkLibraryShapes/xor/blqsort.Sort                          	      69	  17114496 ns/op
+BenchmarkLibraryShapes/xor/blqsort.Sort                          	      69	  17125291 ns/op
+BenchmarkLibraryShapes/xor/blqsort.Sort                          	      69	  17222425 ns/op
+BenchmarkLibraryShapes/xor/blqsort.Sort                          	      69	  17159120 ns/op
+BenchmarkLibraryShapes/xor/zermelo.Sort                          	      91	  12641807 ns/op
+BenchmarkLibraryShapes/xor/zermelo.Sort                          	      93	  12581495 ns/op
+BenchmarkLibraryShapes/xor/zermelo.Sort                          	      94	  12653843 ns/op
+BenchmarkLibraryShapes/xor/zermelo.Sort                          	      93	  12623040 ns/op
+BenchmarkLibraryShapes/xor/zermelo.Sort                          	      96	  12735829 ns/op
+BenchmarkLibraryShapes/xor/zermelo.SortBYOB                      	      90	  12438871 ns/op
+BenchmarkLibraryShapes/xor/zermelo.SortBYOB                      	      98	  12400558 ns/op
+BenchmarkLibraryShapes/xor/zermelo.SortBYOB                      	      98	  12355169 ns/op
+BenchmarkLibraryShapes/xor/zermelo.SortBYOB                      	      94	  12401989 ns/op
+BenchmarkLibraryShapes/xor/zermelo.SortBYOB                      	      94	  12398587 ns/op
+BenchmarkLibraryShapes/xor/sorty.SortSlice                       	      66	  17951713 ns/op
+BenchmarkLibraryShapes/xor/sorty.SortSlice                       	      66	  17909202 ns/op
+BenchmarkLibraryShapes/xor/sorty.SortSlice                       	      66	  17922837 ns/op
+BenchmarkLibraryShapes/xor/sorty.SortSlice                       	      64	  18013074 ns/op
+BenchmarkLibraryShapes/xor/sorty.SortSlice                       	      66	  18028602 ns/op
 PASS

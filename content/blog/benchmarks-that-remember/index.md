@@ -14,8 +14,8 @@ of the blqsort series (the list is at the top of
 ## Possible opening
 
 - On random data blqsort is about 2.5-3.6x faster than `slices.Sort` (int64
-  1M: 2.57x Intel, 3.60x M1 Pro). On Go's own sort benchmarks it's roughly
-  a wash or worse (SortInt1K 0.82x Intel / 1.01x M1; SortInt1K_Mod8 0.86x on
+  1M: 2.59x Intel, 3.60x M1 Pro). On Go's own sort benchmarks it's roughly
+  a wash or worse (SortInt1K 0.82x Intel / 1.00x M1; SortInt1K_Mod8 0.87x on
   both; full table in post 3). Which one is telling the truth? Post 3
   answers half (structure); this post answers the other half (repetition).
 
@@ -35,13 +35,13 @@ of the blqsort series (the list is at the top of
 
 | elements | Intel, same | Intel, fresh | M1 Pro, same | M1 Pro, fresh |
 |---|---|---|---|---|
-| 100 | 1.31x | **1.40x** | 0.99x | **2.75x** |
-| 300 | 1.19x | **1.65x** | 1.09x | **3.11x** |
-| 1,000 | 1.05x | **1.85x** | 1.14x | **3.28x** |
-| 3,000 | 2.63x | **1.98x** | 2.10x | **3.43x** |
-| 10,000 | 2.84x | **2.14x** | 3.52x | **3.55x** |
-| 30,000 | 2.37x | **2.27x** | 3.58x | **3.57x** |
-| 100,000 | 2.44x | **2.39x** | 3.67x | **3.61x** |
+| 100 | 1.34x | **1.40x** | 1.00x | **2.80x** |
+| 300 | 1.20x | **1.65x** | 1.13x | **3.09x** |
+| 1,000 | 1.07x | **1.86x** | 1.12x | **3.28x** |
+| 3,000 | 2.63x | **2.00x** | 2.45x | **3.42x** |
+| 10,000 | 2.85x | **2.16x** | 3.62x | **3.50x** |
+| 30,000 | 2.39x | **2.29x** | 3.59x | **3.55x** |
+| 100,000 | 2.44x | **2.41x** | 3.65x | **3.61x** |
 
 - On a repeated 1,000-element input, `slices.Sort` is 4.5x (Intel) / 3.6x
   (M1) faster than on fresh ones: that is the misprediction cost, memorized
@@ -58,9 +58,9 @@ of the blqsort series (the list is at the top of
 - Is blqsort's own switch at 1,025 elements (small path below, large
   partition above) part of the story? `BenchmarkThreshold` (fresh inputs,
   sizes clustered around it): going from 1,025 to 1,026 elements costs
-  blqsort ~3% per element on Intel (1.592 -> 1.638 ns per n log2 n) and
-  nothing on M1 (0.987 -> 0.989); the speedup ramps smoothly across it
-  (Intel 1.75x at 500 -> 1.99x at 3,000; M1 3.22x -> 3.41x). The threshold
+  blqsort ~3% per element on Intel (1.573 -> 1.625 ns per n log2 n) and
+  nothing on M1 (1.018 -> 1.019); the speedup ramps smoothly across it
+  (Intel 1.73x at 500 -> 1.99x at 3,000; M1 3.22x -> 3.42x). The threshold
   is well placed and explains nothing.
 
 ## Other benchmarking lessons
@@ -80,6 +80,5 @@ of the blqsort series (the list is at the top of
   branch predictor memorizes them).
 
 [^oneoff]: This number comes from a one-off experiment I ran while working on
-    the port. It shaped a design decision rather than compare libraries, so
-    it isn't part of the benchmark suite in blqsort-experiments or the data
-    published with the first post.
+    the port, not from the benchmark suite in blqsort-experiments, so it
+    isn't in the data published with the first post.

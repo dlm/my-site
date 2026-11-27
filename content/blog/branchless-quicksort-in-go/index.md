@@ -84,9 +84,9 @@ means blqsort takes half as long.
 
 | random data, speedup vs `slices.Sort` | Intel (amd64) | M1 Pro (arm64) |
 |---|---|---|
-| int64, 100 / 1,000 / 10,000 | 1.40x / 1.85x / 2.14x | 2.75x / 3.28x / 3.55x |
-| int64, 100K / 1M / 10M | 2.40x / 2.57x / 2.59x | 3.67x / 3.60x / 3.64x |
-| float64, 100K / 1M / 10M | 2.67x / 2.85x / 2.85x | 2.80x / 3.00x / 3.20x |
+| int64, 100 / 1,000 / 10,000 | 1.40x / 1.86x / 2.16x | 2.80x / 3.28x / 3.50x |
+| int64, 100K / 1M / 10M | 2.41x / 2.59x / 2.60x | 3.60x / 3.60x / 3.67x |
+| float64, 100K / 1M / 10M | 2.68x / 2.86x / 2.87x | 2.78x / 2.98x / 3.13x |
 
 The quick takeaway here is that blqsort is about 2.4-2.9x faster on Intel and
 2.8-3.7x faster on M1 from 100K elements up, and ahead at every tested size,
@@ -117,14 +117,14 @@ better):
 
 | input | | `slices.Sort` | blqsort | zermelo (radix) | sorty (1 goroutine) |
 |---|---|---|---|---|---|
-| random | Intel | 57.1 | 22.1 | 22.9 | 49.0 |
-| | M1 Pro | 64.3 | 17.6 | **12.0** | 56.7 |
-| 10 distinct values | Intel | 9.90 | **3.63** | 4.71 | 13.8 |
-| | M1 Pro | 11.3 | 4.86 | **3.84** | 17.3 |
-| sorted | Intel | 0.37 | **0.29** | 0.84 | 3.72 |
-| | M1 Pro | 0.63 | **0.33** | 0.70 | 7.15 |
-| reversed | Intel | 0.64 | **0.59** | 14.9 | 3.88 |
-| | M1 Pro | 0.93 | **0.79** | 12.6 | 7.31 |
+| random | Intel | 56.9 | 22.0 | 22.8 | 49.1 |
+| | M1 Pro | 64.2 | 17.6 | **11.6** | 56.4 |
+| 10 distinct values | Intel | 9.87 | **3.61** | 4.70 | 13.8 |
+| | M1 Pro | 11.3 | 4.86 | **3.82** | 17.2 |
+| sorted | Intel | 0.37 | **0.29** | 0.84 | 3.69 |
+| | M1 Pro | 0.63 | **0.32** | 0.71 | 7.15 |
+| reversed | Intel | 0.63 | **0.59** | 14.9 | 3.92 |
+| | M1 Pro | 0.91 | **0.75** | 12.6 | 7.31 |
 
 On random int64s, zermelo ties blqsort on Intel and beats it on the M1, and
 on random float64s it beats blqsort on both machines. But on reversed input it
@@ -184,9 +184,9 @@ github.com/dlm/blqsort/cmd/blqsortgen@v0.1.1`, a line like
 generates `sortPersonByAgeDescLast(people)`, which sorts by `Age` descending
 (that's the leading `-`) and then by `Name.Last`. The generated file doesn't
 import blqsort. On 1M records with random keys, a generated sorter was about
-3.5x faster than `slices.SortFunc` with `cmp.Compare` for 8-byte records (an
-int32 key) and 1.8x faster for 64-byte records (an int64 key plus padding), on
-the Intel machine.[^oneoff] The
+3.2x faster than `slices.SortFunc` with `cmp.Compare` for 8-byte records (an
+int32 key) and 2.1x faster for 64-byte records (an int64 key plus padding), on
+the Intel machine (4.4x and 1.7x on the M1). The
 [example package](https://github.com/dlm/blqsort/tree/main/cmd/blqsortgen/example)
 in the repo has the full setup.
 
@@ -199,7 +199,7 @@ pattern and the branchy partitioning in `slices.Sort` becomes cheap, so
 structured inputs from the classic Bentley-McIlroy sort tests, timing each one
 7 times and keeping the fastest (instead of the median of 5 runs used above).
 On Intel, across sizes from 100 to 100,000 elements, `slices.Sort` was more
-than 5% faster in 161 of the 450 cases. For
+than 5% faster in 160 of the 450 cases. For
 example, take 100,000 values made of two interleaved ascending runs, reversed
 (a "stagger" input): `slices.Sort` takes 0.27 ms and blqsort takes 1.8 ms (I
 dig into why in an upcoming post). blqsort does hand inputs that are made of a few long runs to

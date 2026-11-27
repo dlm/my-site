@@ -13,6 +13,10 @@ title = 'David L Millman'
 [markup.highlight]
     style = "catppuccin-frappe"
 
+# Lets a block take a class, e.g. {.grouped} on the line after a table
+[markup.goldmark.parser.attribute]
+    block = true
+
 [[menus.main]]
     name = "About"
     pageRef = "/"

@@ -83,7 +83,7 @@ The table shows the speedup: `slices.Sort`'s time divided by blqsort's, so 2x
 means blqsort takes half as long.
 
 | random data, speedup vs `slices.Sort` | Intel (amd64) | M1 Pro (arm64) |
-|---|---|---|
+|---|---:|---:|
 | int64, 100 / 1,000 / 10,000 | 1.40x / 1.86x / 2.16x | 2.80x / 3.28x / 3.50x |
 | int64, 100K / 1M / 10M | 2.41x / 2.59x / 2.60x | 3.60x / 3.60x / 3.67x |
 | float64, 100K / 1M / 10M | 2.68x / 2.86x / 2.87x | 2.78x / 2.98x / 3.13x |
@@ -116,7 +116,7 @@ Here is how long each one takes to sort 1M int64s, in milliseconds (lower is
 better):
 
 | input | | `slices.Sort` | blqsort | zermelo (radix) | sorty (1 goroutine) |
-|---|---|---|---|---|---|
+|---|---|---:|---:|---:|---:|
 | random | Intel | 56.9 | 22.0 | 22.8 | 49.1 |
 | | M1 Pro | 64.2 | 17.6 | **11.6** | 56.4 |
 | 10 distinct values | Intel | 9.87 | **3.61** | 4.70 | 13.8 |
@@ -125,6 +125,7 @@ better):
 | | M1 Pro | 0.63 | **0.32** | 0.71 | 7.15 |
 | reversed | Intel | 0.63 | **0.59** | 14.9 | 3.92 |
 | | M1 Pro | 0.91 | **0.75** | 12.6 | 7.31 |
+{.grouped}
 
 On random int64s, zermelo ties blqsort on Intel and beats it on the M1, and
 on random float64s it beats blqsort on both machines. But on reversed input it

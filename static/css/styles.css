@@ -313,3 +313,44 @@ a:focus {
   font-style: italic;
 }
 
+/* Tables: a sans font, since Georgia's old-style digits don't line up */
+.post-content table {
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.post-content th,
+.post-content td {
+  padding: 6px 12px;
+  vertical-align: top;
+}
+
+.post-content th {
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 2px solid var(--orange);
+}
+
+.post-content tbody tr + tr td {
+  border-top: 1px solid var(--dark-brown);
+}
+
+/* Tables marked {.grouped} in Markdown: a row whose first cell is empty
+   continues the group above (like the M1 Pro row of a machine pair), so
+   it gets no line, and the second column (the machine names) is dimmed */
+.post-content table.grouped tbody tr:has(> td:first-child:empty) td {
+  border-top: none;
+}
+
+.post-content table.grouped tbody tr:has(> td:first-child:empty) td:nth-child(2),
+.post-content table.grouped tbody tr:has(+ tr > td:first-child:empty) td:nth-child(2) {
+  color: rgba(240, 240, 240, 0.7);
+}
+
+.post-content td strong {
+  color: var(--orange);
+}
+

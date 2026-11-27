@@ -1,9 +1,12 @@
 Raw benchmark output for this post
 ==================================
 
-One directory per machine, produced by ../run-benchmarks.sh (a copy of
-run-benchmarks.sh from github.com/dlm/blqsort-experiments). Both runs
-measure blqsort v0.1.1, at blqsort-experiments commit feb312b4aaad.
+One directory per machine, produced by run-benchmarks.sh from
+github.com/dlm/blqsort-experiments at commit feb312b4aaad:
+
+  https://github.com/dlm/blqsort-experiments/tree/feb312b4aaadc239fea13e95a01c6a58dac0918c
+
+Both runs measure blqsort v0.1.1.
 
   zbornak-x86_64/   Intel Core Ultra X7 358H, Linux, go1.26.10, pinned to a
                     performance core (taskset -c 3), on AC power
@@ -34,7 +37,8 @@ crossover.txt and threshold.txt use ns/sort: each benchmark op sorts a
 batch of about 1M elements in total, so use the ns/sort column, not ns/op.
 Both have 5 runs of 1s each. Use medians, for example with benchstat.
 
-To rerun: clone github.com/dlm/blqsort-experiments and run
-./run-benchmarks.sh from its root (with Nix: nix develop --command
-./run-benchmarks.sh). Plug the machine in first; the script refuses to run
-on battery. It takes roughly half an hour.
+To rerun: clone github.com/dlm/blqsort-experiments, check out feb312b4aaad
+(or main, for the latest version), and run ./run-benchmarks.sh from its
+root (with Nix: nix develop --command ./run-benchmarks.sh). Plug the
+machine in first; the script refuses to run on battery. It takes roughly
+half an hour.

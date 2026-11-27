@@ -73,11 +73,11 @@ with this post (see [data/README.txt](data/README.txt)).
 For the small sizes (100 to 10,000 elements), each timed batch sorts many
 *different* random inputs, while for 100K elements and up, each timed sort gets
 a copy of the same random input, restored outside the timed region. It turns
-out that on small inputs, sorting the same input over and over lets the
-CPU's branch predictor memorize it, which makes branchy sorts like
-`slices.Sort` look better than they really are. So, if you
-benchmark small sorts yourself, use a fresh input each time (more on that in an
-upcoming post).
+out that on small inputs, sorting the same input over and over changes the gap
+between the sorters, so the benchmark tells you less about code that sorts a
+different input each time. My guess is that the CPU's branch predictor learns
+the input. So, if you benchmark small sorts yourself, use a fresh input each
+time (more on that in an upcoming post).
 
 The table shows the speedup: `slices.Sort`'s time divided by blqsort's, so 2x
 means blqsort takes half as long.
@@ -193,9 +193,9 @@ in the repo has the full setup.
 ## When not to use it
 
 So, blqsort is not a silver bullet. If your data has a regular structure
-(periodic, interleaved or partly sorted), the CPU's branch predictor learns the
-pattern and the branchy partitioning in `slices.Sort` becomes cheap, so
-`slices.Sort` can win, sometimes by a lot. To check this, I used the 450
+(periodic, interleaved or partly sorted), `slices.Sort` can win, sometimes by a
+lot: predictable comparisons can help it, and it has fast paths for some
+patterns. To check this, I used the 450
 structured inputs from the classic Bentley-McIlroy sort tests, timing each one
 7 times and keeping the fastest (instead of the median of 5 runs used above).
 On Intel, across sizes from 100 to 100,000 elements, `slices.Sort` was more

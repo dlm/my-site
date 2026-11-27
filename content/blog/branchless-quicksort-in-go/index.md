@@ -1,7 +1,7 @@
 ---
 title: "Branchless Quicksort in Go"
-date: 2026-11-20
-draft: true
+date: 2026-11-27
+draft: false
 ---
 
 Welcome to my series of posts on branchless quicksort in Go. In the middle of

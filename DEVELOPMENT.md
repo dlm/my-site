@@ -35,6 +35,12 @@ This Hugo site was redesigned from a legacy academic website with modern CSS pra
 - Hugo template variables use PascalCase: `.Site.Params` (not `.site.params`)
 - TOML config uses lowercase: `[params.social]` but accessed as `.Site.Params.social`
 - Active navigation requires exact URL matching with `$.RelPermalink`
+- Block attributes (`{.class}` after a block) are enabled in `hugo.toml`
+  (`markup.goldmark.parser.attribute.block`); that's what `{.grouped}` uses
+- `hugo server` sometimes misses layout and static file changes; restart it
+  if an edit doesn't show up
+- The host answers unknown paths with a fallback page and status 200, so check
+  a deploy by looking for the page's content, not by status code
 
 ### File Structure
 
@@ -63,6 +69,10 @@ hugo.toml                 # Site config with social links
 **Styling**:
 - Code blocks: Dark brown background with orange left border accent
 - Inline code: Subtle translucent dark brown background
+- Tables: rules under the header and between rows, Trebuchet MS with tabular
+  figures (Georgia's old-style digits don't line up), bold cells in orange.
+  Add `{.grouped}` on the line after a table to treat rows with an empty first
+  cell as part of the group above (no line between them, second column dimmed).
 - Typography: Consistent use of CSS variables for all font sizing
 - Color inheritance: `main` element sets base text color once
 - Accessibility: Focus states matching hover states for keyboard navigation
